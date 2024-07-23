@@ -14,8 +14,8 @@ const path = d3.geoPath().projection(projection);
 
 // Load the data
 Promise.all([
-    d3.json("brillina.github.io/data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("brillina.github.io/data/filtered_total_cases_deaths_per_county.csv")         // CSV file with COVID case counts
+    d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv")         // CSV file with COVID case counts
 ]).then(([geojson, covidData]) => {
     // Process the COVID data
     const covidByCounty = {};
