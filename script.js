@@ -12,10 +12,15 @@ const svg = d3.select("#map")
 const projection = d3.geoAlbersUsa().scale(1000).translate([width / 2, height / 2]);
 const path = d3.geoPath().projection(projection);
 
+// Create a tooltip
+const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 // Load the data
 Promise.all([
     d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("data/filtered_total_cases_deaths_per_county.csv")         // CSV file with COVID case counts
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv")  
 ]).then(([geojson, covidData]) => {
     console.log("GeoJSON data:", geojson);
     console.log("CSV data:", covidData);
@@ -33,11 +38,6 @@ Promise.all([
     const colorScale = d3.scaleQuantize()
         .domain([0, d3.max(covidData, d => +d.cases)])
         .range(d3.schemeReds[9]);
-
-    // Create a tooltip
-    const tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
 
     // Draw the counties
     svg.selectAll(".county")
