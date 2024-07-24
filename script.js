@@ -41,18 +41,19 @@ Promise.all([
         })
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "#000").attr("stroke-width", 1.5);
-            // Add tooltip logic here if desired
+            const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
+            const covidData = covidByCounty[countyKey];
             tooltip.transition()
-            .duration(200)
-            .style("opacity", .9);
-            tooltip.html(firstChartTooltipHTML(d));
-            tooltip.style("left", (event.pageX) + "px")
-            .style("top", (event.pageY - 28) + "px")
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(`${d.properties.NAME}, ${d.properties.STATE}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}`)
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function() {
             d3.select(this).attr("stroke", null);
             tooltip.transition()
-            .duration(500)
-            .style("opacity", 0);
+                .duration(500)
+                .style("opacity", 0);
         });
 });
