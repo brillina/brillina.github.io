@@ -17,17 +17,27 @@ Promise.all([
     d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
     d3.csv("data/filtered_total_cases_deaths_per_county.csv")         // CSV file with COVID case counts
 ]).then(([geojson, covidData]) => {
+    console.log("GeoJSON data:", geojson);
+    console.log("CSV data:", covidData);
+
     // Process the COVID data
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = +d.cases;  // Adjust field names as needed
+        covidByCounty[countyKey] = { cases: +d.cases, deaths: +d.deaths };  // Adjust field names as needed
     });
+
+    console.log("Processed COVID data:", covidByCounty);
 
     // Create a color scale
     const colorScale = d3.scaleQuantize()
         .domain([0, d3.max(covidData, d => +d.cases)])
         .range(d3.schemeReds[9]);
+
+    // Create a tooltip
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
     // Draw the counties
     svg.selectAll(".county")
@@ -37,9 +47,10 @@ Promise.all([
         .attr("d", path)
         .attr("fill", d => {
             const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
-            return colorScale(covidByCounty[countyKey] || 0);  // Adjust property names as needed
+            return colorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0);
         })
         .on("mouseover", function(event, d) {
+            console.log("Mouse over:", d);
             d3.select(this).attr("stroke", "#000").attr("stroke-width", 1.5);
             const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
             const covidData = covidByCounty[countyKey];
@@ -56,4 +67,8 @@ Promise.all([
                 .duration(500)
                 .style("opacity", 0);
         });
+
+    console.log("Counties drawn.");
+}).catch(error => {
+    console.error("Error loading the data:", error);
 });
