@@ -4,18 +4,30 @@
     <h2>What county-level factors affect COVID-19 case numbers in the United States?</h2>
     <h3>Interactive slideshow</h3>
 <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-<head>
-    <title>COVID Cases by County</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        .county {
-            stroke: #fff;
-            stroke-width: 0.5px;
-        }
-    </style>
+
+<title>COVID Cases by County</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+    .county {
+        stroke: #fff;
+        stroke-width: 0.5px;
+    }
+    .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 120px;
+        height: auto;
+        padding: 5px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+</style>
 </head>
 <body>
-    <div id="map"></div>
-    <script src="script.js"></script>
+<div id="map"></div>
+<script src="script.js"></script>
 </body>
 </html>
