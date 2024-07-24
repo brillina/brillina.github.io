@@ -19,8 +19,8 @@ const tooltip = d3.select("body").append("div")
 
 // Load the data
 Promise.all([
-    d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("data/filtered_total_cases_deaths_per_county.csv")  
+    d3.json("data/counties.geojson"),
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv")
 ]).then(([geojson, covidData]) => {
     console.log("GeoJSON data:", geojson);
     console.log("CSV data:", covidData);
@@ -34,8 +34,11 @@ Promise.all([
 
     console.log("Processed COVID data:", covidByCounty);
 
-    // Create a color scale
-    const colorScale = d3.scaleQuantize()
+    // Create a color scale for the states
+    const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    
+    // Create a color scale for the cases
+    const caseColorScale = d3.scaleQuantize()
         .domain([0, d3.max(covidData, d => +d.cases)])
         .range(d3.schemeReds[9]);
 
@@ -47,11 +50,12 @@ Promise.all([
         .attr("d", path)
         .attr("fill", d => {
             const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
-            return colorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0);
+            return caseColorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0);
         })
+        .attr("stroke", d => stateColorScale(d.properties.STATE))
         .on("mouseover", function(event, d) {
             console.log("Mouse over:", d);
-            d3.select(this).attr("stroke", "#000").attr("stroke-width", 1.5);
+            d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
             const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
             const covidData = covidByCounty[countyKey];
             tooltip.transition()
@@ -61,8 +65,9 @@ Promise.all([
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
-        .on("mouseout", function() {
-            d3.select(this).attr("stroke", null);
+        .on("mouseout", function(event, d) {
+            const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
+            d3.select(this).attr("fill", caseColorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0)).attr("stroke-width", 0.5);
             tooltip.transition()
                 .duration(500)
                 .style("opacity", 0);
