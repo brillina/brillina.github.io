@@ -42,8 +42,17 @@ Promise.all([
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "#000").attr("stroke-width", 1.5);
             // Add tooltip logic here if desired
+            tooltip.transition()
+            .duration(200)
+            .style("opacity", .9);
+            tooltip.html(firstChartTooltipHTML(d));
+            tooltip.style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px")
         })
         .on("mouseout", function() {
             d3.select(this).attr("stroke", null);
+            tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
         });
 });
