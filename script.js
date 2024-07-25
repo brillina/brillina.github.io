@@ -20,7 +20,7 @@ const tooltip = d3.select("body").append("div")
 // Load the data
 Promise.all([
     d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("/Users/baobao/Documents/CS416/brillina.github.io/data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
+    d3.csv("brillina.github.io/data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
 ]).then(([geojson, covidData]) => {
     console.log("GeoJSON data:", geojson);
     console.log("CSV data:", covidData);
