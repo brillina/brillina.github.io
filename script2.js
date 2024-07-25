@@ -68,111 +68,108 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-Promise.all([
-    d3.json("data/counties.geojson"),
-    d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_frequency.csv")
-]).then(([geojson, covidData, maskData]) => {
-    console.log("GeoJSON data:", geojson);
-    console.log("GeoJSON features:", geojson.features.slice(0, 5)); // Log first 5 features
-    console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
+// Ensure the script loads after the DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    Promise.all([
+        d3.json("data/counties.geojson"),
+        d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
+        d3.csv("data/mask_frequency.csv")
+    ]).then(([geojson, covidData, maskData]) => {
+        // Populate state dropdown
+        const stateSelect = d3.select("#select-state");
+        Object.values(stateFPtoName).forEach(stateName => {
+            stateSelect.append("option")
+                .attr("value", stateName)
+                .text(stateName);
+        });
 
-    // Process the COVID data
-    const covidByCounty = {};
-    covidData.forEach(d => {
-        const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = { 
-            cases: +d.cases.replace(/,/g, ''), 
-            deaths: +d.deaths.replace(/,/g, '') 
-        };
+        // Process the COVID data
+        const covidByCounty = {};
+        covidData.forEach(d => {
+            const countyKey = `${d.county}, ${d.state}`;
+            covidByCounty[countyKey] = { 
+                cases: +d.cases.replace(/,/g, ''), 
+                deaths: +d.deaths.replace(/,/g, '') 
+            };
+        });
+
+        // Process the mask data
+        const maskByCounty = {};
+        maskData.forEach(d => {
+            maskByCounty[d.fips] = { 
+                NEVER: +d.NEVER, 
+                RARELY: +d.RARELY, 
+                SOMETIMES: +d.SOMETIMES, 
+                FREQUENTLY: +d.FREQUENTLY, 
+                ALWAYS: +d.ALWAYS 
+            };
+        });
+
+        // Merge COVID and mask data
+        const combinedData = {};
+        geojson.features.forEach(feature => {
+            const countyName = feature.properties.NAME;
+            const stateName = stateFPtoName[feature.properties.STATEFP];
+            const fips = feature.properties.GEOID;
+            const countyKey = `${countyName}, ${stateName}`;
+            combinedData[fips] = {
+                ...covidByCounty[countyKey],
+                ...maskByCounty[fips]
+            };
+        });
+
+        // Log combined data to verify
+        console.log("Combined Data:", combinedData);
+
+        // Function to update the map based on selected state
+        function updateMap(selectedState) {
+            const filteredFeatures = selectedState === "all" 
+                ? geojson.features 
+                : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
+
+            // Update the counties
+            svg.selectAll(".county")
+                .data(filteredFeatures)
+                .join("path")
+                .attr("class", "county")
+                .attr("d", path)
+                .attr("fill", d => {
+                    const fips = d.properties.GEOID;
+                    return caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0);
+                })
+                .attr("stroke", d => {
+                    const stateName = stateFPtoName[d.properties.STATEFP];
+                    return stateColorScale(stateName);
+                })
+                .on("mouseover", function(event, d) {
+                    d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
+                    const fips = d.properties.GEOID;
+                    const covidData = combinedData[fips];
+                    tooltip.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                    tooltip.html(`${d.properties.NAME}, ${stateFPtoName[d.properties.STATEFP]}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}<br>Mask Usage:<br>NEVER: ${covidData ? covidData.NEVER : "N/A"}<br>RARELY: ${covidData ? covidData.RARELY : "N/A"}<br>SOMETIMES: ${covidData ? covidData.SOMETIMES : "N/A"}<br>FREQUENTLY: ${covidData ? covidData.FREQUENTLY : "N/A"}<br>ALWAYS: ${covidData ? covidData.ALWAYS : "N/A"}`)
+                        .style("left", (event.pageX + 5) + "px")
+                        .style("top", (event.pageY - 28) + "px");
+                })
+                .on("mouseout", function(event, d) {
+                    const fips = d.properties.GEOID;
+                    d3.select(this).attr("fill", caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0)).attr("stroke-width", 0.5);
+                    tooltip.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                });
+        }
+
+        // Initial update of the map
+        updateMap("all");
+
+        // Listen for changes in the dropdown
+        d3.select("#select-state").on("change", function() {
+            const selectedState = d3.select(this).property("value");
+            updateMap(selectedState);
+        });
+    }).catch(error => {
+        console.error("Error loading the data:", error);
     });
-
-    // Process the mask data
-    const maskByCounty = {};
-    maskData.forEach(d => {
-        maskByCounty[d.fips] = { 
-            NEVER: +d.NEVER, 
-            RARELY: +d.RARELY, 
-            SOMETIMES: +d.SOMETIMES, 
-            FREQUENTLY: +d.FREQUENTLY, 
-            ALWAYS: +d.ALWAYS 
-        };
-    });
-
-    // Merge COVID and mask data
-    const combinedData = {};
-    geojson.features.forEach(feature => {
-        const countyName = feature.properties.NAME;
-        const stateName = stateFPtoName[feature.properties.STATEFP];
-        const fips = feature.properties.GEOID;
-        const countyKey = `${countyName}, ${stateName}`;
-        combinedData[fips] = {
-            ...covidByCounty[countyKey],
-            ...maskByCounty[fips]
-        };
-    });
-
-    // Log combined data to verify
-    console.log("Combined Data:", combinedData);
-
-    // Create the state selection dropdown
-    const stateSelect = d3.select("#select-state");
-    Object.values(stateFPtoName).forEach(stateName => {
-        stateSelect.append("option")
-            .attr("value", stateName)
-            .text(stateName);
-    });
-
-    // Function to update the map based on selected state
-    function updateMap(selectedState) {
-        const filteredFeatures = selectedState === "all" 
-            ? geojson.features 
-            : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
-
-        console.log("Filtered Features:", filteredFeatures);
-
-        // Update the counties
-        svg.selectAll(".county")
-            .data(filteredFeatures)
-            .join("path")
-            .attr("class", "county")
-            .attr("d", path)
-            .attr("fill", d => {
-                const fips = d.properties.GEOID;
-                return caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0);
-            })
-            .attr("stroke", d => {
-                const stateName = stateFPtoName[d.properties.STATEFP];
-                return stateColorScale(stateName);
-            })
-            .on("mouseover", function(event, d) {
-                d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
-                const fips = d.properties.GEOID;
-                const covidData = combinedData[fips];
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                tooltip.html(`${d.properties.NAME}, ${stateFPtoName[d.properties.STATEFP]}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}<br>Mask Usage:<br>NEVER: ${covidData ? covidData.NEVER : "N/A"}<br>RARELY: ${covidData ? covidData.RARELY : "N/A"}<br>SOMETIMES: ${covidData ? covidData.SOMETIMES : "N/A"}<br>FREQUENTLY: ${covidData ? covidData.FREQUENTLY : "N/A"}<br>ALWAYS: ${covidData ? covidData.ALWAYS : "N/A"}`)
-                    .style("left", (event.pageX + 5) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function(event, d) {
-                const fips = d.properties.GEOID;
-                d3.select(this).attr("fill", caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0)).attr("stroke-width", 0.5);
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
-    }
-
-    // Initial update of the map
-    updateMap("all");
-
-    // Listen for changes in the dropdown
-    stateSelect.on("change", function() {
-        const selectedState = d3.select(this).property("value");
-        updateMap(selectedState);
-    });
-}).catch(error => {
-    console.error("Error loading the data:", error);
 });
