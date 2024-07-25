@@ -19,8 +19,8 @@ const tooltip = d3.select("body").append("div")
 
 // Load the data
 Promise.all([
-    d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("brillina.github.io/data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
+    d3.json("data/counties.geojson"),
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv")
 ]).then(([geojson, covidData]) => {
     console.log("GeoJSON data:", geojson);
     console.log("CSV data:", covidData);
@@ -29,7 +29,7 @@ Promise.all([
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };  // Adjust field names as needed
+        covidByCounty[countyKey] = { cases: +d.cases, deaths: +d.deaths };  // Adjust field names as needed
     });
 
     console.log("Processed COVID data:", covidByCounty);
@@ -39,7 +39,7 @@ Promise.all([
     
     // Create a color scale for the cases
     const caseColorScale = d3.scaleQuantize()
-        .domain([0, d3.max(covidData, d => +d.cases.replace(/,/g, ''))])
+        .domain([0, d3.max(covidData, d => +d.cases)])
         .range(d3.schemeReds[9]);
 
     // Draw the counties
