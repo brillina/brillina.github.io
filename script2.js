@@ -68,12 +68,14 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-// Load and process the data
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
+    console.log("GeoJSON data:", geojson.features.slice(0, 5)); // Log first 5 features
+    console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
+
     // Process the COVID data
     const covidByCounty = {};
     covidData.forEach(d => {
@@ -100,16 +102,17 @@ Promise.all([
     const combinedData = {};
     for (let key in covidByCounty) {
         const [county, state] = key.split(', ');
-        const fips = geojson.features.find(f => f.properties.NAME === county && stateFPtoName[f.properties.STATEFP] === state).properties.GEOID;
-        combinedData[fips] = { ...covidByCounty[key], ...maskByCounty[fips] };
+        const feature = geojson.features.find(f => f.properties.NAME === county && stateFPtoName[f.properties.STATEFP] === state);
+        if (feature) {
+            const fips = feature.properties.GEOID;
+            combinedData[fips] = { ...covidByCounty[key], ...maskByCounty[fips] };
+        } else {
+            console.warn(`Feature not found for county: ${county}, state: ${state}`);
+        }
     }
 
     // Create the state selection dropdown
     const stateSelect = d3.select("#select-state");
-    stateSelect.append("option")
-        .attr("value", "all")
-        .text("All States");
-
     Object.values(stateFPtoName).forEach(stateName => {
         stateSelect.append("option")
             .attr("value", stateName)
