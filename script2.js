@@ -68,6 +68,94 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
+// Calculate weighted mask average
+function calculateWeightedAverage(row) {
+    return (row.NEVER * 0) + (row.RARELY * 1) + (row.SOMETIMES * 2) + (row.FREQUENTLY * 3) + (row.ALWAYS * 4);
+}
+
+// Load and process the data
+Promise.all([
+    d3.json("data/counties.geojson"),
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
+    d3.csv("data/mask_frequency.csv")
+]).then(([geojson, covidData, maskData]) => {
+    // Process the COVID data
+    const covidByCounty = {};
+    covidData.forEach(d => {
+        const countyKey = `${d.county}, ${d.state}`;
+        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
+    });
+
+    // Process the mask data
+    const maskByCounty = {};
+    maskData.forEach(d => {
+        const fips = d.fips.replace(/"/g, '');  // Remove quotes
+        maskByCounty[fips] = {
+            NEVER: +d.NEVER,
+            RARELY: +d.RARELY,
+            SOMETIMES: +d.SOMETIMES,
+            FREQUENTLY: +d.FREQUENTLY,
+            ALWAYS: +d.ALWAYS,
+            weightedAverage: calculateWeightedAverage({
+                NEVER: +d.NEVER,
+                RARELY: +d.RARELY,
+                SOMETIMES: +d.SOMETIMES,
+                FREQUENTLY: +d.FREQUENTLY,
+                ALWAYS: +d.ALWAYS
+            })
+        };
+    });
+
+    // Merge COVID and mask data
+    const combinedData = {};
+    for (let key in covidByCounty) {
+        const [county, state] = key.split(', ');
+        const fips = geojson.features.find(f => f.properties.NAME === county && stateFPtoName[f.properties.STATEFP] === state).properties.GEOID;
+        combinedData[fips] = { ...covidByCounty[key], ...maskByCounty[fips] };
+    }
+
+    // Create scatterplot data
+    const scatterplotData = Object.values(combinedData).map(d => ({
+        cases: d.cases,
+        maskAverage: d.weightedAverage
+    }));
+
+    // Create scatterplot
+    const svg = d3.select("#scatterplot")
+        .append("svg")
+        .attr("width", 600)
+        .attr("height", 400);
+
+    const xScale = d3.scaleLinear()
+        .domain([0, d3.max(scatterplotData, d => d.cases)])
+        .range([0, 600]);
+
+    const yScale = d3.scaleLinear()
+        .domain([0, d3.max(scatterplotData, d => d.maskAverage)])
+        .range([400, 0]);
+
+    svg.selectAll("circle")
+        .data(scatterplotData)
+        .enter().append("circle")
+        .attr("cx", d => xScale(d.cases))
+        .attr("cy", d => yScale(d.maskAverage))
+        .attr("r", 5)
+        .attr("fill", "blue");
+
+    // Add x and y axis
+    svg.append("g")
+        .attr("transform", "translate(0, 400)")
+        .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+
+    svg.append("g")
+        .call(d3.axisLeft(yScale));
+
+    console.log("Scatterplot created.");
+
+}).catch(error => {
+    console.error("Error loading the data:", error);
+});
+
 // Ensure the script loads after the DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     Promise.all([
