@@ -82,7 +82,6 @@ Promise.all([
         const stateName = stateFPtoName[feature.properties.STATEFP];
         const fips = feature.properties.GEOID;
     
-        // Check if stateName and fips are valid
         if (!countyName || !stateName || !fips) {
             console.error("Incomplete data for feature:", feature);
             return;
@@ -95,20 +94,26 @@ Promise.all([
         };
     });
     
+    console.log("Combined Data:", combinedData);
 
 
+    const scatterplotData = Object.values(combinedData).map(d => ({
+        cases: d.cases || 0, // Default to 0 if data is missing
+        maskAverage: d.weightedAverage || 0
+    }));
+    
     const scatterplotSvg = d3.select("#scatterplot").append("svg")
-    .attr("width", 600)
-    .attr("height", 400);
-
+        .attr("width", 600)
+        .attr("height", 400);
+    
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
         .range([0, 600]);
-
+    
     const yScale = d3.scaleLinear()
         .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
         .range([400, 0]);
-
+    
     scatterplotSvg.selectAll("circle")
         .data(scatterplotData)
         .enter().append("circle")
@@ -116,13 +121,14 @@ Promise.all([
         .attr("cy", d => yScale(d.maskAverage))
         .attr("r", 5)
         .attr("fill", "blue");
-
+    
     scatterplotSvg.append("g")
         .attr("transform", "translate(0, 400)")
         .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
-
+    
     scatterplotSvg.append("g")
         .call(d3.axisLeft(yScale));
+    
 
 
 
@@ -172,7 +178,6 @@ function updateMap(selectedState) {
         });
 }
 
-    // Initial update of the map
     updateMap("all");
 
     // Listen for changes in the dropdown
