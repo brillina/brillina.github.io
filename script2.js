@@ -71,33 +71,31 @@ Promise.all([
         };
     });
 
-    // Merge COVID and mask data
-// Ensure geojson and combinedData are correctly populated
     const combinedData = {};
     geojson.features.forEach(feature => {
+        if (!feature.properties || !feature.properties.NAME || !feature.properties.STATEFP || !feature.properties.GEOID) {
+            console.error("Missing properties in geojson feature:", feature);
+            return; // Skip this feature
+        }
+    
         const countyName = feature.properties.NAME;
         const stateName = stateFPtoName[feature.properties.STATEFP];
         const fips = feature.properties.GEOID;
-
-        // Ensure feature.properties contains the required attributes
+    
+        // Check if stateName and fips are valid
         if (!countyName || !stateName || !fips) {
-            console.error("Missing properties in geojson feature:", feature);
+            console.error("Incomplete data for feature:", feature);
             return;
         }
-
+    
         const countyKey = `${countyName}, ${stateName}`;
         combinedData[fips] = {
             ...covidByCounty[countyKey],
             ...maskByCounty[fips]
         };
     });
+    
 
-
-    // Create scatterplot data
-    const scatterplotData = Object.values(combinedData).map(d => ({
-        cases: d.cases,
-        maskAverage: d.weightedAverage
-    }));
 
     const scatterplotSvg = d3.select("#scatterplot").append("svg")
     .attr("width", 600)
@@ -125,6 +123,7 @@ Promise.all([
 
     scatterplotSvg.append("g")
         .call(d3.axisLeft(yScale));
+
 
 
 
