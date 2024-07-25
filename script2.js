@@ -72,12 +72,26 @@ Promise.all([
     });
 
     // Merge COVID and mask data
+// Ensure geojson and combinedData are correctly populated
     const combinedData = {};
-    for (let key in covidByCounty) {
-        const [county, state] = key.split(', ');
-        const fips = geojson.features.find(f => f.properties.NAME === county && stateFPtoName[f.properties.STATEFP] === state).properties.GEOID;
-        combinedData[fips] = { ...covidByCounty[key], ...maskByCounty[fips] };
-    }
+    geojson.features.forEach(feature => {
+        const countyName = feature.properties.NAME;
+        const stateName = stateFPtoName[feature.properties.STATEFP];
+        const fips = feature.properties.GEOID;
+
+        // Ensure feature.properties contains the required attributes
+        if (!countyName || !stateName || !fips) {
+            console.error("Missing properties in geojson feature:", feature);
+            return;
+        }
+
+        const countyKey = `${countyName}, ${stateName}`;
+        combinedData[fips] = {
+            ...covidByCounty[countyKey],
+            ...maskByCounty[fips]
+        };
+    });
+
 
     // Create scatterplot data
     const scatterplotData = Object.values(combinedData).map(d => ({
