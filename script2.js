@@ -73,7 +73,8 @@ Promise.all([
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
-    console.log("GeoJSON data:", geojson.features.slice(0, 5)); // Log first 5 features
+    console.log("GeoJSON data:", geojson);
+    console.log("GeoJSON features:", geojson.features.slice(0, 5)); // Log first 5 features
     console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
 
     // Process the COVID data
@@ -100,16 +101,19 @@ Promise.all([
 
     // Merge COVID and mask data
     const combinedData = {};
-    for (let key in covidByCounty) {
-        const [county, state] = key.split(', ');
-        const feature = geojson.features.find(f => f.properties.NAME === county && stateFPtoName[f.properties.STATEFP] === state);
-        if (feature) {
-            const fips = feature.properties.GEOID;
-            combinedData[fips] = { ...covidByCounty[key], ...maskByCounty[fips] };
-        } else {
-            console.warn(`Feature not found for county: ${county}, state: ${state}`);
-        }
-    }
+    geojson.features.forEach(feature => {
+        const countyName = feature.properties.NAME;
+        const stateName = stateFPtoName[feature.properties.STATEFP];
+        const fips = feature.properties.GEOID;
+        const countyKey = `${countyName}, ${stateName}`;
+        combinedData[fips] = {
+            ...covidByCounty[countyKey],
+            ...maskByCounty[fips]
+        };
+    });
+
+    // Log combined data to verify
+    console.log("Combined Data:", combinedData);
 
     // Create the state selection dropdown
     const stateSelect = d3.select("#select-state");
@@ -121,7 +125,11 @@ Promise.all([
 
     // Function to update the map based on selected state
     function updateMap(selectedState) {
-        const filteredFeatures = selectedState === "all" ? geojson.features : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
+        const filteredFeatures = selectedState === "all" 
+            ? geojson.features 
+            : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
+
+        console.log("Filtered Features:", filteredFeatures);
 
         // Update the counties
         svg.selectAll(".county")
