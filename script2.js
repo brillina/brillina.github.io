@@ -28,7 +28,6 @@ const stateFPtoName = {
 };
 
 
-// Calculate weighted mask average
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -69,19 +68,16 @@ Promise.all([
     const combinedData = {};
     geojson.features.forEach(feature => {
         const { properties } = feature;
-        if (!properties || !properties.NAME || !properties.STATEFP || !properties.GEOID) {
-            console.error("Incomplete data for feature:", feature);
-            return; // Skip this feature
-        }
-
+        const stateFP = properties.STATEFP;
         const countyName = properties.NAME;
-        const stateName = stateFPtoName[properties.STATEFP];
         const fips = properties.GEOID;
 
-        if (!countyName || !stateName || !fips) {
+        if (!stateFP || !countyName || !fips) {
             console.error("Incomplete data for feature:", feature);
             return; // Skip this feature
         }
+
+        const stateName = stateFPtoName[stateFP] || "Unknown State";
 
         const countyKey = `${countyName}, ${stateName}`;
         combinedData[fips] = {
@@ -165,19 +161,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const combinedData = {};
         geojson.features.forEach(feature => {
             const { properties } = feature;
-            if (!properties || !properties.NAME || !properties.STATEFP || !properties.GEOID) {
-                console.error("Incomplete data for feature:", feature);
-                return; // Skip this feature
-            }
-
+            const stateFP = properties.STATEFP;
             const countyName = properties.NAME;
-            const stateName = stateFPtoName[properties.STATEFP];
             const fips = properties.GEOID;
 
-            if (!countyName || !stateName || !fips) {
+            if (!stateFP || !countyName || !fips) {
                 console.error("Incomplete data for feature:", feature);
                 return; // Skip this feature
             }
+
+            const stateName = stateFPtoName[stateFP] || "Unknown State";
 
             const countyKey = `${countyName}, ${stateName}`;
             combinedData[fips] = {
@@ -236,16 +229,5 @@ document.addEventListener('DOMContentLoaded', function() {
         updateMap("all");
     }).catch(error => {
         console.error("Error loading the data:", error);
-    });
-});
-
-// Ensure the script loads after the DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    // Populate state dropdown
-    const stateSelect = d3.select("#select-state");
-    Object.values(stateFPtoName).forEach(stateName => {
-        stateSelect.append("option")
-            .attr("value", stateName)
-            .text(stateName);
     });
 });
