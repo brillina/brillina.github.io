@@ -17,13 +17,68 @@ const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
+// Map STATEFP codes to state names
+const stateFPtoName = {
+    "01": "Alabama",
+    "02": "Alaska",
+    "04": "Arizona",
+    "05": "Arkansas",
+    "06": "California",
+    "08": "Colorado",
+    "09": "Connecticut",
+    "10": "Delaware",
+    "11": "District of Columbia",
+    "12": "Florida",
+    "13": "Georgia",
+    "15": "Hawaii",
+    "16": "Idaho",
+    "17": "Illinois",
+    "18": "Indiana",
+    "19": "Iowa",
+    "20": "Kansas",
+    "21": "Kentucky",
+    "22": "Louisiana",
+    "23": "Maine",
+    "24": "Maryland",
+    "25": "Massachusetts",
+    "26": "Michigan",
+    "27": "Minnesota",
+    "28": "Mississippi",
+    "29": "Missouri",
+    "30": "Montana",
+    "31": "Nebraska",
+    "32": "Nevada",
+    "33": "New Hampshire",
+    "34": "New Jersey",
+    "35": "New Mexico",
+    "36": "New York",
+    "37": "North Carolina",
+    "38": "North Dakota",
+    "39": "Ohio",
+    "40": "Oklahoma",
+    "41": "Oregon",
+    "42": "Pennsylvania",
+    "44": "Rhode Island",
+    "45": "South Carolina",
+    "46": "South Dakota",
+    "47": "Tennessee",
+    "48": "Texas",
+    "49": "Utah",
+    "50": "Vermont",
+    "51": "Virginia",
+    "53": "Washington",
+    "54": "West Virginia",
+    "55": "Wisconsin",
+    "56": "Wyoming"
+};
+
 // Load the data
 Promise.all([
     d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
     d3.csv("data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
 ]).then(([geojson, covidData]) => {
-    console.log("GeoJSON data:", geojson);
-    console.log("CSV data:", covidData);
+    console.log("GeoJSON data:", geojson.features.slice(0, 5)); // Log first 5 features
+    console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
 
     // Process the COVID data
     const covidByCounty = {};
@@ -49,24 +104,30 @@ Promise.all([
         .attr("class", "county")
         .attr("d", path)
         .attr("fill", d => {
-            const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
+            const stateName = stateFPtoName[d.properties.STATEFP];
+            const countyKey = `${d.properties.NAME}, ${stateName}`;
             return caseColorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0);
         })
-        .attr("stroke", d => stateColorScale(d.properties.STATE))
+        .attr("stroke", d => {
+            const stateName = stateFPtoName[d.properties.STATEFP];
+            return stateColorScale(stateName);
+        })
         .on("mouseover", function(event, d) {
             console.log("Mouse over:", d);
             d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
-            const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
+            const stateName = stateFPtoName[d.properties.STATEFP];
+            const countyKey = `${d.properties.NAME}, ${stateName}`;
             const covidData = covidByCounty[countyKey];
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html(`${d.properties.NAME}, ${d.properties.STATE}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}`)
+            tooltip.html(`${d.properties.NAME}, ${stateName}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", function(event, d) {
-            const countyKey = `${d.properties.NAME}, ${d.properties.STATE}`;
+            const stateName = stateFPtoName[d.properties.STATEFP];
+            const countyKey = `${d.properties.NAME}, ${stateName}`;
             d3.select(this).attr("fill", caseColorScale(covidByCounty[countyKey] ? covidByCounty[countyKey].cases : 0)).attr("stroke-width", 0.5);
             tooltip.transition()
                 .duration(500)
