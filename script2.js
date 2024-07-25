@@ -99,78 +99,79 @@ Promise.all([
         maskAverage: d.weightedAverage
     }));
 
- // Create scatterplot
     const scatterplotSvg = d3.select("#scatterplot").append("svg")
-    .attr("width", scatterplotWidth)
-    .attr("height", scatterplotHeight);
-
-    console.log("Scatterplot Data:", scatterplotData);
+    .attr("width", 600)
+    .attr("height", 400);
 
     const xScale = d3.scaleLinear()
-    .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
-    .range([0, scatterplotWidth]);
+        .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
+        .range([0, 600]);
 
     const yScale = d3.scaleLinear()
-    .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
-    .range([scatterplotHeight, 0]);
+        .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
+        .range([400, 0]);
 
     scatterplotSvg.selectAll("circle")
-    .data(scatterplotData)
-    .enter().append("circle")
-    .attr("cx", d => xScale(d.cases))
-    .attr("cy", d => yScale(d.maskAverage))
-    .attr("r", 5)
-    .attr("fill", "blue");
+        .data(scatterplotData)
+        .enter().append("circle")
+        .attr("cx", d => xScale(d.cases))
+        .attr("cy", d => yScale(d.maskAverage))
+        .attr("r", 5)
+        .attr("fill", "blue");
 
     scatterplotSvg.append("g")
-    .attr("transform", `translate(0, ${scatterplotHeight})`)
-    .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+        .attr("transform", "translate(0, 400)")
+        .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
 
     scatterplotSvg.append("g")
-    .call(d3.axisLeft(yScale));
-
-    console.log("Scatterplot created.");
+        .call(d3.axisLeft(yScale));
 
 
-    // Function to update the map based on selected state
-    function updateMap(selectedState) {
-        const filteredFeatures = selectedState === "all" 
-            ? geojson.features 
-            : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
 
-        // Update the counties
-        svg.selectAll(".county")
-            .data(filteredFeatures)
-            .join("path")
-            .attr("class", "county")
-            .attr("d", path)
-            .attr("fill", d => {
-                const fips = d.properties.GEOID;
-                return caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0);
-            })
-            .attr("stroke", d => {
-                const stateName = stateFPtoName[d.properties.STATEFP];
-                return stateColorScale(stateName);
-            })
-            .on("mouseover", function(event, d) {
-                d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
-                const fips = d.properties.GEOID;
-                const covidData = combinedData[fips];
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                tooltip.html(`${d.properties.NAME}, ${stateFPtoName[d.properties.STATEFP]}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}<br>Mask Usage:<br>NEVER: ${covidData ? covidData.NEVER : "N/A"}<br>RARELY: ${covidData ? covidData.RARELY : "N/A"}<br>SOMETIMES: ${covidData ? covidData.SOMETIMES : "N/A"}<br>FREQUENTLY: ${covidData ? covidData.FREQUENTLY : "N/A"}<br>ALWAYS: ${covidData ? covidData.ALWAYS : "N/A"}`)
-                    .style("left", (event.pageX + 5) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            })
-            .on("mouseout", function(event, d) {
-                const fips = d.properties.GEOID;
-                d3.select(this).attr("fill", caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0)).attr("stroke-width", 0.5);
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-            });
+ // Function to update the map based on selected state
+function updateMap(selectedState) {
+    const filteredFeatures = selectedState === "all" 
+        ? geojson.features 
+        : geojson.features.filter(d => stateFPtoName[d.properties.STATEFP] === selectedState);
+
+    // Ensure filteredFeatures is not empty
+    if (filteredFeatures.length === 0) {
+        console.error("No features found for selected state:", selectedState);
+        return;
     }
+
+    svg.selectAll(".county")
+        .data(filteredFeatures)
+        .join("path")
+        .attr("class", "county")
+        .attr("d", path)
+        .attr("fill", d => {
+            const fips = d.properties.GEOID;
+            return caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0);
+        })
+        .attr("stroke", d => {
+            const stateName = stateFPtoName[d.properties.STATEFP];
+            return stateColorScale(stateName);
+        })
+        .on("mouseover", function(event, d) {
+            d3.select(this).attr("fill", "orange").attr("stroke-width", 1.5);
+            const fips = d.properties.GEOID;
+            const covidData = combinedData[fips];
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(`${d.properties.NAME}, ${stateFPtoName[d.properties.STATEFP]}<br>Cases: ${covidData ? covidData.cases : "N/A"}<br>Deaths: ${covidData ? covidData.deaths : "N/A"}<br>Mask Usage:<br>NEVER: ${covidData ? covidData.NEVER : "N/A"}<br>RARELY: ${covidData ? covidData.RARELY : "N/A"}<br>SOMETIMES: ${covidData ? covidData.SOMETIMES : "N/A"}<br>FREQUENTLY: ${covidData ? covidData.FREQUENTLY : "N/A"}<br>ALWAYS: ${covidData ? covidData.ALWAYS : "N/A"}`)
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(event, d) {
+            const fips = d.properties.GEOID;
+            d3.select(this).attr("fill", caseColorScale(combinedData[fips] ? combinedData[fips].cases : 0)).attr("stroke-width", 0.5);
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+}
 
     // Initial update of the map
     updateMap("all");
