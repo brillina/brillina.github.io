@@ -73,18 +73,19 @@ Promise.all([
 
     const combinedData = {};
     geojson.features.forEach(feature => {
-        if (!feature.properties || !feature.properties.NAME || !feature.properties.STATEFP || !feature.properties.GEOID) {
-            console.error("Missing properties in geojson feature:", feature);
+        const { properties } = feature;
+        if (!properties || !properties.NAME || !properties.STATEFP || !properties.GEOID) {
+            console.error("Incomplete data for feature:", feature);
             return; // Skip this feature
         }
     
-        const countyName = feature.properties.NAME;
-        const stateName = stateFPtoName[feature.properties.STATEFP];
-        const fips = feature.properties.GEOID;
+        const countyName = properties.NAME;
+        const stateName = stateFPtoName[properties.STATEFP];
+        const fips = properties.GEOID;
     
         if (!countyName || !stateName || !fips) {
             console.error("Incomplete data for feature:", feature);
-            return;
+            return; // Skip this feature
         }
     
         const countyKey = `${countyName}, ${stateName}`;
@@ -94,11 +95,12 @@ Promise.all([
         };
     });
     
+    
     console.log("Combined Data:", combinedData);
 
 
     const scatterplotData = Object.values(combinedData).map(d => ({
-        cases: d.cases || 0, // Default to 0 if data is missing
+        cases: d.cases || 0, // Use fallback values
         maskAverage: d.weightedAverage || 0
     }));
     
@@ -128,6 +130,7 @@ Promise.all([
     
     scatterplotSvg.append("g")
         .call(d3.axisLeft(yScale));
+    
     
 
 
