@@ -85,37 +85,38 @@ Promise.all([
         maskAverage: d.weightedAverage
     }));
 
-    // Create scatterplot
-    const scatterplotSvg = d3.select("#scatterplot")
-        .append("svg")
-        .attr("width", scatterplotWidth)
-        .attr("height", scatterplotHeight);
+ // Create scatterplot
+    const scatterplotSvg = d3.select("#scatterplot").append("svg")
+    .attr("width", scatterplotWidth)
+    .attr("height", scatterplotHeight);
+
+    console.log("Scatterplot Data:", scatterplotData);
 
     const xScale = d3.scaleLinear()
-        .domain([0, d3.max(scatterplotData, d => d.cases)])
-        .range([0, scatterplotWidth]);
+    .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
+    .range([0, scatterplotWidth]);
 
     const yScale = d3.scaleLinear()
-        .domain([0, d3.max(scatterplotData, d => d.maskAverage)])
-        .range([scatterplotHeight, 0]);
+    .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
+    .range([scatterplotHeight, 0]);
 
     scatterplotSvg.selectAll("circle")
-        .data(scatterplotData)
-        .enter().append("circle")
-        .attr("cx", d => xScale(d.cases))
-        .attr("cy", d => yScale(d.maskAverage))
-        .attr("r", 5)
-        .attr("fill", "blue");
-
-    // Add x and y axis
-    scatterplotSvg.append("g")
-        .attr("transform", "translate(0, " + scatterplotHeight + ")")
-        .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+    .data(scatterplotData)
+    .enter().append("circle")
+    .attr("cx", d => xScale(d.cases))
+    .attr("cy", d => yScale(d.maskAverage))
+    .attr("r", 5)
+    .attr("fill", "blue");
 
     scatterplotSvg.append("g")
-        .call(d3.axisLeft(yScale));
+    .attr("transform", `translate(0, ${scatterplotHeight})`)
+    .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+
+    scatterplotSvg.append("g")
+    .call(d3.axisLeft(yScale));
 
     console.log("Scatterplot created.");
+
 
     // Function to update the map based on selected state
     function updateMap(selectedState) {
