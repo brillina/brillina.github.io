@@ -102,6 +102,9 @@ Promise.all([
             maskAverage: d.weightedAverage
         }));
 
+    // Log scatterplot data
+    console.log("Scatterplot Data:", scatterplotData);
+
     // Set up scatterplot scales
     const svgScatter = d3.select("#scatterplot")
         .append("svg")
