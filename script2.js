@@ -39,6 +39,10 @@ Promise.all([
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
+    console.log("GeoJSON Data:", geojson);
+    console.log("COVID Data:", covidData);
+    console.log("Mask Data:", maskData);
+
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
@@ -85,8 +89,16 @@ Promise.all([
         };
     });
 
-    // Log combined data
     console.log("Combined Data:", combinedData);
+
+    // Populate dropdown
+    const stateSelect = d3.select("#select-state");
+    stateSelect.append("option").attr("value", "all").text("All States");
+    Object.values(stateFPtoName).forEach(stateName => {
+        stateSelect.append("option")
+            .attr("value", stateName)
+            .text(stateName);
+    });
 
     // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
@@ -96,7 +108,6 @@ Promise.all([
             maskAverage: d.weightedAverage
         }));
 
-    // Log scatterplot data
     console.log("Scatterplot Data:", scatterplotData);
 
     // Set up scatterplot scales
