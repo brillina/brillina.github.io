@@ -39,6 +39,7 @@ Promise.all([
     console.log("COVID Data:", covidData);
     console.log("Mask Data:", maskData);
 
+    // Process COVID data
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
@@ -47,7 +48,9 @@ Promise.all([
             deaths: +d.deaths.replace(/,/g, '')
         };
     });
+    console.log("COVID by County:", covidByCounty);
 
+    // Process mask data
     const maskByCounty = {};
     maskData.forEach(d => {
         const fips = d.fips.replace(/"/g, '').trim();  // Remove quotes and trim spaces
@@ -55,7 +58,9 @@ Promise.all([
             weightedAverage: +d.weightedAverage
         };
     });
+    console.log("Mask by County:", maskByCounty);
 
+    // Combine data
     const combinedData = {};
     geojson.features.forEach(feature => {
         const { properties } = feature;
@@ -75,17 +80,7 @@ Promise.all([
             ...maskByCounty[fips]
         };
     });
-
     console.log("Combined Data:", combinedData);
-
-    // Populate dropdown
-    const stateSelect = d3.select("#select-state");
-    stateSelect.append("option").attr("value", "all").text("All States");
-    Object.values(stateFPtoName).forEach(stateName => {
-        stateSelect.append("option")
-            .attr("value", stateName)
-            .text(stateName);
-    });
 
     // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
