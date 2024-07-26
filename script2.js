@@ -30,14 +30,10 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-function calculateWeightedAverage(row) {
-    return (row.NEVER * 0) + (row.RARELY * 1) + (row.SOMETIMES * 2) + (row.FREQUENTLY * 3) + (row.ALWAYS * 4);
-}
-
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_frequency.csv")
+    d3.csv("data/mask_averages.csv")
 ]).then(([geojson, covidData, maskData]) => {
     console.log("GeoJSON Data:", geojson);
     console.log("COVID Data:", covidData);
@@ -53,18 +49,7 @@ Promise.all([
     maskData.forEach(d => {
         const fips = d.fips.replace(/"/g, '');  // Remove quotes
         maskByCounty[fips] = {
-            NEVER: +d.NEVER,
-            RARELY: +d.RARELY,
-            SOMETIMES: +d.SOMETIMES,
-            FREQUENTLY: +d.FREQUENTLY,
-            ALWAYS: +d.ALWAYS,
-            weightedAverage: calculateWeightedAverage({
-                NEVER: +d.NEVER,
-                RARELY: +d.RARELY,
-                SOMETIMES: +d.SOMETIMES,
-                FREQUENTLY: +d.FREQUENTLY,
-                ALWAYS: +d.ALWAYS
-            })
+            weightedAverage: +d.weightedAverage
         };
     });
 
