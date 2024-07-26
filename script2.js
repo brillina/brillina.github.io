@@ -42,12 +42,15 @@ Promise.all([
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
+        covidByCounty[countyKey] = {
+            cases: +d.cases.replace(/,/g, ''),
+            deaths: +d.deaths.replace(/,/g, '')
+        };
     });
 
     const maskByCounty = {};
     maskData.forEach(d => {
-        const fips = d.fips.replace(/"/g, '');  // Remove quotes
+        const fips = d.fips.replace(/"/g, '').trim();  // Remove quotes and trim spaces
         maskByCounty[fips] = {
             weightedAverage: +d.weightedAverage
         };
@@ -66,7 +69,6 @@ Promise.all([
         }
 
         const stateName = stateFPtoName[stateFP] || "Unknown State";
-
         const countyKey = `${countyName}, ${stateName}`;
         combinedData[fips] = {
             ...covidByCounty[countyKey],
@@ -94,6 +96,11 @@ Promise.all([
         }));
 
     console.log("Scatterplot Data:", scatterplotData);
+
+    if (scatterplotData.length === 0) {
+        console.error("No data available for scatterplot.");
+        return; // Exit if no data is available
+    }
 
     // Set up scatterplot scales
     const svgScatter = d3.select("#scatterplot")
