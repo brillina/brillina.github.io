@@ -85,14 +85,8 @@ Promise.all([
         };
     });
 
-    // Populate dropdown
-    const stateSelect = d3.select("#select-state");
-    stateSelect.append("option").attr("value", "all").text("All States");
-    Object.values(stateFPtoName).forEach(stateName => {
-        stateSelect.append("option")
-            .attr("value", stateName)
-            .text(stateName);
-    });
+    // Log combined data
+    console.log("Combined Data:", combinedData);
 
     // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
