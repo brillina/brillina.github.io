@@ -135,6 +135,23 @@ Promise.all([
         .attr("transform", "translate(40, 0)")
         .call(d3.axisLeft(yScale));
 
+    // Add x-axis label
+    svgScatter.append("text")
+        .attr("class", "x axis-label")
+        .attr("x", 300)
+        .attr("y", 390)
+        .attr("text-anchor", "middle")
+        .text("Number of COVID-19 Cases");
+
+    // Add y-axis label
+    svgScatter.append("text")
+        .attr("class", "y axis-label")
+        .attr("x", -200)
+        .attr("y", 15)
+        .attr("text-anchor", "middle")
+        .attr("transform", "rotate(-90)")
+        .text("Weighted Mask-Wearing Average");
+
     function updateMap(selectedState) {
         const filteredFeatures = selectedState === "all" 
             ? geojson.features 
