@@ -1,11 +1,12 @@
 // Set up margins and dimensions
-const margin = {top: 20, right: 150, bottom: 50, left: 60}; // Increased right margin
+const margin = {top: 20, right: 30, bottom: 50, left: 60};
 const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
+const legendWidth = 150; // Width for the legend
 
 // Append SVG to the body and set up the chart area
 const svg = d3.select("#scatterplot").append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + margin.right + legendWidth)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -143,23 +144,30 @@ d3.csv("data/mask_averages.csv").then(data => {
         updateScatterplot(selectedState);
     });
 
-    // Add legend
-    const legend = svg.selectAll(".legend")
+    // Add legend container
+    const legendContainer = d3.select("#scatterplot").append("div")
+        .style("width", `${legendWidth}px`)
+        .style("height", `${height}px`)
+        .style("overflow-y", "scroll")
+        .style("float", "right")
+        .style("padding", "10px");
+
+    // Add legend items
+    const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
-        .enter().append("g")
+        .enter().append("div")
         .attr("class", "legend")
-        .attr("transform", (d, i) => `translate(${width + 10},${i * 20})`); // Move the legend to the right
+        .style("margin-bottom", "5px");
 
-    legend.append("rect")
-        .attr("x", 0)
-        .attr("width", 18)
-        .attr("height", 18)
-        .style("fill", colorScale);
+    legend.append("div")
+        .style("width", "18px")
+        .style("height", "18px")
+        .style("background-color", colorScale)
+        .style("display", "inline-block")
+        .style("vertical-align", "middle");
 
-    legend.append("text")
-        .attr("x", 24)
-        .attr("y", 9)
-        .attr("dy", ".35em")
-        .style("text-anchor", "start")
+    legend.append("span")
+        .style("margin-left", "5px")
+        .style("vertical-align", "middle")
         .text(d => d);
 });
