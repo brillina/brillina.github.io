@@ -180,4 +180,6 @@ Promise.all([
     });
 
     updateMap("all");
+}).catch(error => {
+    console.error("Error loading data:", error);
 });
