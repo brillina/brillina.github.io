@@ -2,10 +2,11 @@
 const margin = {top: 20, right: 30, bottom: 50, left: 60};
 const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
+const legendWidth = 150; // Width for the legend
 
 // Append SVG to the body and set up the chart area
 const svg = d3.select("#scatterplot").append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + margin.right + legendWidth)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -115,7 +116,7 @@ d3.csv("data/mask_averages.csv").then(data => {
 
                 // Increase the size and change color on hover
                 const originalColor = d3.color(colorScale(d.state));
-                const hoverColor = originalColor.brighter(5);
+                const hoverColor = originalColor.brighter(1);
                 d3.select(event.currentTarget)
                   .attr("r", 8)
                   .attr("fill", hoverColor)
@@ -148,18 +149,18 @@ d3.csv("data/mask_averages.csv").then(data => {
         .data(colorScale.domain())
         .enter().append("g")
         .attr("class", "legend")
-        .attr("transform", (d, i) => `translate(0,${i * 20})`);
+        .attr("transform", (d, i) => `translate(${width + 20},${i * 20})`); // Move the legend to the right
 
     legend.append("rect")
-        .attr("x", width - 18)
+        .attr("x", 0)
         .attr("width", 18)
         .attr("height", 18)
         .style("fill", colorScale);
 
     legend.append("text")
-        .attr("x", width - 24)
+        .attr("x", 24)
         .attr("y", 9)
         .attr("dy", ".35em")
-        .style("text-anchor", "end")
+        .style("text-anchor", "start")
         .text(d => d);
 });
