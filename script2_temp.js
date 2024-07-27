@@ -21,12 +21,22 @@ const yAxis = d3.axisLeft(yScale);
 // Define the color scale
 const colorScale = d3.scaleOrdinal(d3.schemeCategory10); // Use D3 color schemes
 
+// Define the tooltip
+const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 // Load the CSV data
 d3.csv("data/mask_averages.csv").then(data => {
     // Parse the data
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
         d.cases = +d.cases.replace(/,/g, ''); // Remove commas in case numbers
+        d.NEVER = +d.NEVER;
+        d.RARELY = +d.RARELY;
+        d.SOMETIMES = +d.SOMETIMES;
+        d.FREQUENTLY = +d.FREQUENTLY;
+        d.ALWAYS = +d.ALWAYS;
     });
 
     // Get the unique states for the color scale domain
@@ -77,8 +87,22 @@ d3.csv("data/mask_averages.csv").then(data => {
             .attr("cy", d => yScale(d.weightedAverage))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.state))
-            .append("title")
-              .text(d => `${d.county}, ${d.state}`); // Tooltip with county and state
+            .on("mouseover", (event, d) => {
+                tooltip.transition().duration(200).style("opacity", .9);
+                tooltip.html(`<strong>${d.county}, ${d.state}</strong><br>
+                              Cases: ${d.cases}<br>
+                              Weighted Avg: ${d.weightedAverage}<br>
+                              NEVER: ${d.NEVER}<br>
+                              RARELY: ${d.RARELY}<br>
+                              SOMETIMES: ${d.SOMETIMES}<br>
+                              FREQUENTLY: ${d.FREQUENTLY}<br>
+                              ALWAYS: ${d.ALWAYS}`)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", () => {
+                tooltip.transition().duration(500).style("opacity", 0);
+            });
     }
 
     // Initialize scatterplot with all data
