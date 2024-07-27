@@ -30,21 +30,20 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-function calculateWeightedAverage(row) {
-    return (row.NEVER * 0) + (row.RARELY * 1) + (row.SOMETIMES * 2) + (row.FREQUENTLY * 3) + (row.ALWAYS * 4);
-}
-
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_averages.csv") // Updated to use the new CSV
 ]).then(([geojson, covidData, maskData]) => {
+    if (!maskData) {
+        console.error("Mask data is undefined or not loaded properly.");
+        return;
+    }
+
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
         covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
-    }).catch(error => {
-        console.error("Error loading data:", error);
     });
 
     const maskByCounty = {};
@@ -60,25 +59,24 @@ Promise.all([
 
     const combinedData = {};
     geojson.features.forEach(feature => {
-    const { properties } = feature;
-    const stateFP = properties.STATEFP;
-    const countyName = properties.NAME;
-    const fips = properties.GEOID;
+        const { properties } = feature;
+        const stateFP = properties.STATEFP;
+        const countyName = properties.NAME;
+        const fips = properties.GEOID;
 
-    if (!stateFP || !countyName || !fips) {
-        console.error("Incomplete data for feature:", feature);
-        return; // Skip this feature
-    }
+        if (!stateFP || !countyName || !fips) {
+            console.error("Incomplete data for feature:", feature);
+            return; // Skip this feature
+        }
 
-    const stateName = stateFPtoName[stateFP] || "Unknown State";
+        const stateName = stateFPtoName[stateFP] || "Unknown State";
 
-    const countyKey = `${countyName}, ${stateName}`;
-    combinedData[fips] = {
-        ...covidByCounty[countyKey],
-        ...maskByCounty[fips]
-    };
-});
-
+        const countyKey = `${countyName}, ${stateName}`;
+        combinedData[fips] = {
+            ...covidByCounty[countyKey],
+            ...maskByCounty[fips]
+        };
+    });
 
     console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
     console.log("Combined Data:", combinedData);
