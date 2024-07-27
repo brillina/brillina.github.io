@@ -39,10 +39,11 @@ Promise.all([
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
-    console.log("COVID Data:", covidData);
-    console.log("Mask Data:", maskData);
-});
-
+    const covidByCounty = {};
+    covidData.forEach(d => {
+        const countyKey = `${d.county}, ${d.state}`;
+        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
+    });
 
     const maskByCounty = {};
     maskData.forEach(d => {
@@ -72,31 +73,23 @@ Promise.all([
         const stateFP = properties.STATEFP;
         const countyName = properties.NAME;
         const fips = properties.GEOID;
-    
+
         if (!stateFP || !countyName || !fips) {
             console.error("Incomplete data for feature:", feature);
             return; // Skip this feature
         }
-    
+
         const stateName = stateFPtoName[stateFP] || "Unknown State";
+
         const countyKey = `${countyName}, ${stateName}`;
-    
         combinedData[fips] = {
             ...covidByCounty[countyKey],
             ...maskByCounty[fips]
         };
-    
-        console.log(`Combined Data for FIPS ${fips}:`, combinedData[fips]);
     });
-    
 
     console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
     console.log("Combined Data:", combinedData);
-
-    Object.values(combinedData).forEach(d => {
-        console.log(`FIPS: ${d.fips}, Cases: ${d.cases}, Weighted Average: ${d.weightedAverage}`);
-    });    
-
 
     // Populate dropdown
     const stateSelect = d3.select("#select-state");
@@ -107,53 +100,49 @@ Promise.all([
             .text(stateName);
     });
 
+    // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
-    .filter(d => {
-        console.log("Filtering data:", d);
-        return d.cases !== undefined && d.weightedAverage !== undefined;
-    })
-    .map(d => ({
-        cases: d.cases,
-        maskAverage: d.weightedAverage
-    }));
+        .filter(d => d.cases !== undefined && d.weightedAverage !== undefined)
+        .map(d => ({
+            cases: d.cases,
+            maskAverage: d.weightedAverage
+        }));
 
     console.log("Scatterplot Data (Filtered):", scatterplotData);
 
-
     // Check scales
     const xScale = d3.scaleLinear()
-    .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
-    .range([40, 560]);
+        .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
+        .range([40, 560]);
 
     const yScale = d3.scaleLinear()
-    .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
-    .range([360, 40]);
+        .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
+        .range([360, 40]);
 
     console.log("X Scale Domain:", xScale.domain());
     console.log("Y Scale Domain:", yScale.domain());
 
     // Create scatterplot
     const svgScatter = d3.select("#scatterplot")
-    .append("svg")
-    .attr("width", 600)
-    .attr("height", 400);
+        .append("svg")
+        .attr("width", 600)
+        .attr("height", 400);
 
     svgScatter.selectAll("circle")
-    .data(scatterplotData)
-    .enter().append("circle")
-    .attr("cx", d => xScale(d.cases))
-    .attr("cy", d => yScale(d.maskAverage))
-    .attr("r", 5)
-    .attr("fill", "blue");
+        .data(scatterplotData)
+        .enter().append("circle")
+        .attr("cx", d => xScale(d.cases))
+        .attr("cy", d => yScale(d.maskAverage))
+        .attr("r", 5)
+        .attr("fill", "blue");
 
     svgScatter.append("g")
-    .attr("transform", "translate(0, 360)")
-    .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+        .attr("transform", "translate(0, 360)")
+        .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
 
     svgScatter.append("g")
-    .attr("transform", "translate(40, 0)")
-    .call(d3.axisLeft(yScale));
-
+        .attr("transform", "translate(40, 0)")
+        .call(d3.axisLeft(yScale));
 
     function updateMap(selectedState) {
         const filteredFeatures = selectedState === "all" 
@@ -201,3 +190,6 @@ Promise.all([
     });
 
     updateMap("all");
+}).catch(error => {
+    console.error("Error loading data:", error);
+});
