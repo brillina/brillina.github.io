@@ -32,6 +32,7 @@ d3.csv("data/mask_averages.csv").then(data => {
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
         d.cases = +d.cases.replace(/,/g, ''); // Remove commas in case numbers
+        d.deaths = +d.deaths;
         d.NEVER = +d.NEVER;
         d.RARELY = +d.RARELY;
         d.SOMETIMES = +d.SOMETIMES;
@@ -102,6 +103,7 @@ d3.csv("data/mask_averages.csv").then(data => {
                 tooltip.transition().duration(200).style("opacity", .9);
                 tooltip.html(`<strong>${d.county}, ${d.state}</strong><br>
                               Cases: ${d.cases}<br>
+                              Deaths: ${d.deaths}<br>
                               Weighted Avg: ${d.weightedAverage}<br>
                               NEVER: ${d.NEVER}<br>
                               RARELY: ${d.RARELY}<br>
@@ -110,9 +112,21 @@ d3.csv("data/mask_averages.csv").then(data => {
                               ALWAYS: ${d.ALWAYS}`)
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
+
+                // Increase the size and change color on hover
+                d3.select(event.currentTarget)
+                  .attr("r", 8)
+                  .attr("stroke", "black")
+                  .attr("stroke-width", 2);
             })
-            .on("mouseout", () => {
+            .on("mouseout", (event, d) => {
                 tooltip.transition().duration(500).style("opacity", 0);
+
+                // Reset the size and color when mouse leaves
+                d3.select(event.currentTarget)
+                  .attr("r", 5)
+                  .attr("stroke", null)
+                  .attr("stroke-width", null);
             });
     }
 
