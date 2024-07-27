@@ -37,7 +37,7 @@ function calculateWeightedAverage(row) {
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_frequency.csv")
+    d3.csv("data/mask_averages.csv")
 ]).then(([geojson, covidData, maskData]) => {
     const covidByCounty = {};
     covidData.forEach(d => {
