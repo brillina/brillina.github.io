@@ -35,8 +35,7 @@ function calculateWeightedAverage(row) {
 }
 
 const maskData = [
-    { fips: "01001", NEVER: "5", RARELY: "10", SOMETIMES: "20", FREQUENTLY: "30", ALWAYS: "35" },
-    // Add more mock data as needed
+    { fips: "01001", NEVER: "5", RARELY: "10", SOMETIMES: "20", FREQUENTLY: "30", ALWAYS: "35" }
 ];
 
 
