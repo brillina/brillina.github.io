@@ -64,6 +64,9 @@ Promise.all([
         };
     });
 
+    console.log("COVID Data by County:", covidByCounty);
+    console.log("Mask Data by County:", maskByCounty);
+
     const combinedData = {};
     geojson.features.forEach(feature => {
         const { properties } = feature;
@@ -85,6 +88,8 @@ Promise.all([
         };
     });
 
+    console.log("Combined Data:", combinedData);
+
     // Populate dropdown
     const stateSelect = d3.select("#select-state");
     stateSelect.append("option").attr("value", "all").text("All States");
@@ -101,6 +106,8 @@ Promise.all([
             cases: d.cases,
             maskAverage: d.weightedAverage
         }));
+
+    console.log("Scatterplot Data:", scatterplotData);
 
     // Set up scatterplot scales
     const svgScatter = d3.select("#scatterplot")
