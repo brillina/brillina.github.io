@@ -100,53 +100,50 @@ Promise.all([
     });
 
     // Prepare scatterplot data
+ // Populate scatterplotData with valid entries
     const scatterplotData = Object.values(combinedData)
-        .filter(d => {
-            if (d.cases === undefined || d.weightedAverage === undefined) {
-                console.log("Missing data for:", d);
-                return false;
-            }
-            return true;
-        })
-        .map(d => ({
-            cases: d.cases,
-            maskAverage: d.weightedAverage
-        }));
+    .filter(d => d.cases !== undefined && d.weightedAverage !== undefined)
+    .map(d => ({
+        cases: d.cases,
+        maskAverage: d.weightedAverage
+    }));
 
     console.log("Scatterplot Data (Filtered):", scatterplotData);
 
-    // Set up scatterplot scales
-    const svgScatter = d3.select("#scatterplot")
-        .append("svg")
-        .attr("width", 600)
-        .attr("height", 400);
-
+    // Check scales
     const xScale = d3.scaleLinear()
-        .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
-        .range([40, 560]);  // Added padding for axes
+    .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
+    .range([40, 560]);
 
     const yScale = d3.scaleLinear()
-        .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
-        .range([360, 40]);  // Inverted range for y-axis
+    .domain([0, d3.max(scatterplotData, d => d.maskAverage) || 1])
+    .range([360, 40]);
+
+    console.log("X Scale Domain:", xScale.domain());
+    console.log("Y Scale Domain:", yScale.domain());
 
     // Create scatterplot
+    const svgScatter = d3.select("#scatterplot")
+    .append("svg")
+    .attr("width", 600)
+    .attr("height", 400);
+
     svgScatter.selectAll("circle")
-        .data(scatterplotData)
-        .enter().append("circle")
-        .attr("cx", d => xScale(d.cases))
-        .attr("cy", d => yScale(d.maskAverage))
-        .attr("r", 5)
-        .attr("fill", "blue");
+    .data(scatterplotData)
+    .enter().append("circle")
+    .attr("cx", d => xScale(d.cases))
+    .attr("cy", d => yScale(d.maskAverage))
+    .attr("r", 5)
+    .attr("fill", "blue");
 
-    // Add x-axis
     svgScatter.append("g")
-        .attr("transform", "translate(0, 360)")
-        .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
+    .attr("transform", "translate(0, 360)")
+    .call(d3.axisBottom(xScale).tickFormat(d3.format(".0s")));
 
-    // Add y-axis
     svgScatter.append("g")
-        .attr("transform", "translate(40, 0)")
-        .call(d3.axisLeft(yScale));
+    .attr("transform", "translate(40, 0)")
+    .call(d3.axisLeft(yScale));
+
 
     function updateMap(selectedState) {
         const filteredFeatures = selectedState === "all" 
