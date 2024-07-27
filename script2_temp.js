@@ -18,13 +18,20 @@ const yScale = d3.scaleLinear().range([height, 0]);
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
 
+// Define the color scale
+const colorScale = d3.scaleOrdinal(d3.schemeCategory10); // Use D3 color schemes
+
 // Load the CSV data
-d3.csv("data/mask_averages.csv").then(data => {
+d3.csv("mask_averages.csv").then(data => {
     // Parse the data
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
         d.cases = +d.cases.replace(/,/g, ''); // Remove commas in case numbers
     });
+
+    // Get the unique states for the color scale domain
+    const states = Array.from(new Set(data.map(d => d.state)));
+    colorScale.domain(states);
 
     // Set domains for scales
     xScale.domain(d3.extent(data, d => d.cases)).nice();
@@ -61,6 +68,7 @@ d3.csv("data/mask_averages.csv").then(data => {
         .attr("cx", d => xScale(d.cases))
         .attr("cy", d => yScale(d.weightedAverage))
         .attr("r", 5)
+        .attr("fill", d => colorScale(d.state))
         .append("title")
-          .text(d => d.fips); // Tooltip with fips
+          .text(d => `${d.county}, ${d.state}`); // Tooltip with county and state
 });
