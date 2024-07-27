@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map with Mask Usage</title>
+    <title>Scatterplot with State Filter</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         .dot {
@@ -22,9 +22,6 @@
             border-radius: 8px;
             pointer-events: none;
         }
-        #map {
-            position: relative;
-        }
         #scatterplot {
             margin-top: 20px;
         }
@@ -34,9 +31,8 @@
     <!-- Dropdown Menu -->
     <label for="select-state">Select a State:</label>
     <select id="select-state">
-        <!-- <option value="all">All States</option> -->
+        <!-- Options will be added by JavaScript -->
     </select>
-    <div id="map"></div>
     <div id="scatterplot"></div> <!-- Scatterplot will be rendered here -->
     <script src="script2_temp.js"></script>
     <p>

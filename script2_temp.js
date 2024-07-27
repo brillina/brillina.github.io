@@ -3,37 +3,12 @@ const margin = {top: 20, right: 30, bottom: 50, left: 60};
 const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 
-
 // Append SVG to the body and set up the chart area
-const svg = d3.select("svg")
+const svg = d3.select("#scatterplot").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
-
-const stateFPtoName = {
-        "01": "Alabama", "02": "Alaska", "04": "Arizona", "05": "Arkansas", 
-        "06": "California", "08": "Colorado", "09": "Connecticut", "10": "Delaware", 
-        "11": "District of Columbia", "12": "Florida", "13": "Georgia", "15": "Hawaii", 
-        "16": "Idaho", "17": "Illinois", "18": "Indiana", "19": "Iowa", "20": "Kansas", 
-        "21": "Kentucky", "22": "Louisiana", "23": "Maine", "24": "Maryland", 
-        "25": "Massachusetts", "26": "Michigan", "27": "Minnesota", "28": "Mississippi", 
-        "29": "Missouri", "30": "Montana", "31": "Nebraska", "32": "Nevada", 
-        "33": "New Hampshire", "34": "New Jersey", "35": "New Mexico", "36": "New York", 
-        "37": "North Carolina", "38": "North Dakota", "39": "Ohio", "40": "Oklahoma", 
-        "41": "Oregon", "42": "Pennsylvania", "44": "Rhode Island", "45": "South Carolina", 
-        "46": "South Dakota", "47": "Tennessee", "48": "Texas", "49": "Utah", 
-        "50": "Vermont", "51": "Virginia", "53": "Washington", "54": "West Virginia", 
-        "55": "Wisconsin", "56": "Wyoming"
-    };
-
-const stateSelect = d3.select("#select-state");
-stateSelect.append("option").attr("value", "all").text("All States");
-Object.values(stateFPtoName).forEach(stateName => {
-    stateSelect.append("option")
-        .attr("value", stateName)
-        .text(stateName);
-});
 
 // Define the scales
 const xScale = d3.scaleLinear().range([0, width]);
@@ -85,15 +60,33 @@ d3.csv("data/mask_averages.csv").then(data => {
         .attr("transform", "rotate(-90)")
         .text("Weighted Average");
 
-    // Append dots
-    svg.selectAll(".dot")
-        .data(data)
-      .enter().append("circle")
-        .attr("class", "dot")
-        .attr("cx", d => xScale(d.cases))
-        .attr("cy", d => yScale(d.weightedAverage))
-        .attr("r", 5)
-        .attr("fill", d => colorScale(d.state))
-        .append("title")
-          .text(d => `${d.county}, ${d.state}`); // Tooltip with county and state
+    // Function to update the scatterplot
+    function updateScatterplot(selectedState) {
+        // Filter data based on the selected state
+        const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
+
+        // Remove existing dots
+        svg.selectAll(".dot").remove();
+
+        // Append dots
+        svg.selectAll(".dot")
+            .data(filteredData)
+          .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => xScale(d.cases))
+            .attr("cy", d => yScale(d.weightedAverage))
+            .attr("r", 5)
+            .attr("fill", d => colorScale(d.state))
+            .append("title")
+              .text(d => `${d.county}, ${d.state}`); // Tooltip with county and state
+    }
+
+    // Initialize scatterplot with all data
+    updateScatterplot("all");
+
+    // Handle dropdown change
+    d3.select("#select-state").on("change", function() {
+        const selectedState = d3.select(this).property("value");
+        updateScatterplot(selectedState);
+    });
 });
