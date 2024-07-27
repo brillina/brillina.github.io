@@ -34,16 +34,23 @@ function calculateWeightedAverage(row) {
     return (row.NEVER * 0) + (row.RARELY * 1) + (row.SOMETIMES * 2) + (row.FREQUENTLY * 3) + (row.ALWAYS * 4);
 }
 
+const maskData = [
+    { fips: "01001", NEVER: "5", RARELY: "10", SOMETIMES: "20", FREQUENTLY: "30", ALWAYS: "35" },
+    // Add more mock data as needed
+];
+
+
 Promise.all([
     d3.json("data/counties.geojson"),
-    d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_frequency.csv")
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv").catch(error => {
+        console.error("Error loading mask frequency data:", error);
+        return []; // Return empty array to avoid breaking the code
+    })
 ]).then(([geojson, covidData, maskData]) => {
-    const covidByCounty = {};
-    covidData.forEach(d => {
-        const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
-    });
+    if (!maskData) {
+        console.error("Mask data is undefined or empty.");
+        return;
+    }
 
     const maskByCounty = {};
     maskData.forEach(d => {
