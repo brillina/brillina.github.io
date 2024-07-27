@@ -47,7 +47,7 @@ const yAxis = d3.axisLeft(yScale);
 const colorScale = d3.scaleOrdinal(d3.schemeCategory10); // Use D3 color schemes
 
 // Load the CSV data
-d3.csv("mask_averages.csv").then(data => {
+d3.csv("data/mask_averages.csv").then(data => {
     // Parse the data
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
