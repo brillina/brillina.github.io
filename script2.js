@@ -101,14 +101,19 @@ Promise.all([
 
     // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
-        .filter(d => d.cases !== undefined && d.weightedAverage !== undefined)
+        .filter(d => {
+            if (d.cases === undefined || d.weightedAverage === undefined) {
+                console.log("Missing data for:", d);
+                return false;
+            }
+            return true;
+        })
         .map(d => ({
             cases: d.cases,
             maskAverage: d.weightedAverage
         }));
 
-    console.log("Scatterplot Data (Filtered):", scatterplotData.filter(d => d.cases !== undefined && d.maskAverage !== undefined));
-    console.log("Scatterplot Data:", scatterplotData);
+    console.log("Scatterplot Data (Filtered):", scatterplotData);
 
     // Set up scatterplot scales
     const svgScatter = d3.select("#scatterplot")
