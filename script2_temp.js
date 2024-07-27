@@ -19,7 +19,7 @@ const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
 
 // Load the CSV data
-d3.csv("data/mask_averages.csv").then(data => {
+d3.csv('data/mask_averages.csv').then(data => {
     // Parse the data
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
