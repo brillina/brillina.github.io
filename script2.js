@@ -39,11 +39,10 @@ Promise.all([
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
     d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
-    const covidByCounty = {};
-    covidData.forEach(d => {
-        const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
-    });
+    console.log("COVID Data:", covidData);
+    console.log("Mask Data:", maskData);
+});
+
 
     const maskByCounty = {};
     maskData.forEach(d => {
@@ -73,22 +72,31 @@ Promise.all([
         const stateFP = properties.STATEFP;
         const countyName = properties.NAME;
         const fips = properties.GEOID;
-
+    
         if (!stateFP || !countyName || !fips) {
             console.error("Incomplete data for feature:", feature);
             return; // Skip this feature
         }
-
+    
         const stateName = stateFPtoName[stateFP] || "Unknown State";
-
         const countyKey = `${countyName}, ${stateName}`;
+    
         combinedData[fips] = {
             ...covidByCounty[countyKey],
             ...maskByCounty[fips]
         };
+    
+        console.log(`Combined Data for FIPS ${fips}:`, combinedData[fips]);
     });
+    
 
     console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
+    console.log("Combined Data:", combinedData);
+
+    Object.values(combinedData).forEach(d => {
+        console.log(`FIPS: ${d.fips}, Cases: ${d.cases}, Weighted Average: ${d.weightedAverage}`);
+    });    
+
 
     // Populate dropdown
     const stateSelect = d3.select("#select-state");
@@ -99,16 +107,18 @@ Promise.all([
             .text(stateName);
     });
 
-    // Prepare scatterplot data
- // Populate scatterplotData with valid entries
     const scatterplotData = Object.values(combinedData)
-    .filter(d => d.cases !== undefined && d.weightedAverage !== undefined)
+    .filter(d => {
+        console.log("Filtering data:", d);
+        return d.cases !== undefined && d.weightedAverage !== undefined;
+    })
     .map(d => ({
         cases: d.cases,
         maskAverage: d.weightedAverage
     }));
 
     console.log("Scatterplot Data (Filtered):", scatterplotData);
+
 
     // Check scales
     const xScale = d3.scaleLinear()
@@ -191,6 +201,3 @@ Promise.all([
     });
 
     updateMap("all");
-}).catch(error => {
-    console.error("Error loading data:", error);
-});
