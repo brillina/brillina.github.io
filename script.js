@@ -135,6 +135,4 @@ Promise.all([
         });
 
     console.log("Counties drawn.");
-}).catch(error => {
-    console.error("Error loading the data:", error);
 });
