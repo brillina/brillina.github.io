@@ -30,37 +30,40 @@ const stateFPtoName = {
 const caseColorScale = d3.scaleSequential(d3.interpolateReds).domain([0, 10000]);
 const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
+function calculateWeightedAverage(row) {
+    return (row.NEVER * 0) + (row.RARELY * 1) + (row.SOMETIMES * 2) + (row.FREQUENTLY * 3) + (row.ALWAYS * 4);
+}
+
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_averages.csv")
+    d3.csv("data/mask_frequency.csv")
 ]).then(([geojson, covidData, maskData]) => {
-    console.log("GeoJSON Data:", geojson);
-    console.log("COVID Data:", covidData);
-    console.log("Mask Data:", maskData);
-
-    // Process COVID data
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
-        covidByCounty[countyKey] = {
-            cases: +d.cases.replace(/,/g, ''),
-            deaths: +d.deaths.replace(/,/g, '')
-        };
+        covidByCounty[countyKey] = { cases: +d.cases.replace(/,/g, ''), deaths: +d.deaths.replace(/,/g, '') };
     });
-    console.log("COVID by County:", covidByCounty);
 
-    // Process mask data
     const maskByCounty = {};
     maskData.forEach(d => {
-        const fips = d.fips.replace(/"/g, '').trim();  // Remove quotes and trim spaces
+        const fips = d.fips.replace(/"/g, '');  // Remove quotes
         maskByCounty[fips] = {
-            weightedAverage: +d.weightedAverage
+            NEVER: +d.NEVER,
+            RARELY: +d.RARELY,
+            SOMETIMES: +d.SOMETIMES,
+            FREQUENTLY: +d.FREQUENTLY,
+            ALWAYS: +d.ALWAYS,
+            weightedAverage: calculateWeightedAverage({
+                NEVER: +d.NEVER,
+                RARELY: +d.RARELY,
+                SOMETIMES: +d.SOMETIMES,
+                FREQUENTLY: +d.FREQUENTLY,
+                ALWAYS: +d.ALWAYS
+            })
         };
     });
-    console.log("Mask by County:", maskByCounty);
 
-    // Combine data
     const combinedData = {};
     geojson.features.forEach(feature => {
         const { properties } = feature;
@@ -74,13 +77,22 @@ Promise.all([
         }
 
         const stateName = stateFPtoName[stateFP] || "Unknown State";
+
         const countyKey = `${countyName}, ${stateName}`;
         combinedData[fips] = {
             ...covidByCounty[countyKey],
             ...maskByCounty[fips]
         };
     });
-    console.log("Combined Data:", combinedData);
+
+    // Populate dropdown
+    const stateSelect = d3.select("#select-state");
+    stateSelect.append("option").attr("value", "all").text("All States");
+    Object.values(stateFPtoName).forEach(stateName => {
+        stateSelect.append("option")
+            .attr("value", stateName)
+            .text(stateName);
+    });
 
     // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
@@ -89,13 +101,6 @@ Promise.all([
             cases: d.cases,
             maskAverage: d.weightedAverage
         }));
-
-    console.log("Scatterplot Data:", scatterplotData);
-
-    if (scatterplotData.length === 0) {
-        console.error("No data available for scatterplot.");
-        return; // Exit if no data is available
-    }
 
     // Set up scatterplot scales
     const svgScatter = d3.select("#scatterplot")
@@ -129,23 +134,6 @@ Promise.all([
     svgScatter.append("g")
         .attr("transform", "translate(40, 0)")
         .call(d3.axisLeft(yScale));
-
-    // Add x-axis label
-    svgScatter.append("text")
-        .attr("class", "x axis-label")
-        .attr("x", 300)
-        .attr("y", 390)
-        .attr("text-anchor", "middle")
-        .text("Number of COVID-19 Cases");
-
-    // Add y-axis label
-    svgScatter.append("text")
-        .attr("class", "y axis-label")
-        .attr("x", -200)
-        .attr("y", 15)
-        .attr("text-anchor", "middle")
-        .attr("transform", "rotate(-90)")
-        .text("Weighted Mask-Wearing Average");
 
     function updateMap(selectedState) {
         const filteredFeatures = selectedState === "all" 
