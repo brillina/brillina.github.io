@@ -39,8 +39,19 @@ d3.csv("data/mask_averages.csv").then(data => {
         d.ALWAYS = +d.ALWAYS;
     });
 
-    // Get the unique states for the color scale domain
+    // Get the unique states for the dropdown menu
     const states = Array.from(new Set(data.map(d => d.state)));
+
+    // Populate the dropdown menu
+    const stateSelect = d3.select("#select-state");
+    stateSelect.append("option").attr("value", "all").text("All States");
+    states.forEach(stateName => {
+        stateSelect.append("option")
+            .attr("value", stateName)
+            .text(stateName);
+    });
+
+    // Get the unique states for the color scale domain
     colorScale.domain(states);
 
     // Set domains for scales
