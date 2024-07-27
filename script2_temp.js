@@ -116,7 +116,7 @@ d3.csv("data/mask_averages.csv").then(data => {
 
                 // Increase the size and change color on hover
                 const originalColor = d3.color(colorScale(d.state));
-                const hoverColor = originalColor.brighter(1);
+                const hoverColor = originalColor.brighter(2);
                 d3.select(event.currentTarget)
                   .attr("r", 8)
                   .attr("fill", hoverColor)
