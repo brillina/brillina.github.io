@@ -114,8 +114,11 @@ d3.csv("data/mask_averages.csv").then(data => {
                     .style("top", (event.pageY - 28) + "px");
 
                 // Increase the size and change color on hover
+                const originalColor = d3.color(colorScale(d.state));
+                const hoverColor = originalColor.brighter(1);
                 d3.select(event.currentTarget)
                   .attr("r", 8)
+                  .attr("fill", hoverColor)
                   .attr("stroke", "black")
                   .attr("stroke-width", 2);
             })
@@ -125,6 +128,7 @@ d3.csv("data/mask_averages.csv").then(data => {
                 // Reset the size and color when mouse leaves
                 d3.select(event.currentTarget)
                   .attr("r", 5)
+                  .attr("fill", colorScale(d.state))
                   .attr("stroke", null)
                   .attr("stroke-width", null);
             });
