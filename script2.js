@@ -88,7 +88,7 @@ Promise.all([
         };
     });
 
-    console.log("Combined Data:", combinedData);
+    console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
 
     // Populate dropdown
     const stateSelect = d3.select("#select-state");
@@ -188,7 +188,6 @@ Promise.all([
     });
 
     updateMap("all");
-
 }).catch(error => {
-    console.error("Error loading the data:", error);
+    console.error("Error loading data:", error);
 });
