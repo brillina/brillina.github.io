@@ -107,6 +107,7 @@ Promise.all([
             maskAverage: d.weightedAverage
         }));
 
+    console.log("Scatterplot Data (Filtered):", scatterplotData.filter(d => d.cases !== undefined && d.maskAverage !== undefined));
     console.log("Scatterplot Data:", scatterplotData);
 
     // Set up scatterplot scales
