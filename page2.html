@@ -41,21 +41,30 @@
     </p>
     <script>// Function to load and process data
         async function loadData() {
-            const casesDeathsData = await d3.csv("filtered_total_cases_deaths_per_county.csv");
-            const maskData = await d3.csv("mask_frequency.csv");
+            try {
+                const casesDeathsData = await d3.csv("filtered_total_cases_deaths_per_county.csv");
+                const maskData = await d3.csv("mask_frequency.csv");
         
-            const mergedData = casesDeathsData.map(casesRow => {
-                const maskRow = maskData.find(maskRow => maskRow.fips === casesRow.fips);
-                if (maskRow) {
-                    return {
-                        ...casesRow,
-                        ...maskRow
-                    };
-                }
-                return null;
-            }).filter(row => row !== null);
+                console.log("Cases and Deaths Data:", casesDeathsData);
+                console.log("Mask Frequency Data:", maskData);
         
-            return mergedData;
+                const mergedData = casesDeathsData.map(casesRow => {
+                    const maskRow = maskData.find(maskRow => maskRow.fips === casesRow.fips);
+                    if (maskRow) {
+                        return {
+                            ...casesRow,
+                            ...maskRow
+                        };
+                    }
+                    return null;
+                }).filter(row => row !== null);
+        
+                console.log("Merged Data:", mergedData);
+                return mergedData;
+            } catch (error) {
+                console.error("Error loading data:", error);
+                return [];
+            }
         }
         
         // Function to render scatterplot
