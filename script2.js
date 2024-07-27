@@ -90,7 +90,7 @@ Promise.all([
     });
     
 
-    // console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
+    console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
     console.log("Combined Data:", combinedData);
 
     Object.values(combinedData).forEach(d => {
