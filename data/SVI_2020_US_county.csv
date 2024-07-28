@@ -1,0 +1,3084 @@
+STATE,COUNTY,FIPS,SVI,cases
+Alabama,Autauga,"1,001",0.513,"8,443"
+Alabama,Baldwin,"1,003",0.3103,"5,248"
+Alabama,Barbour,"1,005",0.9927,"4,861"
+Alabama,Bibb,"1,007",0.8078,"2,696"
+Alabama,Blount,"1,009",0.5137,"3,617"
+Alabama,Bullock,"1,011",0.831,"4,898"
+Alabama,Butler,"1,013",0.6843,"8,329"
+Alabama,Calhoun,"1,015",0.7349,"5,601"
+Alabama,Chambers,"1,017",0.8074,"8,634"
+Alabama,Cherokee,"1,019",0.3269,"1,449"
+Alabama,Chilton,"1,021",0.7222,"3,758"
+Alabama,Choctaw,"1,023",0.7116,"2,663"
+Alabama,Clarke,"1,025",0.8552,"3,825"
+Alabama,Clay,"1,027",0.5309,966
+Alabama,Cleburne,"1,029",0.4542,525
+Alabama,Coffee,"1,031",0.6489,"5,271"
+Alabama,Colbert,"1,033",0.3475,"6,004"
+Alabama,Conecuh,"1,035",0.6575,"2,869"
+Alabama,Coosa,"1,037",0.436,801
+Alabama,Covington,"1,039",0.7075,"5,213"
+Alabama,Crenshaw,"1,041",0.6025,"1,712"
+Alabama,Cullman,"1,043",0.5156,"6,913"
+Alabama,Dale,"1,045",0.8065,"4,406"
+Alabama,Dallas,"1,047",0.9157,"8,200"
+Alabama,DeKalb,"1,049",0.7387,"8,766"
+Alabama,Elmore,"1,051",0.4564,"6,496"
+Alabama,Escambia,"1,053",0.8708,"5,490"
+Alabama,Etowah,"1,055",0.6483,"8,051"
+Alabama,Fayette,"1,057",0.6725,"1,032"
+Alabama,Franklin,"1,059",0.7298,"11,925"
+Alabama,Geneva,"1,061",0.5691,"1,148"
+Alabama,Greene,"1,063",0.9513,"2,468"
+Alabama,Hale,"1,065",0.9351,"4,346"
+Alabama,Henry,"1,067",0.5646,"1,868"
+Alabama,Houston,"1,069",0.7021,"7,234"
+Alabama,Jackson,"1,071",0.5528,"4,583"
+Alabama,Jefferson,"1,073",0.7562,0
+Alabama,Lamar,"1,075",0.5519,"1,077"
+Alabama,Lauderdale,"1,077",0.4745,"6,923"
+Alabama,Lawrence,"1,079",0.4239,"1,587"
+Alabama,Lee,"1,081",0.6795,0
+Alabama,Limestone,"1,083",0.4602,"7,272"
+Alabama,Lowndes,"1,085",0.8997,"6,249"
+Alabama,Macon,"1,087",0.8896,"2,700"
+Alabama,Madison,"1,089",0.3596,0
+Alabama,Marengo,"1,091",0.8113,"4,281"
+Alabama,Marion,"1,093",0.6833,"3,343"
+Alabama,Marshall,"1,095",0.6222,0
+Alabama,Mobile,"1,097",0.7947,0
+Alabama,Monroe,"1,099",0.7241,"3,229"
+Alabama,Montgomery,"1,101",0.9032,0
+Alabama,Morgan,"1,103",0.6413,0
+Alabama,Perry,"1,105",0.9137,"2,642"
+Alabama,Pickens,"1,107",0.9379,"3,266"
+Alabama,Pike,"1,109",0.8059,"5,947"
+Alabama,Randolph,"1,111",0.5347,"3,046"
+Alabama,Russell,"1,113",0.8918,"8,057"
+Alabama,St. Clair,"1,115",0.3224,"6,089"
+Alabama,Shelby,"1,117",0.1155,0
+Alabama,Sumter,"1,119",0.9653,"3,756"
+Alabama,Talladega,"1,121",0.8768,"4,708"
+Alabama,Tallapoosa,"1,123",0.8927,"8,039"
+Alabama,Tuscaloosa,"1,125",0.682,0
+Alabama,Walker,"1,127",0.6875,"5,670"
+Alabama,Washington,"1,129",0.4599,"1,671"
+Alabama,Wilcox,"1,131",0.9208,"3,911"
+Alabama,Winston,"1,133",0.6852,"3,646"
+Alaska,Aleutians East Borough,"2,013",0.6442,26
+Alaska,Aleutians West Census Area,"2,016",0.4959,72
+Alaska,Anchorage,"2,020",0.5761,"8,669"
+Alaska,Bethel Census Area,"2,050",0.9542,183
+Alaska,Denali,"2,068",0.2155,13
+Alaska,Dillingham,"2,070",0.9363,272
+Alaska,Fairbanks North Star,"2,090",0.5264,"2,764"
+Alaska,Haines,"2,100",0.5248,78
+Alaska,Juneau City and Borough,"2,110",0.3526,682
+Alaska,Kenai Peninsula,"2,122",0.5236,"2,569"
+Alaska,Ketchikan Gateway,"2,130",0.6518,405
+Alaska,Kodiak Island,"2,150",0.7667,128
+Alaska,Kusilvak,"2,158",0.8988,19
+Alaska,Matanuska-Susitna,"2,170",0.499,"1,680"
+Alaska,Nome,"2,180",0.9367,171
+Alaska,North Slope,"2,185",0.8555,57
+Alaska,Northwest Arctic,"2,188",0.9153,74
+Alaska,Petersburg,"2,195",0.6556,93
+Alaska,Prince of Wales-Hyder,"2,198",0.8339,39
+Alaska,Sitka City and Borough,"2,220",0.4809,234
+Alaska,Southeast Fairbanks,"2,240",0.6878,233
+Alaska,Wrangell City and Borough,"2,275",0.4911,104
+Alaska,Yukon-Koyukuk,"2,290",0.8657,85
+Arizona,Apache,"4,001",0.965,0
+Arizona,Cochise,"4,003",0.9243,"7,494"
+Arizona,Coconino,"4,005",0.8259,0
+Arizona,Gila,"4,007",0.8205,"5,018"
+Arizona,Graham,"4,009",0.8819,"2,206"
+Arizona,Greenlee,"4,011",0.3571,341
+Arizona,La Paz,"4,012",0.9481,"4,948"
+Arizona,Maricopa,"4,013",0.7397,0
+Arizona,Mohave,"4,015",0.8695,0
+Arizona,Navajo,"4,017",0.9901,0
+Arizona,Pima,"4,019",0.9118,0
+Arizona,Pinal,"4,021",0.8377,0
+Arizona,Santa Cruz,"4,023",0.9449,0
+Arizona,Yavapai,"4,025",0.6187,"5,496"
+Arizona,Yuma,"4,027",0.9936,0
+Arkansas,Arkansas,"5,001",0.6967,610
+Arkansas,Ashley,"5,003",0.6706,"1,170"
+Arkansas,Baxter,"5,005",0.3094,346
+Arkansas,Benton,"5,007",0.33,0
+Arkansas,Boone,"5,009",0.2909,506
+Arkansas,Bradley,"5,011",0.9074,828
+Arkansas,Calhoun,"5,013",0.5474,28
+Arkansas,Carroll,"5,015",0.6413,"2,679"
+Arkansas,Chicot,"5,017",0.9968,"2,475"
+Arkansas,Clark,"5,019",0.8603,841
+Arkansas,Clay,"5,021",0.4624,953
+Arkansas,Cleburne,"5,023",0.2686,"1,559"
+Arkansas,Cleveland,"5,025",0.2616,413
+Arkansas,Columbia,"5,027",0.8609,"1,273"
+Arkansas,Conway,"5,029",0.7486,"1,047"
+Arkansas,Craighead,"5,031",0.788,"6,641"
+Arkansas,Crawford,"5,033",0.6369,"3,097"
+Arkansas,Crittenden,"5,035",0.9252,"10,474"
+Arkansas,Cross,"5,037",0.8479,"1,209"
+Arkansas,Dallas,"5,039",0.7355,138
+Arkansas,Desha,"5,041",0.9271,901
+Arkansas,Drew,"5,043",0.6324,"1,066"
+Arkansas,Faulkner,"5,045",0.5185,"8,667"
+Arkansas,Franklin,"5,047",0.5665,369
+Arkansas,Fulton,"5,049",0.6381,212
+Arkansas,Garland,"5,051",0.8902,"3,935"
+Arkansas,Grant,"5,053",0.1687,662
+Arkansas,Greene,"5,055",0.6493,"1,754"
+Arkansas,Hempstead,"5,057",0.9102,912
+Arkansas,Hot Spring,"5,059",0.641,"5,778"
+Arkansas,Howard,"5,061",0.8851,"1,534"
+Arkansas,Independence,"5,063",0.6824,851
+Arkansas,Izard,"5,065",0.5563,313
+Arkansas,Jackson,"5,067",0.6862,470
+Arkansas,Jefferson,"5,069",0.944,"10,388"
+Arkansas,Johnson,"5,071",0.8437,"4,130"
+Arkansas,Lafayette,"5,073",0.8577,312
+Arkansas,Lawrence,"5,075",0.5802,"1,413"
+Arkansas,Lee,"5,077",0.9739,"10,505"
+Arkansas,Lincoln,"5,079",0.3966,0
+Arkansas,Little River,"5,081",0.4048,540
+Arkansas,Logan,"5,083",0.5083,879
+Arkansas,Lonoke,"5,085",0.3046,"2,356"
+Arkansas,Madison,"5,087",0.5146,"2,750"
+Arkansas,Marion,"5,089",0.444,160
+Arkansas,Miller,"5,091",0.8972,"2,858"
+Arkansas,Mississippi,"5,093",0.9227,"3,378"
+Arkansas,Monroe,"5,095",0.8962,242
+Arkansas,Montgomery,"5,097",0.5745,85
+Arkansas,Nevada,"5,099",0.7441,"1,385"
+Arkansas,Newton,"5,101",0.2078,105
+Arkansas,Ouachita,"5,103",0.8654,358
+Arkansas,Perry,"5,105",0.3857,436
+Arkansas,Phillips,"5,107",0.9017,"2,136"
+Arkansas,Pike,"5,109",0.5551,192
+Arkansas,Poinsett,"5,111",0.739,869
+Arkansas,Polk,"5,113",0.8501,"1,067"
+Arkansas,Pope,"5,115",0.7607,"7,373"
+Arkansas,Prairie,"5,117",0.4672,334
+Arkansas,Pulaski,"5,119",0.7635,0
+Arkansas,Randolph,"5,121",0.6531,820
+Arkansas,St. Francis,"5,123",0.9835,"11,563"
+Arkansas,Saline,"5,125",0.2947,"5,237"
+Arkansas,Scott,"5,127",0.8533,188
+Arkansas,Searcy,"5,129",0.3262,180
+Arkansas,Sebastian,"5,131",0.8511,"9,060"
+Arkansas,Sevier,"5,133",0.782,"9,999"
+Arkansas,Sharp,"5,135",0.5831,792
+Arkansas,Stone,"5,137",0.6951,254
+Arkansas,Union,"5,139",0.7011,"3,416"
+Arkansas,Van Buren,"5,141",0.7588,451
+Arkansas,Washington,"5,143",0.7852,0
+Arkansas,White,"5,145",0.81,"1,489"
+Arkansas,Woodruff,"5,147",0.7444,124
+Arkansas,Yell,"5,149",0.7346,"9,973"
+California,Alameda,"6,001",0.515,0
+California,Alpine,"6,003",0.5041,13
+California,Amador,"6,005",0.5942,437
+California,Butte,"6,007",0.8294,"3,811"
+California,Calaveras,"6,009",0.324,791
+California,Colusa,"6,011",0.7642,"1,259"
+California,Contra Costa,"6,013",0.4736,0
+California,Del Norte,"6,015",0.9462,756
+California,El Dorado,"6,017",0.2266,"3,582"
+California,Fresno,"6,019",0.9609,0
+California,Glenn,"6,021",0.8854,"1,845"
+California,Humboldt,"6,023",0.8278,"2,041"
+California,Imperial,"6,025",0.9946,0
+California,Inyo,"6,027",0.5293,429
+California,Kern,"6,029",0.9694,0
+California,Kings,"6,031",0.9459,0
+California,Lake,"6,033",0.895,"1,317"
+California,Lassen,"6,035",0.6353,"3,731"
+California,Los Angeles,"6,037",0.8584,0
+California,Madera,"6,039",0.9348,"8,306"
+California,Marin,"6,041",0.3316,0
+California,Mariposa,"6,043",0.83,399
+California,Mendocino,"6,045",0.9561,"1,397"
+California,Merced,"6,047",0.9698,0
+California,Mono,"6,051",0.4223,620
+California,Monterey,"6,053",0.845,0
+California,Napa,"6,055",0.6209,"5,916"
+California,Nevada,"6,057",0.2164,"1,972"
+California,Orange,"6,059",0.5621,0
+California,Placer,"6,061",0.1782,"7,057"
+California,Plumas,"6,063",0.3972,148
+California,Riverside,"6,065",0.8297,0
+California,Sacramento,"6,067",0.7673,0
+California,San Benito,"6,069",0.5738,"4,078"
+California,San Bernardino,"6,071",0.9058,0
+California,San Diego,"6,073",0.6989,0
+California,San Francisco,"6,075",0.4322,0
+California,San Joaquin,"6,077",0.8864,0
+California,San Luis Obispo,"6,079",0.4465,"8,760"
+California,San Mateo,"6,081",0.2638,0
+California,Santa Barbara,"6,083",0.8364,0
+California,Santa Clara,"6,085",0.3714,0
+California,Santa Cruz,"6,087",0.6139,"6,577"
+California,Shasta,"6,089",0.7451,"2,240"
+California,Sierra,"6,091",0.281,13
+California,Siskiyou,"6,093",0.7492,455
+California,Solano,"6,095",0.6311,0
+California,Sonoma,"6,097",0.5076,0
+California,Stanislaus,"6,099",0.8498,0
+California,Sutter,"6,101",0.8619,"4,191"
+California,Tehama,"6,103",0.9287,"1,275"
+California,Trinity,"6,105",0.8612,39
+California,Tulare,"6,107",0.9344,0
+California,Tuolumne,"6,109",0.5961,749
+California,Ventura,"6,111",0.6073,0
+California,Yolo,"6,113",0.7307,"10,125"
+California,Yuba,"6,115",0.9147,"2,062"
+Colorado,Adams,"8,001",0.6894,0
+Colorado,Alamosa,"8,003",0.9806,"2,627"
+Colorado,Arapahoe,"8,005",0.4131,0
+Colorado,Archuleta,"8,007",0.2836,144
+Colorado,Baca,"8,009",0.5522,182
+Colorado,Bent,"8,011",0.8119,56
+Colorado,Boulder,"8,013",0.212,0
+Colorado,Broomfield,"8,014",0.0691,"4,241"
+Colorado,Chaffee,"8,015",0.6203,"1,161"
+Colorado,Cheyenne,"8,017",0.0608,65
+Colorado,Clear Creek,"8,019",0.1381,269
+Colorado,Conejos,"8,021",0.8915,209
+Colorado,Costilla,"8,023",0.9163,286
+Colorado,Crowley,"8,025",0.824,921
+Colorado,Custer,"8,027",0.0557,41
+Colorado,Delta,"8,029",0.7327,"1,087"
+Colorado,Denver,"8,031",0.5821,0
+Colorado,Douglas,"8,035",0.0248,"1,977"
+Colorado,Eagle,"8,037",0.3561,"9,528"
+Colorado,Elbert,"8,039",0.001,779
+Colorado,El Paso,"8,041",0.4895,0
+Colorado,Fremont,"8,043",0.6197,539
+Colorado,Garfield,"8,045",0.5716,"4,645"
+Colorado,Gilpin,"8,047",0.0146,101
+Colorado,Grand,"8,049",0.1881,313
+Colorado,Gunnison,"8,051",0.1868,"2,474"
+Colorado,Hinsdale,"8,053",0.2603,39
+Colorado,Huerfano,"8,055",0.4188,54
+Colorado,Jackson,"8,057",0.2257,53
+Colorado,Jefferson,"8,059",0.1076,0
+Colorado,Kit Carson,"8,063",0.6658,450
+Colorado,Lake,"8,065",0.4481,682
+Colorado,La Plata,"8,067",0.2527,"1,671"
+Colorado,Larimer,"8,069",0.1833,"11,071"
+Colorado,Las Animas,"8,071",0.8326,121
+Colorado,Lincoln,"8,073",0.5029,52
+Colorado,Logan,"8,075",0.6595,"8,321"
+Colorado,Mesa,"8,077",0.6833,"1,654"
+Colorado,Mineral,"8,079",0.0754,169
+Colorado,Moffat,"8,081",0.8087,182
+Colorado,Montezuma,"8,083",0.5299,983
+Colorado,Montrose,"8,085",0.5363,"2,774"
+Colorado,Morgan,"8,087",0.8418,"8,527"
+Colorado,Otero,"8,089",0.8886,290
+Colorado,Ouray,"8,091",0.0274,154
+Colorado,Park,"8,093",0.0169,392
+Colorado,Phillips,"8,095",0.4332,208
+Colorado,Pitkin,"8,097",0.1458,"1,510"
+Colorado,Prowers,"8,099",0.9612,406
+Colorado,Pueblo,"8,101",0.8587,"5,430"
+Colorado,Rio Blanco,"8,103",0.4812,62
+Colorado,Rio Grande,"8,105",0.9408,"1,040"
+Colorado,Routt,"8,107",0.1066,"1,031"
+Colorado,Saguache,"8,109",0.8052,"1,333"
+Colorado,San Juan,"8,111",0.4204,26
+Colorado,San Miguel,"8,113",0.1595,560
+Colorado,Sedgwick,"8,115",0.8125,2
+Colorado,Summit,"8,117",0.1996,"3,722"
+Colorado,Teller,"8,119",0.1038,675
+Colorado,Washington,"8,121",0.2422,598
+Colorado,Weld,"8,123",0.6111,0
+Colorado,Yuma,"8,125",0.4917,694
+Connecticut,Fairfield,"9,001",0.6184,0
+Connecticut,Hartford,"9,003",0.5955,0
+Connecticut,Litchfield,"9,005",0.1512,0
+Connecticut,Middlesex,"9,007",0.1843,0
+Connecticut,New Haven,"9,009",0.6512,0
+Connecticut,New London,"9,011",0.3959,0
+Connecticut,Tolland,"9,013",0.1073,"12,018"
+Connecticut,Windham,"9,015",0.4799,"8,137"
+Delaware,Kent,"10,001",0.8444,0
+Delaware,New Castle,"10,003",0.4733,0
+Delaware,Sussex,"10,005",0.4898,0
+District of Columbia,District of Columbia,"11,001",0.6502,0
+Florida,Alachua,"12,001",0.6334,0
+Florida,Baker,"12,003",0.437,"1,630"
+Florida,Bay,"12,005",0.733,"5,985"
+Florida,Bradford,"12,007",0.8982,"1,456"
+Florida,Brevard,"12,009",0.4707,0
+Florida,Broward,"12,011",0.7826,0
+Florida,Calhoun,"12,013",0.7362,"1,591"
+Florida,Charlotte,"12,015",0.6168,"6,358"
+Florida,Citrus,"12,017",0.5388,"5,967"
+Florida,Clay,"12,019",0.3908,"3,599"
+Florida,Collier,"12,021",0.647,0
+Florida,Columbia,"12,023",0.8947,"5,493"
+Florida,DeSoto,"12,027",0.994,"10,211"
+Florida,Dixie,"12,029",0.767,"1,202"
+Florida,Duval,"12,031",0.7973,0
+Florida,Escambia,"12,033",0.7502,0
+Florida,Flagler,"12,035",0.3491,"5,571"
+Florida,Franklin,"12,037",0.9071,297
+Florida,Gadsden,"12,039",0.9726,"6,582"
+Florida,Gilchrist,"12,041",0.8157,"1,633"
+Florida,Glades,"12,043",0.8921,"2,463"
+Florida,Gulf,"12,045",0.6719,846
+Florida,Hamilton,"12,047",0.9799,"5,244"
+Florida,Hardee,"12,049",0.9618,"7,097"
+Florida,Hendry,"12,051",0.9959,993
+Florida,Hernando,"12,053",0.6645,"8,801"
+Florida,Highlands,"12,055",0.8466,"6,029"
+Florida,Hillsborough,"12,057",0.7906,0
+Florida,Holmes,"12,059",0.8625,"2,738"
+Florida,Indian River,"12,061",0.521,"6,335"
+Florida,Jackson,"12,063",0.8991,"6,437"
+Florida,Jefferson,"12,065",0.6687,921
+Florida,Lafayette,"12,067",0.796,593
+Florida,Lake,"12,069",0.6779,0
+Florida,Lee,"12,071",0.7209,0
+Florida,Leon,"12,073",0.6588,0
+Florida,Levy,"12,075",0.774,"2,989"
+Florida,Liberty,"12,077",0.7062,"3,306"
+Florida,Madison,"12,079",0.915,"3,706"
+Florida,Manatee,"12,081",0.6983,0
+Florida,Marion,"12,083",0.8542,"4,387"
+Florida,Martin,"12,085",0.4898,0
+Florida,Miami-Dade,"12,086",0.9007,0
+Florida,Monroe,"12,087",0.6986,"5,810"
+Florida,Nassau,"12,089",0.2976,"5,079"
+Florida,Okaloosa,"12,091",0.5385,"6,193"
+Florida,Okeechobee,"12,093",0.9093,"6,122"
+Florida,Orange,"12,095",0.8011,0
+Florida,Osceola,"12,097",0.873,0
+Florida,Palm Beach,"12,099",0.7884,0
+Florida,Pasco,"12,101",0.747,0
+Florida,Pinellas,"12,103",0.7247,0
+Florida,Polk,"12,105",0.9188,0
+Florida,Putnam,"12,107",0.9666,"8,002"
+Florida,St. Johns,"12,109",0.163,0
+Florida,St. Lucie,"12,111",0.7868,0
+Florida,Santa Rosa,"12,113",0.464,"5,937"
+Florida,Sarasota,"12,115",0.4122,0
+Florida,Seminole,"12,117",0.3358,0
+Florida,Sumter,"12,119",0.2759,"6,821"
+Florida,Suwannee,"12,121",0.8794,"8,668"
+Florida,Taylor,"12,123",0.8539,"1,481"
+Florida,Union,"12,125",0.6448,"1,255"
+Florida,Volusia,"12,127",0.6579,0
+Florida,Wakulla,"12,129",0.2282,"1,360"
+Florida,Walton,"12,131",0.7142,"5,521"
+Florida,Washington,"12,133",0.8616,"1,860"
+Georgia,Appling,"13,001",0.8892,"4,058"
+Georgia,Atkinson,"13,003",0.9052,"2,331"
+Georgia,Bacon,"13,005",0.9332,"3,751"
+Georgia,Baker,"13,007",0.6996,566
+Georgia,Baldwin,"13,009",0.887,"7,876"
+Georgia,Banks,"13,011",0.5102,"1,927"
+Georgia,Barrow,"13,013",0.5255,"7,562"
+Georgia,Bartow,"13,015",0.6343,"9,075"
+Georgia,Ben Hill,"13,017",0.9558,"2,657"
+Georgia,Berrien,"13,019",0.7018,"1,995"
+Georgia,Bibb,"13,021",0.9564,969
+Georgia,Bleckley,"13,023",0.6321,"1,023"
+Georgia,Brantley,"13,025",0.4761,"1,589"
+Georgia,Brooks,"13,027",0.8994,"2,608"
+Georgia,Bryan,"13,029",0.3555,"2,655"
+Georgia,Bulloch,"13,031",0.8253,"7,178"
+Georgia,Burke,"13,033",0.6846,"2,160"
+Georgia,Butts,"13,035",0.7237,"4,132"
+Georgia,Calhoun,"13,037",0.9545,"2,178"
+Georgia,Camden,"13,039",0.6025,"2,981"
+Georgia,Candler,"13,043",0.9914,956
+Georgia,Carroll,"13,045",0.768,"6,777"
+Georgia,Catoosa,"13,047",0.2753,"4,408"
+Georgia,Charlton,"13,049",0.9456,"1,104"
+Georgia,Chatham,"13,051",0.8323,0
+Georgia,Chattahoochee,"13,053",0.7428,"5,769"
+Georgia,Chattooga,"13,055",0.9122,961
+Georgia,Cherokee,"13,057",0.2228,0
+Georgia,Clarke,"13,059",0.8211,"9,568"
+Georgia,Clay,"13,061",0.9411,755
+Georgia,Clayton,"13,063",0.9539,0
+Georgia,Clinch,"13,065",0.9427,"1,485"
+Georgia,Cobb,"13,067",0.4227,0
+Georgia,Coffee,"13,069",0.9675,"9,751"
+Georgia,Colquitt,"13,071",0.9809,0
+Georgia,Columbia,"13,073",0.1645,"9,421"
+Georgia,Cook,"13,075",0.8908,"2,642"
+Georgia,Coweta,"13,077",0.2963,"10,649"
+Georgia,Crawford,"13,079",0.5395,701
+Georgia,Crisp,"13,081",0.9933,"3,877"
+Georgia,Dade,"13,083",0.5675,989
+Georgia,Dawson,"13,085",0.1887,"2,122"
+Georgia,Decatur,"13,087",0.9602,"3,708"
+Georgia,DeKalb,"13,089",0.8164,0
+Georgia,Dodge,"13,091",0.8173,"1,641"
+Georgia,Dooly,"13,093",0.9192,"2,826"
+Georgia,Dougherty,"13,095",0.9723,0
+Georgia,Douglas,"13,097",0.6929,0
+Georgia,Early,"13,099",0.9656,"3,765"
+Georgia,Echols,"13,101",0.5175,"2,468"
+Georgia,Effingham,"13,103",0.3351,"3,106"
+Georgia,Elbert,"13,105",0.9691,"1,856"
+Georgia,Emanuel,"13,107",0.9873,"2,263"
+Georgia,Evans,"13,109",0.9644,513
+Georgia,Fannin,"13,111",0.4866,"1,500"
+Georgia,Fayette,"13,113",0.1397,"5,999"
+Georgia,Floyd,"13,115",0.9529,"8,488"
+Georgia,Forsyth,"13,117",0.07,"4,611"
+Georgia,Franklin,"13,119",0.7473,"3,042"
+Georgia,Fulton,"13,121",0.69,0
+Georgia,Gilmer,"13,123",0.6544,"2,814"
+Georgia,Glascock,"13,125",0.6639,160
+Georgia,Glynn,"13,127",0.7549,972
+Georgia,Gordon,"13,129",0.8721,"6,218"
+Georgia,Grady,"13,131",0.9246,"3,097"
+Georgia,Greene,"13,133",0.5633,"1,420"
+Georgia,Gwinnett,"13,135",0.6015,0
+Georgia,Habersham,"13,137",0.6703,"9,597"
+Georgia,Hall,"13,139",0.7896,0
+Georgia,Hancock,"13,141",0.902,"2,919"
+Georgia,Haralson,"13,143",0.422,"1,246"
+Georgia,Harris,"13,145",0.0675,"5,194"
+Georgia,Hart,"13,147",0.8116,"1,218"
+Georgia,Heard,"13,149",0.8103,939
+Georgia,Henry,"13,151",0.4001,0
+Georgia,Houston,"13,153",0.5369,"9,098"
+Georgia,Irwin,"13,155",0.8265,"1,134"
+Georgia,Jackson,"13,157",0.387,"6,130"
+Georgia,Jasper,"13,159",0.6063,"1,055"
+Georgia,Jeff Davis,"13,161",0.8724,"1,816"
+Georgia,Jefferson,"13,163",0.9819,"2,150"
+Georgia,Jenkins,"13,165",0.8495,"1,696"
+Georgia,Johnson,"13,167",0.9468,"1,471"
+Georgia,Jones,"13,169",0.2712,"1,547"
+Georgia,Lamar,"13,171",0.5837,"1,801"
+Georgia,Lanier,"13,173",0.6515,"2,035"
+Georgia,Laurens,"13,175",0.8692,"3,762"
+Georgia,Lee,"13,177",0.2925,"5,349"
+Georgia,Liberty,"13,179",0.8606,"2,489"
+Georgia,Lincoln,"13,181",0.7323,717
+Georgia,Long,"13,183",0.95,786
+Georgia,Lowndes,"13,185",0.8733,0
+Georgia,Lumpkin,"13,187",0.4058,"2,039"
+Georgia,McDuffie,"13,189",0.8507,"1,764"
+Georgia,McIntosh,"13,191",0.5376,907
+Georgia,Macon,"13,193",0.979,"1,671"
+Georgia,Madison,"13,195",0.7059,"1,830"
+Georgia,Marion,"13,197",0.7909,"1,189"
+Georgia,Meriwether,"13,199",0.8943,"2,987"
+Georgia,Miller,"13,201",0.9112,715
+Georgia,Mitchell,"13,205",0.9917,"6,163"
+Georgia,Monroe,"13,207",0.4717,"2,775"
+Georgia,Montgomery,"13,209",0.8485,573
+Georgia,Morgan,"13,211",0.246,922
+Georgia,Murray,"13,213",0.6922,"3,518"
+Georgia,Muscogee,"13,215",0.9497,0
+Georgia,Newton,"13,217",0.7206,"10,376"
+Georgia,Oconee,"13,219",0.0468,"2,671"
+Georgia,Oglethorpe,"13,221",0.5948,"1,315"
+Georgia,Paulding,"13,223",0.1661,"9,886"
+Georgia,Peach,"13,225",0.9418,"1,721"
+Georgia,Pickens,"13,227",0.4042,"1,393"
+Georgia,Pierce,"13,229",0.4885,"2,921"
+Georgia,Pike,"13,231",0.0913,"1,395"
+Georgia,Polk,"13,233",0.8444,"3,545"
+Georgia,Pulaski,"13,235",0.9749,737
+Georgia,Putnam,"13,237",0.7467,"2,551"
+Georgia,Quitman,"13,239",0.8383,254
+Georgia,Rabun,"13,241",0.6222,842
+Georgia,Randolph,"13,243",0.9987,"2,680"
+Georgia,Richmond,"13,245",0.9631,0
+Georgia,Rockdale,"13,247",0.7705,"7,989"
+Georgia,Schley,"13,249",0.619,356
+Georgia,Screven,"13,251",0.8192,"1,355"
+Georgia,Seminole,"13,253",0.93,696
+Georgia,Spalding,"13,255",0.7731,"6,645"
+Georgia,Stephens,"13,257",0.7537,"3,697"
+Georgia,Stewart,"13,259",0.9637,"2,562"
+Georgia,Sumter,"13,261",0.936,"7,693"
+Georgia,Talbot,"13,263",0.8962,"1,136"
+Georgia,Taliaferro,"13,265",0.8017,30
+Georgia,Tattnall,"13,267",0.9036,"2,240"
+Georgia,Taylor,"13,269",0.9319,462
+Georgia,Telfair,"13,271",0.8711,"1,920"
+Georgia,Terrell,"13,273",0.9831,"3,098"
+Georgia,Thomas,"13,275",0.8861,"6,998"
+Georgia,Tift,"13,277",0.8978,"11,669"
+Georgia,Toombs,"13,279",0.9688,"3,862"
+Georgia,Towns,"13,281",0.2849,752
+Georgia,Treutlen,"13,283",0.9717,489
+Georgia,Troup,"13,285",0.9383,0
+Georgia,Turner,"13,287",0.9548,"2,392"
+Georgia,Twiggs,"13,289",0.5579,467
+Georgia,Union,"13,291",0.6031,"1,192"
+Georgia,Upson,"13,293",0.7078,"4,969"
+Georgia,Walker,"13,295",0.6948,"4,649"
+Georgia,Walton,"13,297",0.4173,"6,512"
+Georgia,Ware,"13,299",0.8838,"7,398"
+Georgia,Warren,"13,301",0.7734,376
+Georgia,Washington,"13,303",0.9141,"2,072"
+Georgia,Wayne,"13,305",0.8561,"1,683"
+Georgia,Webster,"13,307",0.8752,359
+Georgia,Wheeler,"13,309",0.5869,730
+Georgia,White,"13,311",0.2893,"2,076"
+Georgia,Whitfield,"13,313",0.916,0
+Georgia,Wilcox,"13,315",0.7664,"1,730"
+Georgia,Wilkes,"13,317",0.7489,"1,140"
+Georgia,Wilkinson,"13,319",0.7801,"1,274"
+Georgia,Worth,"13,321",0.7559,"4,426"
+Hawaii,Hawaii,"15,001",0.6229,"1,255"
+Hawaii,Honolulu,"15,003",0.5382,"10,626"
+Hawaii,Kauai,"15,007",0.3622,538
+Hawaii,Maui,"15,009",0.4796,"1,692"
+Idaho,Ada,"16,001",0.1674,0
+Idaho,Adams,"16,003",0.2145,152
+Idaho,Bannock,"16,005",0.6015,"1,893"
+Idaho,Bear Lake,"16,007",0.175,33
+Idaho,Benewah,"16,009",0.6123,320
+Idaho,Bingham,"16,011",0.5095,"1,028"
+Idaho,Blaine,"16,013",0.5134,"7,079"
+Idaho,Boise,"16,015",0.0987,88
+Idaho,Bonner,"16,017",0.3431,676
+Idaho,Bonneville,"16,019",0.4348,"2,286"
+Idaho,Boundary,"16,021",0.3256,44
+Idaho,Camas,"16,025",0.3186,13
+Idaho,Canyon,"16,027",0.6429,980
+Idaho,Caribou,"16,029",0.1906,234
+Idaho,Cassia,"16,031",0.5827,"3,850"
+Idaho,Clearwater,"16,035",0.6496,52
+Idaho,Custer,"16,037",0.3978,69
+Idaho,Elmore,"16,039",0.7934,"1,052"
+Idaho,Franklin,"16,041",0.1225,410
+Idaho,Fremont,"16,043",0.6375,120
+Idaho,Gem,"16,045",0.7403,611
+Idaho,Gooding,"16,047",0.8456,971
+Idaho,Idaho,"16,049",0.5538,125
+Idaho,Jefferson,"16,051",0.1082,325
+Idaho,Jerome,"16,053",0.67,"3,559"
+Idaho,Kootenai,"16,055",0.2562,"7,089"
+Idaho,Latah,"16,057",0.2989,416
+Idaho,Lemhi,"16,059",0.5089,33
+Idaho,Lewis,"16,061",0.6397,3
+Idaho,Lincoln,"16,063",0.7034,507
+Idaho,Madison,"16,065",0.3797,719
+Idaho,Minidoka,"16,067",0.6868,"3,088"
+Idaho,Nez Perce,"16,069",0.542,"1,369"
+Idaho,Oneida,"16,071",0.205,78
+Idaho,Owyhee,"16,073",0.7597,889
+Idaho,Payette,"16,075",0.6092,"2,001"
+Idaho,Power,"16,077",0.6152,267
+Idaho,Shoshone,"16,079",0.7543,71
+Idaho,Teton,"16,081",0.1308,365
+Idaho,Twin Falls,"16,083",0.5379,"9,757"
+Idaho,Valley,"16,085",0.1143,279
+Idaho,Washington,"16,087",0.9125,"1,599"
+Illinois,Adams,"17,001",0.2829,"1,867"
+Illinois,Alexander,"17,003",0.923,297
+Illinois,Bond,"17,005",0.4335,232
+Illinois,Boone,"17,007",0.4153,"8,073"
+Illinois,Brown,"17,009",0.4554,130
+Illinois,Bureau,"17,011",0.2721,431
+Illinois,Calhoun,"17,013",0.0309,15
+Illinois,Carroll,"17,015",0.147,274
+Illinois,Cass,"17,017",0.5532,"1,778"
+Illinois,Champaign,"17,019",0.5605,"6,649"
+Illinois,Christian,"17,021",0.1808,624
+Illinois,Clark,"17,023",0.071,326
+Illinois,Clay,"17,025",0.3997,44
+Illinois,Clinton,"17,027",0.1321,"3,171"
+Illinois,Coles,"17,029",0.5407,"2,388"
+Illinois,Cook,"17,031",0.8004,0
+Illinois,Crawford,"17,033",0.4157,243
+Illinois,Cumberland,"17,035",0.0175,286
+Illinois,DeKalb,"17,037",0.4952,"8,172"
+Illinois,De Witt,"17,039",0.0439,182
+Illinois,Douglas,"17,041",0.5353,731
+Illinois,DuPage,"17,043",0.2199,0
+Illinois,Edgar,"17,045",0.2521,191
+Illinois,Edwards,"17,047",0.2349,39
+Illinois,Effingham,"17,049",0.2129,291
+Illinois,Fayette,"17,051",0.4726,307
+Illinois,Ford,"17,053",0.2428,519
+Illinois,Franklin,"17,055",0.5471,479
+Illinois,Fulton,"17,057",0.233,204
+Illinois,Gallatin,"17,059",0.4828,54
+Illinois,Greene,"17,061",0.0544,116
+Illinois,Grundy,"17,063",0.0799,"2,372"
+Illinois,Hamilton,"17,065",0.3119,81
+Illinois,Hancock,"17,067",0.0891,255
+Illinois,Hardin,"17,069",0.3049,15
+Illinois,Henderson,"17,071",0.0271,104
+Illinois,Henry,"17,073",0.1168,"1,351"
+Illinois,Iroquois,"17,075",0.3813,"2,185"
+Illinois,Jackson,"17,077",0.789,"4,481"
+Illinois,Jasper,"17,079",0.2158,610
+Illinois,Jefferson,"17,081",0.7174,"1,439"
+Illinois,Jersey,"17,083",0.0341,498
+Illinois,Jo Daviess,"17,085",0.0894,646
+Illinois,Johnson,"17,087",0.2912,301
+Illinois,Kane,"17,089",0.494,0
+Illinois,Kankakee,"17,091",0.697,0
+Illinois,Kendall,"17,093",0.1222,0
+Illinois,Knox,"17,095",0.6423,"1,985"
+Illinois,Lake,"17,097",0.4663,0
+Illinois,LaSalle,"17,099",0.3826,"3,141"
+Illinois,Lawrence,"17,101",0.4806,117
+Illinois,Lee,"17,103",0.3189,"1,346"
+Illinois,Livingston,"17,105",0.3806,686
+Illinois,Logan,"17,107",0.1814,241
+Illinois,McDonough,"17,109",0.4612,"1,351"
+Illinois,McHenry,"17,111",0.1152,0
+Illinois,McLean,"17,113",0.2005,"3,854"
+Illinois,Macon,"17,115",0.5258,"3,143"
+Illinois,Macoupin,"17,117",0.1388,805
+Illinois,Madison,"17,119",0.2581,"1,967"
+Illinois,Marion,"17,121",0.5547,951
+Illinois,Marshall,"17,123",0.0681,146
+Illinois,Mason,"17,125",0.1493,305
+Illinois,Massac,"17,127",0.5856,198
+Illinois,Menard,"17,129",0.0165,361
+Illinois,Mercer,"17,131",0.0598,334
+Illinois,Monroe,"17,133",0.0016,"1,877"
+Illinois,Montgomery,"17,135",0.2505,800
+Illinois,Morgan,"17,137",0.5245,"1,713"
+Illinois,Moultrie,"17,139",0.3558,268
+Illinois,Ogle,"17,141",0.3485,"3,876"
+Illinois,Peoria,"17,143",0.6785,"7,831"
+Illinois,Perry,"17,145",0.6031,763
+Illinois,Piatt,"17,147",0.0035,267
+Illinois,Pike,"17,149",0.3784,64
+Illinois,Pope,"17,151",0.5086,13
+Illinois,Pulaski,"17,153",0.5271,"1,043"
+Illinois,Putnam,"17,155",0.0162,13
+Illinois,Randolph,"17,157",0.4163,"3,879"
+Illinois,Richland,"17,159",0.3065,86
+Illinois,Rock Island,"17,161",0.6891,995
+Illinois,St. Clair,"17,163",0.5544,0
+Illinois,Saline,"17,165",0.7412,159
+Illinois,Sangamon,"17,167",0.4303,"6,386"
+Illinois,Schuyler,"17,169",0.4109,170
+Illinois,Scott,"17,171",0.0178,12
+Illinois,Shelby,"17,173",0.064,254
+Illinois,Stark,"17,175",0.0194,68
+Illinois,Stephenson,"17,177",0.5516,"3,645"
+Illinois,Tazewell,"17,179",0.0948,"2,097"
+Illinois,Union,"17,181",0.5172,"2,602"
+Illinois,Vermilion,"17,183",0.6582,"1,069"
+Illinois,Wabash,"17,185",0.4096,296
+Illinois,Warren,"17,187",0.5328,"1,899"
+Illinois,Washington,"17,189",0.0509,303
+Illinois,Wayne,"17,191",0.4386,208
+Illinois,White,"17,193",0.4383,107
+Illinois,Whiteside,"17,195",0.2549,"2,636"
+Illinois,Will,"17,197",0.2412,0
+Illinois,Williamson,"17,199",0.43,"1,827"
+Illinois,Winnebago,"17,201",0.7629,0
+Illinois,Woodford,"17,203",0.0226,544
+Indiana,Adams,"18,001",0.598,651
+Indiana,Allen,"18,003",0.5054,0
+Indiana,Bartholomew,"18,005",0.3778,"7,769"
+Indiana,Benton,"18,007",0.416,639
+Indiana,Blackford,"18,009",0.4411,555
+Indiana,Boone,"18,011",0.0417,"6,217"
+Indiana,Brown,"18,013",0.1757,534
+Indiana,Carroll,"18,015",0.0933,"1,450"
+Indiana,Cass,"18,017",0.5567,0
+Indiana,Clark,"18,019",0.2696,"8,911"
+Indiana,Clay,"18,021",0.2855,806
+Indiana,Clinton,"18,023",0.5159,"3,762"
+Indiana,Crawford,"18,025",0.267,428
+Indiana,Daviess,"18,027",0.7419,"1,932"
+Indiana,Dearborn,"18,029",0.0617,"3,194"
+Indiana,Decatur,"18,031",0.0481,"3,510"
+Indiana,DeKalb,"18,033",0.1034,"2,149"
+Indiana,Delaware,"18,035",0.633,"5,944"
+Indiana,Dubois,"18,037",0.1235,"3,771"
+Indiana,Elkhart,"18,039",0.7938,0
+Indiana,Fayette,"18,041",0.6547,"2,000"
+Indiana,Floyd,"18,043",0.1483,"5,122"
+Indiana,Fountain,"18,045",0.2667,429
+Indiana,Franklin,"18,047",0.1639,"1,737"
+Indiana,Fulton,"18,049",0.3896,935
+Indiana,Gibson,"18,051",0.239,"1,239"
+Indiana,Grant,"18,053",0.725,"5,466"
+Indiana,Greene,"18,055",0.3794,"2,548"
+Indiana,Hamilton,"18,057",0.035,0
+Indiana,Hancock,"18,059",0.0334,"5,965"
+Indiana,Harrison,"18,061",0.1174,"2,826"
+Indiana,Hendricks,"18,063",0.0713,0
+Indiana,Henry,"18,065",0.2642,"3,698"
+Indiana,Howard,"18,067",0.3775,"7,660"
+Indiana,Huntington,"18,069",0.1178,"1,091"
+Indiana,Jackson,"18,071",0.5038,"6,202"
+Indiana,Jasper,"18,073",0.2145,"1,647"
+Indiana,Jay,"18,075",0.4087,962
+Indiana,Jefferson,"18,077",0.4456,"1,022"
+Indiana,Jennings,"18,079",0.2094,"2,320"
+Indiana,Johnson,"18,081",0.1069,0
+Indiana,Knox,"18,083",0.6295,877
+Indiana,Kosciusko,"18,085",0.4857,"7,284"
+Indiana,LaGrange,"18,087",0.3899,"6,222"
+Indiana,Lake,"18,089",0.7072,0
+Indiana,LaPorte,"18,091",0.5853,"7,707"
+Indiana,Lawrence,"18,093",0.2791,"3,224"
+Indiana,Madison,"18,095",0.6569,"8,795"
+Indiana,Marion,"18,097",0.8291,0
+Indiana,Marshall,"18,099",0.5369,"6,598"
+Indiana,Martin,"18,101",0.1754,305
+Indiana,Miami,"18,103",0.4421,"2,481"
+Indiana,Monroe,"18,105",0.4688,"4,103"
+Indiana,Montgomery,"18,107",0.3218,"3,867"
+Indiana,Morgan,"18,109",0.1133,"4,470"
+Indiana,Newton,"18,111",0.2775,"1,300"
+Indiana,Noble,"18,113",0.506,"6,429"
+Indiana,Ohio,"18,115",0.0917,246
+Indiana,Orange,"18,117",0.4971,"1,798"
+Indiana,Owen,"18,119",0.3304,648
+Indiana,Parke,"18,121",0.6926,381
+Indiana,Perry,"18,123",0.2416,"1,938"
+Indiana,Pike,"18,125",0.0684,143
+Indiana,Porter,"18,127",0.1655,"10,153"
+Indiana,Posey,"18,129",0.0134,634
+Indiana,Pulaski,"18,131",0.3113,859
+Indiana,Putnam,"18,133",0.1897,"2,281"
+Indiana,Randolph,"18,135",0.3791,"1,362"
+Indiana,Ripley,"18,137",0.3507,"1,607"
+Indiana,Rush,"18,139",0.2584,"1,089"
+Indiana,St. Joseph,"18,141",0.6143,0
+Indiana,Scott,"18,143",0.634,"2,158"
+Indiana,Shelby,"18,145",0.2317,"8,724"
+Indiana,Spencer,"18,147",0.0471,633
+Indiana,Starke,"18,149",0.2556,"1,278"
+Indiana,Steuben,"18,151",0.1617,"1,719"
+Indiana,Sullivan,"18,153",0.6098,634
+Indiana,Switzerland,"18,155",0.7002,399
+Indiana,Tippecanoe,"18,157",0.499,"9,603"
+Indiana,Tipton,"18,159",0.0442,425
+Indiana,Union,"18,161",0.1696,390
+Indiana,Vanderburgh,"18,163",0.5847,"8,169"
+Indiana,Vermillion,"18,165",0.3851,226
+Indiana,Vigo,"18,167",0.7145,"3,163"
+Indiana,Wabash,"18,169",0.2861,"1,516"
+Indiana,Warren,"18,171",0.0099,202
+Indiana,Warrick,"18,173",0.0369,"3,068"
+Indiana,Washington,"18,175",0.2654,874
+Indiana,Wayne,"18,177",0.6763,"4,280"
+Indiana,Wells,"18,179",0.084,"1,215"
+Indiana,White,"18,181",0.3036,"3,483"
+Indiana,Whitley,"18,183",0.0805,"1,268"
+Iowa,Adair,"19,001",0.0493,211
+Iowa,Adams,"19,003",0.0391,104
+Iowa,Allamakee,"19,005",0.2903,"1,732"
+Iowa,Appanoose,"19,007",0.4955,281
+Iowa,Audubon,"19,009",0.0229,215
+Iowa,Benton,"19,011",0.0041,917
+Iowa,Black Hawk,"19,013",0.529,0
+Iowa,Boone,"19,015",0.0446,"2,052"
+Iowa,Bremer,"19,017",0.0423,"1,323"
+Iowa,Buchanan,"19,019",0.0433,762
+Iowa,Buena Vista,"19,021",0.6693,0
+Iowa,Butler,"19,023",0.0312,791
+Iowa,Calhoun,"19,025",0.0878,736
+Iowa,Carroll,"19,027",0.0777,"1,359"
+Iowa,Cass,"19,029",0.1785,328
+Iowa,Cedar,"19,031",0.0048,"1,151"
+Iowa,Cerro Gordo,"19,033",0.1884,"2,973"
+Iowa,Cherokee,"19,035",0.1187,"1,031"
+Iowa,Chickasaw,"19,037",0.0426,382
+Iowa,Clarke,"19,039",0.7791,"1,779"
+Iowa,Clay,"19,041",0.2409,"1,831"
+Iowa,Clayton,"19,043",0.2629,596
+Iowa,Clinton,"19,045",0.3666,"1,578"
+Iowa,Crawford,"19,047",0.8351,"8,819"
+Iowa,Dallas,"19,049",0.0576,0
+Iowa,Davis,"19,051",0.3692,537
+Iowa,Decatur,"19,053",0.4704,157
+Iowa,Delaware,"19,055",0.0115,689
+Iowa,Des Moines,"19,057",0.4905,"1,232"
+Iowa,Dickinson,"19,059",0.0843,"3,672"
+Iowa,Dubuque,"19,061",0.2225,"8,512"
+Iowa,Emmet,"19,063",0.2896,"1,172"
+Iowa,Fayette,"19,065",0.1989,678
+Iowa,Floyd,"19,067",0.1722,988
+Iowa,Franklin,"19,069",0.2533,"1,281"
+Iowa,Fremont,"19,071",0.0159,112
+Iowa,Greene,"19,073",0.1805,385
+Iowa,Grundy,"19,075",0.0025,546
+Iowa,Guthrie,"19,077",0.0614,925
+Iowa,Hamilton,"19,079",0.0595,"2,526"
+Iowa,Hancock,"19,081",0.0738,729
+Iowa,Hardin,"19,083",0.1652,"1,065"
+Iowa,Harrison,"19,085",0.0242,735
+Iowa,Henry,"19,087",0.2031,"1,158"
+Iowa,Howard,"19,089",0.0551,454
+Iowa,Humboldt,"19,091",0.0955,740
+Iowa,Ida,"19,093",0.0592,302
+Iowa,Iowa,"19,095",0.0306,746
+Iowa,Jackson,"19,097",0.0662,581
+Iowa,Jasper,"19,099",0.1945,"4,353"
+Iowa,Jefferson,"19,101",0.5169,804
+Iowa,Johnson,"19,103",0.3511,0
+Iowa,Jones,"19,105",0.2056,848
+Iowa,Keokuk,"19,107",0.0621,280
+Iowa,Kossuth,"19,109",0.1938,493
+Iowa,Lee,"19,111",0.275,697
+Iowa,Linn,"19,113",0.1935,0
+Iowa,Louisa,"19,115",0.2823,"4,723"
+Iowa,Lucas,"19,117",0.2871,420
+Iowa,Lyon,"19,119",0.0286,646
+Iowa,Madison,"19,121",0.0172,649
+Iowa,Mahaska,"19,123",0.1728,"1,526"
+Iowa,Marion,"19,125",0.1248,977
+Iowa,Marshall,"19,127",0.662,0
+Iowa,Mills,"19,129",0.0745,562
+Iowa,Mitchell,"19,131",0.0732,538
+Iowa,Monona,"19,133",0.0936,998
+Iowa,Monroe,"19,135",0.2196,666
+Iowa,Montgomery,"19,137",0.0605,149
+Iowa,Muscatine,"19,139",0.4354,"8,628"
+Iowa,O'Brien,"19,141",0.2626,"1,185"
+Iowa,Osceola,"19,143",0.1419,833
+Iowa,Page,"19,145",0.253,268
+Iowa,Palo Alto,"19,147",0.0904,582
+Iowa,Plymouth,"19,149",0.0668,"4,325"
+Iowa,Pocahontas,"19,151",0.0923,"1,320"
+Iowa,Polk,"19,153",0.4574,0
+Iowa,Pottawattamie,"19,155",0.4892,"10,059"
+Iowa,Poweshiek,"19,157",0.2339,"1,404"
+Iowa,Ringgold,"19,159",0.1871,200
+Iowa,Sac,"19,161",0.0847,849
+Iowa,Scott,"19,163",0.2982,"6,529"
+Iowa,Shelby,"19,165",0.0563,"1,517"
+Iowa,Sioux,"19,167",0.1031,"6,326"
+Iowa,Story,"19,169",0.282,"10,617"
+Iowa,Tama,"19,171",0.325,"6,162"
+Iowa,Taylor,"19,173",0.0968,"1,042"
+Iowa,Union,"19,175",0.4233,449
+Iowa,Van Buren,"19,177",0.381,269
+Iowa,Wapello,"19,179",0.8071,"9,236"
+Iowa,Warren,"19,181",0.0764,"3,909"
+Iowa,Washington,"19,183",0.1489,"3,194"
+Iowa,Wayne,"19,185",0.3892,134
+Iowa,Webster,"19,187",0.4061,"3,816"
+Iowa,Winnebago,"19,189",0.1251,431
+Iowa,Winneshiek,"19,191",0.0411,557
+Iowa,Woodbury,"19,193",0.6521,0
+Iowa,Worth,"19,195",0.0038,277
+Iowa,Wright,"19,197",0.401,"5,061"
+Kansas,Allen,"20,001",0.3924,74
+Kansas,Anderson,"20,003",0.2756,94
+Kansas,Atchison,"20,005",0.3546,522
+Kansas,Barber,"20,007",0.5181,27
+Kansas,Barton,"20,009",0.6276,777
+Kansas,Bourbon,"20,011",0.5242,488
+Kansas,Brown,"20,013",0.2798,198
+Kansas,Butler,"20,015",0.2718,"1,069"
+Kansas,Chase,"20,017",0.1926,66
+Kansas,Chautauqua,"20,019",0.7686,59
+Kansas,Cherokee,"20,021",0.4819,572
+Kansas,Cheyenne,"20,023",0.218,26
+Kansas,Clark,"20,025",0.1649,442
+Kansas,Clay,"20,027",0.317,120
+Kansas,Cloud,"20,029",0.2279,312
+Kansas,Coffey,"20,031",0.2046,697
+Kansas,Comanche,"20,033",0.1012,35
+Kansas,Cowley,"20,035",0.6194,"1,013"
+Kansas,Crawford,"20,037",0.7683,"3,743"
+Kansas,Decatur,"20,039",0.1607,6
+Kansas,Dickinson,"20,041",0.1836,161
+Kansas,Doniphan,"20,043",0.2263,347
+Kansas,Douglas,"20,045",0.2565,"4,562"
+Kansas,Edwards,"20,047",0.2374,96
+Kansas,Elk,"20,049",0.3616,13
+Kansas,Ellis,"20,051",0.1862,483
+Kansas,Ellsworth,"20,053",0.1779,121
+Kansas,Finney,"20,055",0.8574,0
+Kansas,Ford,"20,057",0.7931,0
+Kansas,Franklin,"20,059",0.2613,"1,115"
+Kansas,Geary,"20,061",0.711,"1,300"
+Kansas,Gove,"20,063",0.1063,25
+Kansas,Graham,"20,065",0.4039,61
+Kansas,Grant,"20,067",0.4758,749
+Kansas,Gray,"20,069",0.2979,375
+Kansas,Greeley,"20,071",0.5232,3
+Kansas,Greenwood,"20,073",0.2578,143
+Kansas,Hamilton,"20,075",0.3017,449
+Kansas,Harper,"20,077",0.5306,28
+Kansas,Harvey,"20,079",0.5592,786
+Kansas,Haskell,"20,081",0.3644,400
+Kansas,Hodgeman,"20,083",0.0824,119
+Kansas,Jackson,"20,085",0.3055,"1,523"
+Kansas,Jefferson,"20,087",0.0102,424
+Kansas,Jewell,"20,089",0.105,52
+Kansas,Johnson,"20,091",0.085,0
+Kansas,Kearny,"20,093",0.3962,624
+Kansas,Kingman,"20,095",0.0382,24
+Kansas,Kiowa,"20,097",0.3039,39
+Kansas,Labette,"20,099",0.6292,864
+Kansas,Lane,"20,101",0.106,65
+Kansas,Leavenworth,"20,103",0.2307,0
+Kansas,Lincoln,"20,105",0.0789,7
+Kansas,Linn,"20,107",0.4102,216
+Kansas,Logan,"20,109",0.1856,16
+Kansas,Lyon,"20,111",0.6766,"6,688"
+Kansas,McPherson,"20,113",0.1349,"1,133"
+Kansas,Marion,"20,115",0.1184,215
+Kansas,Marshall,"20,117",0.0945,37
+Kansas,Meade,"20,119",0.3409,400
+Kansas,Miami,"20,121",0.0535,642
+Kansas,Mitchell,"20,123",0.1375,95
+Kansas,Montgomery,"20,125",0.8154,671
+Kansas,Morris,"20,127",0.1776,65
+Kansas,Morton,"20,129",0.5933,91
+Kansas,Nemaha,"20,131",0.0624,378
+Kansas,Neosho,"20,133",0.5732,470
+Kansas,Ness,"20,135",0.0722,52
+Kansas,Norton,"20,137",0.1642,145
+Kansas,Osage,"20,139",0.1964,280
+Kansas,Osborne,"20,141",0.0748,35
+Kansas,Ottawa,"20,143",0.0449,159
+Kansas,Pawnee,"20,145",0.2683,51
+Kansas,Phillips,"20,147",0.2393,295
+Kansas,Pottawatomie,"20,149",0.0532,"1,094"
+Kansas,Pratt,"20,151",0.3877,163
+Kansas,Reno,"20,155",0.5627,"1,375"
+Kansas,Republic,"20,157",0.0245,163
+Kansas,Rice,"20,159",0.2954,76
+Kansas,Riley,"20,161",0.5557,"4,057"
+Kansas,Rooks,"20,163",0.1079,111
+Kansas,Rush,"20,165",0.0366,27
+Kansas,Russell,"20,167",0.3243,13
+Kansas,Saline,"20,169",0.5707,"2,383"
+Kansas,Scott,"20,171",0.4462,217
+Kansas,Sedgwick,"20,173",0.6856,0
+Kansas,Seward,"20,175",0.9099,0
+Kansas,Shawnee,"20,177",0.5067,"9,407"
+Kansas,Sheridan,"20,179",0.1057,70
+Kansas,Sherman,"20,181",0.2403,97
+Kansas,Smith,"20,183",0.0602,39
+Kansas,Stafford,"20,185",0.2817,15
+Kansas,Stanton,"20,187",0.5461,151
+Kansas,Stevens,"20,189",0.8832,432
+Kansas,Sumner,"20,191",0.3829,298
+Kansas,Thomas,"20,193",0.0742,214
+Kansas,Trego,"20,195",0.0181,20
+Kansas,Wabaunsee,"20,197",0.063,481
+Kansas,Washington,"20,201",0.0398,13
+Kansas,Wilson,"20,205",0.4685,47
+Kansas,Woodson,"20,207",0.2187,123
+Kansas,Wyandotte,"20,209",0.9504,0
+Kentucky,Adair,"21,001",0.5356,"1,847"
+Kentucky,Allen,"21,003",0.6165,"2,363"
+Kentucky,Anderson,"21,005",0.2241,389
+Kentucky,Ballard,"21,007",0.388,212
+Kentucky,Barren,"21,009",0.7712,"1,408"
+Kentucky,Bath,"21,011",0.4141,244
+Kentucky,Bell,"21,013",0.7992,726
+Kentucky,Boone,"21,015",0.1496,"8,732"
+Kentucky,Bourbon,"21,017",0.4144,498
+Kentucky,Boyd,"21,019",0.6859,988
+Kentucky,Boyle,"21,021",0.5321,561
+Kentucky,Bracken,"21,023",0.2104,232
+Kentucky,Breathitt,"21,025",0.6897,156
+Kentucky,Breckinridge,"21,027",0.5057,359
+Kentucky,Bullitt,"21,029",0.1194,"2,139"
+Kentucky,Butler,"21,031",0.684,"3,395"
+Kentucky,Caldwell,"21,033",0.6127,309
+Kentucky,Calloway,"21,035",0.4017,"1,284"
+Kentucky,Campbell,"21,037",0.2476,"3,932"
+Kentucky,Carlisle,"21,039",0.3148,105
+Kentucky,Carroll,"21,041",0.8243,819
+Kentucky,Carter,"21,043",0.5888,438
+Kentucky,Casey,"21,045",0.8663,723
+Kentucky,Christian,"21,047",0.9258,"3,811"
+Kentucky,Clark,"21,049",0.5325,"1,369"
+Kentucky,Clay,"21,051",0.8405,993
+Kentucky,Clinton,"21,053",0.76,92
+Kentucky,Crittenden,"21,055",0.5006,133
+Kentucky,Cumberland,"21,057",0.5455,105
+Kentucky,Daviess,"21,059",0.612,"6,193"
+Kentucky,Edmonson,"21,061",0.4876,"1,092"
+Kentucky,Elliott,"21,063",0.4835,41
+Kentucky,Estill,"21,065",0.8361,64
+Kentucky,Fayette,"21,067",0.5719,0
+Kentucky,Fleming,"21,069",0.6467,329
+Kentucky,Floyd,"21,071",0.7553,478
+Kentucky,Franklin,"21,073",0.6251,"1,993"
+Kentucky,Fulton,"21,075",0.9325,330
+Kentucky,Gallatin,"21,077",0.5678,862
+Kentucky,Garrard,"21,079",0.2034,419
+Kentucky,Grant,"21,081",0.2985,822
+Kentucky,Graves,"21,083",0.7253,"3,334"
+Kentucky,Grayson,"21,085",0.57,"1,859"
+Kentucky,Green,"21,087",0.7358,130
+Kentucky,Greenup,"21,089",0.211,502
+Kentucky,Hancock,"21,091",0.1798,300
+Kentucky,Hardin,"21,093",0.5162,"2,932"
+Kentucky,Harlan,"21,095",0.8488,427
+Kentucky,Harrison,"21,097",0.4106,"1,021"
+Kentucky,Hart,"21,099",0.7693,646
+Kentucky,Henderson,"21,101",0.6451,"2,450"
+Kentucky,Henry,"21,103",0.522,522
+Kentucky,Hickman,"21,105",0.4265,83
+Kentucky,Hopkins,"21,107",0.6439,"3,724"
+Kentucky,Jackson,"21,109",0.5115,"1,497"
+Kentucky,Jefferson,"21,111",0.6146,0
+Kentucky,Jessamine,"21,113",0.2743,"1,661"
+Kentucky,Johnson,"21,115",0.7282,135
+Kentucky,Kenton,"21,117",0.296,"11,063"
+Kentucky,Knott,"21,119",0.7728,185
+Kentucky,Knox,"21,121",0.7581,"1,108"
+Kentucky,Larue,"21,123",0.2899,254
+Kentucky,Laurel,"21,125",0.663,"2,015"
+Kentucky,Lawrence,"21,127",0.5337,135
+Kentucky,Lee,"21,129",0.8014,13
+Kentucky,Leslie,"21,131",0.6349,136
+Kentucky,Letcher,"21,133",0.7658,223
+Kentucky,Lewis,"21,135",0.5703,288
+Kentucky,Lincoln,"21,137",0.6238,547
+Kentucky,Livingston,"21,139",0.126,177
+Kentucky,Logan,"21,141",0.4507,"3,142"
+Kentucky,Lyon,"21,143",0.1715,275
+Kentucky,McCracken,"21,145",0.5573,"2,414"
+Kentucky,McCreary,"21,147",0.7482,237
+Kentucky,McLean,"21,149",0.274,357
+Kentucky,Madison,"21,151",0.4908,"2,091"
+Kentucky,Magoffin,"21,153",0.7813,86
+Kentucky,Marion,"21,155",0.7572,764
+Kentucky,Marshall,"21,157",0.2139,855
+Kentucky,Martin,"21,159",0.6235,130
+Kentucky,Mason,"21,161",0.6158,479
+Kentucky,Meade,"21,163",0.1849,429
+Kentucky,Menifee,"21,165",0.345,174
+Kentucky,Mercer,"21,167",0.2747,350
+Kentucky,Metcalfe,"21,169",0.4978,181
+Kentucky,Monroe,"21,171",0.6671,573
+Kentucky,Montgomery,"21,173",0.6617,805
+Kentucky,Morgan,"21,175",0.6938,154
+Kentucky,Muhlenberg,"21,177",0.2702,"7,139"
+Kentucky,Nelson,"21,179",0.0831,"1,282"
+Kentucky,Nicholas,"21,181",0.4093,132
+Kentucky,Ohio,"21,183",0.4523,"2,951"
+Kentucky,Oldham,"21,185",0.0264,"2,008"
+Kentucky,Owen,"21,187",0.3536,115
+Kentucky,Owsley,"21,189",0.7088,39
+Kentucky,Pendleton,"21,191",0.4551,268
+Kentucky,Perry,"21,193",0.6591,971
+Kentucky,Pike,"21,195",0.7432,"1,433"
+Kentucky,Powell,"21,197",0.7085,116
+Kentucky,Pulaski,"21,199",0.6636,"1,580"
+Kentucky,Robertson,"21,201",0.486,13
+Kentucky,Rockcastle,"21,203",0.6782,361
+Kentucky,Rowan,"21,205",0.4784,334
+Kentucky,Russell,"21,207",0.6677,827
+Kentucky,Scott,"21,209",0.2069,"1,455"
+Kentucky,Shelby,"21,211",0.3345,"6,801"
+Kentucky,Simpson,"21,213",0.3071,"1,098"
+Kentucky,Spencer,"21,215",0.0255,553
+Kentucky,Taylor,"21,217",0.4077,701
+Kentucky,Todd,"21,219",0.8316,343
+Kentucky,Trigg,"21,221",0.4414,352
+Kentucky,Trimble,"21,223",0.6069,132
+Kentucky,Union,"21,225",0.2101,392
+Kentucky,Warren,"21,227",0.7266,0
+Kentucky,Washington,"21,229",0.4045,366
+Kentucky,Wayne,"21,231",0.7498,301
+Kentucky,Webster,"21,233",0.698,631
+Kentucky,Whitley,"21,235",0.7425,567
+Kentucky,Wolfe,"21,237",0.8097,54
+Kentucky,Woodford,"21,239",0.1585,"1,005"
+Louisiana,Acadia,"22,001",0.888,"2,881"
+Louisiana,Allen,"22,003",0.7244,"5,141"
+Louisiana,Ascension,"22,005",0.3253,0
+Louisiana,Assumption,"22,007",0.7527,"5,178"
+Louisiana,Avoyelles,"22,009",0.9284,"5,592"
+Louisiana,Beauregard,"22,011",0.5201,"3,802"
+Louisiana,Bienville,"22,013",0.943,"3,231"
+Louisiana,Bossier,"22,015",0.6961,"2,889"
+Louisiana,Caddo,"22,017",0.9001,0
+Louisiana,Calcasieu,"22,019",0.7097,0
+Louisiana,Caldwell,"22,021",0.7922,"1,516"
+Louisiana,Cameron,"22,023",0.2371,"1,057"
+Louisiana,Catahoula,"22,025",0.8221,"2,665"
+Louisiana,Claiborne,"22,027",0.8355,"1,780"
+Louisiana,Concordia,"22,029",0.9682,"1,716"
+Louisiana,De Soto,"22,031",0.8144,"5,170"
+Louisiana,East Baton Rouge,"22,033",0.8027,0
+Louisiana,East Carroll,"22,035",0.9672,"5,853"
+Louisiana,East Feliciana,"22,037",0.7521,"4,331"
+Louisiana,Evangeline,"22,039",0.999,"3,539"
+Louisiana,Franklin,"22,041",0.8873,"6,773"
+Louisiana,Grant,"22,043",0.5465,"1,429"
+Louisiana,Iberia,"22,045",0.9507,"5,355"
+Louisiana,Iberville,"22,047",0.8425,"10,210"
+Louisiana,Jackson,"22,049",0.7737,"2,936"
+Louisiana,Jefferson,"22,051",0.7985,0
+Louisiana,Jefferson Davis,"22,053",0.817,"6,798"
+Louisiana,Lafayette,"22,055",0.7447,0
+Louisiana,Lafourche,"22,057",0.8033,0
+Louisiana,LaSalle,"22,059",0.5697,"1,451"
+Louisiana,Lincoln,"22,061",0.839,"5,005"
+Louisiana,Livingston,"22,063",0.4437,0
+Louisiana,Madison,"22,065",0.9978,"5,254"
+Louisiana,Morehouse,"22,067",0.9077,"3,437"
+Louisiana,Natchitoches,"22,069",0.8641,"4,647"
+Louisiana,Orleans,"22,071",0.8329,0
+Louisiana,Ouachita,"22,073",0.8593,0
+Louisiana,Plaquemines,"22,075",0.6528,"3,800"
+Louisiana,Pointe Coupee,"22,077",0.7858,"4,244"
+Louisiana,Rapides,"22,079",0.9023,0
+Louisiana,Red River,"22,081",0.8272,931
+Louisiana,Richland,"22,083",0.8937,"3,140"
+Louisiana,Sabine,"22,085",0.8307,"1,923"
+Louisiana,St. Bernard,"22,087",0.8666,"8,768"
+Louisiana,St. Charles,"22,089",0.3157,"10,810"
+Louisiana,St. Helena,"22,091",0.9185,"1,484"
+Louisiana,St. James,"22,093",0.5554,"5,477"
+Louisiana,St. John the Baptist,"22,095",0.7158,982
+Louisiana,St. Landry,"22,097",0.8374,"6,345"
+Louisiana,St. Martin,"22,099",0.7301,"8,691"
+Louisiana,St. Mary,"22,101",0.8638,"8,553"
+Louisiana,St. Tammany,"22,103",0.451,0
+Louisiana,Tangipahoa,"22,105",0.8905,0
+Louisiana,Tensas,"22,107",0.7234,385
+Louisiana,Terrebonne,"22,109",0.86,0
+Louisiana,Union,"22,111",0.6789,"5,951"
+Louisiana,Vermilion,"22,113",0.7899,"5,569"
+Louisiana,Vernon,"22,115",0.754,"2,906"
+Louisiana,Washington,"22,117",0.9736,"10,051"
+Louisiana,Webster,"22,119",0.9039,"6,228"
+Louisiana,West Baton Rouge,"22,121",0.5423,"4,393"
+Louisiana,West Carroll,"22,123",0.5898,"2,055"
+Louisiana,West Feliciana,"22,125",0.4389,"3,307"
+Louisiana,Winn,"22,127",0.7136,"3,508"
+Maine,Androscoggin,"23,001",0.5614,"6,470"
+Maine,Aroostook,"23,003",0.5757,313
+Maine,Cumberland,"23,005",0.1789,0
+Maine,Franklin,"23,007",0.4118,529
+Maine,Hancock,"23,009",0.2043,228
+Maine,Kennebec,"23,011",0.3125,"1,899"
+Maine,Knox,"23,013",0.1684,324
+Maine,Lincoln,"23,015",0.204,328
+Maine,Oxford,"23,017",0.3173,558
+Maine,Penobscot,"23,019",0.4249,"1,542"
+Maine,Piscataquis,"23,021",0.493,55
+Maine,Sagadahoc,"23,023",0.0665,443
+Maine,Somerset,"23,025",0.4659,393
+Maine,Waldo,"23,027",0.2693,751
+Maine,Washington,"23,029",0.6957,53
+Maine,York,"23,031",0.1719,"7,259"
+Maryland,Allegany,"24,001",0.549,"2,756"
+Maryland,Anne Arundel,"24,003",0.1903,0
+Maryland,Baltimore,"24,005",0.5175,0
+Maryland,Calvert,"24,009",0.0086,"5,637"
+Maryland,Caroline,"24,011",0.676,"4,268"
+Maryland,Carroll,"24,013",0.0328,0
+Maryland,Cecil,"24,015",0.3208,"6,630"
+Maryland,Charles,"24,017",0.197,0
+Maryland,Dorchester,"24,019",0.7874,"2,631"
+Maryland,Frederick,"24,021",0.1827,0
+Maryland,Garrett,"24,023",0.2327,233
+Maryland,Harford,"24,025",0.1015,0
+Maryland,Howard,"24,027",0.1369,0
+Maryland,Kent,"24,029",0.4567,"2,653"
+Maryland,Montgomery,"24,031",0.4631,0
+Maryland,Prince George's,"24,033",0.7969,0
+Maryland,Queen Anne's,"24,035",0.0404,"3,434"
+Maryland,St. Mary's,"24,037",0.303,"8,760"
+Maryland,Somerset,"24,039",0.8546,"1,214"
+Maryland,Talbot,"24,041",0.2419,"2,140"
+Maryland,Washington,"24,043",0.5987,"9,174"
+Maryland,Wicomico,"24,045",0.8199,0
+Maryland,Worcester,"24,047",0.4882,"3,998"
+Maryland,Baltimore City,"24,510",0.8682,0
+Massachusetts,Barnstable,"25,001",0.0961,0
+Massachusetts,Berkshire,"25,003",0.367,"7,891"
+Massachusetts,Bristol,"25,005",0.5875,0
+Massachusetts,Dukes,"25,007",0.1136,698
+Massachusetts,Essex,"25,009",0.6085,0
+Massachusetts,Franklin,"25,011",0.3689,"4,912"
+Massachusetts,Hampden,"25,013",0.8234,0
+Massachusetts,Hampshire,"25,015",0.2575,"8,862"
+Massachusetts,Middlesex,"25,017",0.2677,0
+Massachusetts,Nantucket,"25,019",0.119,267
+Massachusetts,Norfolk,"25,021",0.2734,0
+Massachusetts,Plymouth,"25,023",0.2845,0
+Massachusetts,Suffolk,"25,025",0.7861,0
+Massachusetts,Worcester,"25,027",0.4398,0
+Michigan,Alcona,"26,001",0.1413,298
+Michigan,Alger,"26,003",0.3953,52
+Michigan,Allegan,"26,005",0.1725,"4,584"
+Michigan,Alpena,"26,007",0.3552,"1,598"
+Michigan,Antrim,"26,009",0.0643,307
+Michigan,Arenac,"26,011",0.3355,494
+Michigan,Baraga,"26,013",0.4125,66
+Michigan,Barry,"26,015",0.0522,"1,597"
+Michigan,Bay,"26,017",0.3514,"5,390"
+Michigan,Benzie,"26,019",0.0786,154
+Michigan,Berrien,"26,021",0.6964,"4,887"
+Michigan,Branch,"26,023",0.7263,0
+Michigan,Calhoun,"26,025",0.6906,"7,589"
+Michigan,Cass,"26,027",0.2473,"2,269"
+Michigan,Charlevoix,"26,029",0.1499,425
+Michigan,Cheboygan,"26,031",0.2728,359
+Michigan,Chippewa,"26,033",0.6665,213
+Michigan,Clare,"26,035",0.7677,408
+Michigan,Clinton,"26,037",0.0363,"3,493"
+Michigan,Crawford,"26,039",0.3568,"1,011"
+Michigan,Delta,"26,041",0.3294,378
+Michigan,Dickinson,"26,043",0.1598,187
+Michigan,Eaton,"26,045",0.2231,"4,478"
+Michigan,Emmet,"26,047",0.17,452
+Michigan,Genesee,"26,049",0.6766,0
+Michigan,Gladwin,"26,051",0.5952,354
+Michigan,Gogebic,"26,053",0.3752,136
+Michigan,Grand Traverse,"26,055",0.1967,998
+Michigan,Gratiot,"26,057",0.3335,"1,375"
+Michigan,Hillsdale,"26,059",0.4577,"2,638"
+Michigan,Houghton,"26,061",0.4714,293
+Michigan,Huron,"26,063",0.198,924
+Michigan,Ingham,"26,065",0.5917,0
+Michigan,Ionia,"26,067",0.3437,"2,727"
+Michigan,Iosco,"26,069",0.4392,"1,552"
+Michigan,Iron,"26,071",0.3272,84
+Michigan,Isabella,"26,073",0.606,"1,872"
+Michigan,Jackson,"26,075",0.5194,0
+Michigan,Kalamazoo,"26,077",0.4516,0
+Michigan,Kalkaska,"26,079",0.3596,522
+Michigan,Kent,"26,081",0.4739,0
+Michigan,Keweenaw,"26,083",0.0188,14
+Michigan,Lake,"26,085",0.6563,149
+Michigan,Lapeer,"26,087",0.219,"8,048"
+Michigan,Leelanau,"26,089",0.0398,409
+Michigan,Lenawee,"26,091",0.3628,"8,754"
+Michigan,Livingston,"26,093",0.0054,"8,446"
+Michigan,Luce,"26,095",0.3577,52
+Michigan,Mackinac,"26,097",0.6435,117
+Michigan,Macomb,"26,099",0.3864,0
+Michigan,Manistee,"26,101",0.3867,478
+Michigan,Marquette,"26,103",0.2358,"1,060"
+Michigan,Mason,"26,105",0.4379,889
+Michigan,Mecosta,"26,107",0.5805,445
+Michigan,Menominee,"26,109",0.2253,407
+Michigan,Midland,"26,111",0.1544,"2,301"
+Michigan,Missaukee,"26,113",0.4675,438
+Michigan,Monroe,"26,115",0.1556,"8,423"
+Michigan,Montcalm,"26,117",0.4252,"1,515"
+Michigan,Montmorency,"26,119",0.3565,74
+Michigan,Muskegon,"26,121",0.6248,"11,492"
+Michigan,Newaygo,"26,123",0.4997,"2,435"
+Michigan,Oakland,"26,125",0.1464,0
+Michigan,Oceana,"26,127",0.7212,"4,751"
+Michigan,Ogemaw,"26,129",0.5417,544
+Michigan,Ontonagon,"26,131",0.1614,11
+Michigan,Osceola,"26,133",0.6289,531
+Michigan,Oscoda,"26,135",0.6257,284
+Michigan,Otsego,"26,137",0.4453,"1,754"
+Michigan,Ottawa,"26,139",0.1773,0
+Michigan,Presque Isle,"26,141",0.2222,175
+Michigan,Roscommon,"26,143",0.5016,389
+Michigan,Saginaw,"26,145",0.655,0
+Michigan,St. Clair,"26,147",0.3078,"7,770"
+Michigan,St. Joseph,"26,149",0.6149,"4,736"
+Michigan,Sanilac,"26,151",0.4255,700
+Michigan,Schoolcraft,"26,153",0.4026,81
+Michigan,Shiawassee,"26,155",0.1181,"3,647"
+Michigan,Tuscola,"26,157",0.2635,"3,110"
+Michigan,Van Buren,"26,159",0.6887,"3,284"
+Michigan,Washtenaw,"26,161",0.2568,0
+Michigan,Wayne,"26,163",0.8714,0
+Michigan,Wexford,"26,165",0.4344,663
+Minnesota,Aitkin,"27,001",0.2804,196
+Minnesota,Anoka,"27,003",0.1327,0
+Minnesota,Becker,"27,005",0.3415,770
+Minnesota,Beltrami,"27,007",0.809,513
+Minnesota,Benton,"27,009",0.309,"2,936"
+Minnesota,Big Stone,"27,011",0.1216,207
+Minnesota,Blue Earth,"27,013",0.318,"6,704"
+Minnesota,Brown,"27,015",0.0767,495
+Minnesota,Carlton,"27,017",0.2451,"1,154"
+Minnesota,Carver,"27,019",0.0156,"5,505"
+Minnesota,Cass,"27,021",0.4055,227
+Minnesota,Chippewa,"27,023",0.6722,"1,030"
+Minnesota,Chisago,"27,025",0.0318,"1,341"
+Minnesota,Clay,"27,027",0.316,"7,781"
+Minnesota,Clearwater,"27,029",0.844,128
+Minnesota,Cook,"27,031",0.1817,13
+Minnesota,Cottonwood,"27,033",0.4647,"1,790"
+Minnesota,Crow Wing,"27,035",0.148,"1,420"
+Minnesota,Dakota,"27,037",0.1521,0
+Minnesota,Dodge,"27,039",0.0407,"1,186"
+Minnesota,Douglas,"27,041",0.0694,873
+Minnesota,Faribault,"27,043",0.1095,765
+Minnesota,Fillmore,"27,045",0.1932,409
+Minnesota,Freeborn,"27,047",0.415,"3,914"
+Minnesota,Goodhue,"27,049",0.1693,"1,750"
+Minnesota,Grant,"27,051",0.1337,253
+Minnesota,Hennepin,"27,053",0.3956,0
+Minnesota,Houston,"27,055",0.0296,367
+Minnesota,Hubbard,"27,057",0.2435,103
+Minnesota,Isanti,"27,059",0.0646,994
+Minnesota,Itasca,"27,061",0.3803,880
+Minnesota,Jackson,"27,063",0.0197,729
+Minnesota,Kanabec,"27,065",0.2355,202
+Minnesota,Kandiyohi,"27,067",0.4694,"7,556"
+Minnesota,Kittson,"27,069",0.1127,26
+Minnesota,Koochiching,"27,071",0.3469,229
+Minnesota,Lac qui Parle,"27,073",0.0678,57
+Minnesota,Lake,"27,075",0.0729,87
+Minnesota,Le Sueur,"27,079",0.0649,"1,479"
+Minnesota,Lincoln,"27,081",0.1098,188
+Minnesota,Lyon,"27,083",0.4854,"4,255"
+Minnesota,McLeod,"27,085",0.0761,"1,233"
+Minnesota,Mahnomen,"27,087",0.9255,129
+Minnesota,Marshall,"27,089",0.1088,169
+Minnesota,Martin,"27,091",0.1916,"2,210"
+Minnesota,Meeker,"27,093",0.1044,807
+Minnesota,Mille Lacs,"27,095",0.5939,468
+Minnesota,Morrison,"27,097",0.1999,809
+Minnesota,Mower,"27,099",0.6426,"12,538"
+Minnesota,Murray,"27,101",0.1041,886
+Minnesota,Nicollet,"27,103",0.2406,"2,363"
+Minnesota,Nobles,"27,105",0.7794,0
+Minnesota,Norman,"27,107",0.2597,267
+Minnesota,Olmsted,"27,109",0.2397,0
+Minnesota,Otter Tail,"27,111",0.2658,"1,333"
+Minnesota,Pennington,"27,113",0.2457,678
+Minnesota,Pine,"27,115",0.5108,"1,410"
+Minnesota,Pipestone,"27,117",0.4526,775
+Minnesota,Polk,"27,119",0.3982,"1,101"
+Minnesota,Pope,"27,121",0.029,151
+Minnesota,Ramsey,"27,123",0.6747,0
+Minnesota,Red Lake,"27,125",0.1117,49
+Minnesota,Redwood,"27,127",0.2002,268
+Minnesota,Renville,"27,129",0.2171,456
+Minnesota,Rice,"27,131",0.4099,"11,175"
+Minnesota,Rock,"27,133",0.1279,413
+Minnesota,Roseau,"27,135",0.2113,253
+Minnesota,St. Louis,"27,137",0.2973,"2,638"
+Minnesota,Scott,"27,139",0.0964,"10,265"
+Minnesota,Sherburne,"27,141",0.0719,"4,356"
+Minnesota,Sibley,"27,143",0.1028,722
+Minnesota,Stearns,"27,145",0.3886,0
+Minnesota,Steele,"27,147",0.2489,"3,108"
+Minnesota,Stevens,"27,149",0.169,93
+Minnesota,Swift,"27,151",0.3581,341
+Minnesota,Todd,"27,153",0.556,"5,222"
+Minnesota,Traverse,"27,155",0.289,77
+Minnesota,Wabasha,"27,157",0.1025,460
+Minnesota,Wadena,"27,159",0.7798,207
+Minnesota,Waseca,"27,161",0.2788,931
+Minnesota,Washington,"27,163",0.0668,0
+Minnesota,Watonwan,"27,165",0.6499,"3,152"
+Minnesota,Wilkin,"27,167",0.1467,274
+Minnesota,Winona,"27,169",0.1553,"1,730"
+Minnesota,Wright,"27,171",0.022,"6,470"
+Minnesota,Yellow Medicine,"27,173",0.2597,396
+Mississippi,Adams,"28,001",0.9857,"4,305"
+Mississippi,Alcorn,"28,003",0.838,"1,091"
+Mississippi,Amite,"28,005",0.8762,"1,317"
+Mississippi,Attala,"28,007",0.9729,"4,827"
+Mississippi,Benton,"28,009",0.5576,524
+Mississippi,Bolivar,"28,011",0.9895,"4,788"
+Mississippi,Calhoun,"28,013",0.8686,"1,913"
+Mississippi,Carroll,"28,015",0.5468,"2,241"
+Mississippi,Chickasaw,"28,017",0.9297,"3,731"
+Mississippi,Choctaw,"28,019",0.6283,969
+Mississippi,Claiborne,"28,021",0.9239,"3,726"
+Mississippi,Clarke,"28,023",0.7257,"2,789"
+Mississippi,Clay,"28,025",0.7374,"3,301"
+Mississippi,Coahoma,"28,027",0.9446,"2,758"
+Mississippi,Copiah,"28,029",0.8399,"8,191"
+Mississippi,Covington,"28,031",0.7925,"5,129"
+Mississippi,DeSoto,"28,033",0.3164,0
+Mississippi,Forrest,"28,035",0.9663,"9,034"
+Mississippi,Franklin,"28,037",0.5595,633
+Mississippi,George,"28,039",0.8094,"1,310"
+Mississippi,Greene,"28,041",0.6849,"1,408"
+Mississippi,Grenada,"28,043",0.8791,"6,869"
+Mississippi,Hancock,"28,045",0.5525,"1,782"
+Mississippi,Harrison,"28,047",0.9217,"5,336"
+Mississippi,Hinds,"28,049",0.8956,0
+Mississippi,Holmes,"28,051",0.992,"7,410"
+Mississippi,Humphreys,"28,053",0.9733,"2,022"
+Mississippi,Issaquena,"28,055",0.9847,126
+Mississippi,Itawamba,"28,057",0.2954,"1,825"
+Mississippi,Jackson,"28,059",0.7148,"9,067"
+Mississippi,Jasper,"28,061",0.6728,"3,499"
+Mississippi,Jefferson,"28,063",0.9204,"1,506"
+Mississippi,Jefferson Davis,"28,065",0.7769,"1,510"
+Mississippi,Jones,"28,067",0.8313,0
+Mississippi,Kemper,"28,069",0.944,"2,346"
+Mississippi,Lafayette,"28,071",0.4774,"5,686"
+Mississippi,Lamar,"28,073",0.691,"6,578"
+Mississippi,Lauderdale,"28,075",0.9176,"12,152"
+Mississippi,Lawrence,"28,077",0.7775,"2,494"
+Mississippi,Leake,"28,079",0.9777,"7,842"
+Mississippi,Lee,"28,081",0.7546,"7,529"
+Mississippi,Leflore,"28,083",0.9306,"6,648"
+Mississippi,Lincoln,"28,085",0.712,"6,405"
+Mississippi,Lowndes,"28,087",0.7829,"6,675"
+Mississippi,Madison,"28,089",0.3421,0
+Mississippi,Marion,"28,091",0.9437,"3,995"
+Mississippi,Marshall,"28,093",0.8558,"3,361"
+Mississippi,Monroe,"28,095",0.6655,"5,546"
+Mississippi,Montgomery,"28,097",0.901,"1,954"
+Mississippi,Neshoba,"28,099",0.9551,"4,916"
+Mississippi,Newton,"28,101",0.7661,"4,617"
+Mississippi,Noxubee,"28,103",0.9879,"3,505"
+Mississippi,Oktibbeha,"28,105",0.7804,"7,422"
+Mississippi,Panola,"28,107",0.8491,"5,086"
+Mississippi,Pearl River,"28,109",0.6171,"3,565"
+Mississippi,Perry,"28,111",0.7565,994
+Mississippi,Pike,"28,113",0.971,"6,024"
+Mississippi,Pontotoc,"28,115",0.7272,"4,134"
+Mississippi,Prentiss,"28,117",0.8434,"1,479"
+Mississippi,Quitman,"28,119",0.9593,"1,133"
+Mississippi,Rankin,"28,121",0.3736,"6,530"
+Mississippi,Scott,"28,123",0.9745,"10,309"
+Mississippi,Sharkey,"28,125",0.9583,533
+Mississippi,Simpson,"28,127",0.7161,"4,716"
+Mississippi,Smith,"28,129",0.55,"3,032"
+Mississippi,Stone,"28,131",0.8246,900
+Mississippi,Sunflower,"28,133",0.9621,"5,602"
+Mississippi,Tallahatchie,"28,135",0.9567,"2,084"
+Mississippi,Tate,"28,137",0.7438,"4,225"
+Mississippi,Tippah,"28,139",0.8431,"1,803"
+Mississippi,Tishomingo,"28,141",0.654,"1,180"
+Mississippi,Tunica,"28,143",0.9752,"1,457"
+Mississippi,Union,"28,145",0.7139,"2,951"
+Mississippi,Walthall,"28,147",0.8647,"2,945"
+Mississippi,Warren,"28,149",0.9405,"7,109"
+Mississippi,Washington,"28,151",0.9949,"8,376"
+Mississippi,Wayne,"28,153",0.908,"7,169"
+Mississippi,Webster,"28,155",0.5092,"1,686"
+Mississippi,Wilkinson,"28,157",0.9192,"1,245"
+Mississippi,Winston,"28,159",0.9134,"3,632"
+Mississippi,Yalobusha,"28,161",0.7365,"2,436"
+Mississippi,Yazoo,"28,163",0.9984,"6,898"
+Missouri,Adair,"29,001",0.4968,"1,321"
+Missouri,Andrew,"29,003",0.042,726
+Missouri,Atchison,"29,005",0.1295,71
+Missouri,Audrain,"29,007",0.5687,"1,829"
+Missouri,Barry,"29,009",0.5786,"1,094"
+Missouri,Barton,"29,011",0.7279,398
+Missouri,Bates,"29,013",0.5926,165
+Missouri,Benton,"29,015",0.6314,266
+Missouri,Bollinger,"29,017",0.5048,236
+Missouri,Boone,"29,019",0.3819,"7,856"
+Missouri,Buchanan,"29,021",0.761,"11,898"
+Missouri,Butler,"29,023",0.8415,"1,468"
+Missouri,Caldwell,"29,025",0.3339,175
+Missouri,Callaway,"29,027",0.2362,776
+Missouri,Camden,"29,029",0.3262,993
+Missouri,Cape Girardeau,"29,031",0.3399,"3,497"
+Missouri,Carroll,"29,033",0.3135,301
+Missouri,Carter,"29,035",0.5032,85
+Missouri,Cass,"29,037",0.1286,"2,731"
+Missouri,Cedar,"29,039",0.6553,149
+Missouri,Chariton,"29,041",0.1572,79
+Missouri,Christian,"29,043",0.1384,978
+Missouri,Clark,"29,045",0.4395,26
+Missouri,Clay,"29,047",0.2467,"6,831"
+Missouri,Clinton,"29,049",0.0939,398
+Missouri,Cole,"29,051",0.2498,"1,443"
+Missouri,Cooper,"29,053",0.4408,309
+Missouri,Crawford,"29,055",0.7982,243
+Missouri,Dade,"29,057",0.5713,19
+Missouri,Dallas,"29,059",0.5818,210
+Missouri,Daviess,"29,061",0.5013,131
+Missouri,DeKalb,"29,063",0.1305,195
+Missouri,Dent,"29,065",0.7081,69
+Missouri,Douglas,"29,067",0.3705,114
+Missouri,Dunklin,"29,069",0.978,"1,545"
+Missouri,Franklin,"29,071",0.126,"3,209"
+Missouri,Gasconade,"29,073",0.1022,174
+Missouri,Gentry,"29,075",0.5003,817
+Missouri,Greene,"29,077",0.5535,"5,821"
+Missouri,Grundy,"29,079",0.7479,267
+Missouri,Harrison,"29,081",0.6057,294
+Missouri,Henry,"29,083",0.6827,284
+Missouri,Hickory,"29,085",0.5672,7
+Missouri,Holt,"29,087",0.1273,13
+Missouri,Howard,"29,089",0.2333,65
+Missouri,Howell,"29,091",0.6534,605
+Missouri,Iron,"29,093",0.7422,39
+Missouri,Jackson,"29,095",0.6715,0
+Missouri,Jasper,"29,097",0.7514,"8,719"
+Missouri,Jefferson,"29,099",0.1604,"8,345"
+Missouri,Johnson,"29,101",0.3762,"2,767"
+Missouri,Knox,"29,103",0.3364,26
+Missouri,Laclede,"29,105",0.571,844
+Missouri,Lafayette,"29,107",0.1658,"1,265"
+Missouri,Lawrence,"29,109",0.8202,654
+Missouri,Lewis,"29,111",0.4975,103
+Missouri,Lincoln,"29,113",0.2174,"1,399"
+Missouri,Linn,"29,115",0.1575,247
+Missouri,Livingston,"29,117",0.3501,273
+Missouri,McDonald,"29,119",0.818,"10,587"
+Missouri,Macon,"29,121",0.5344,204
+Missouri,Madison,"29,123",0.6053,89
+Missouri,Maries,"29,125",0.592,81
+Missouri,Marion,"29,127",0.394,362
+Missouri,Mercer,"29,129",0.4217,82
+Missouri,Miller,"29,131",0.3927,281
+Missouri,Mississippi,"29,133",0.9166,"1,238"
+Missouri,Moniteau,"29,135",0.5204,896
+Missouri,Monroe,"29,137",0.4004,66
+Missouri,Montgomery,"29,139",0.458,278
+Missouri,Morgan,"29,141",0.7651,298
+Missouri,New Madrid,"29,143",0.8475,619
+Missouri,Newton,"29,145",0.564,"6,658"
+Missouri,Nodaway,"29,147",0.2368,315
+Missouri,Oregon,"29,149",0.683,109
+Missouri,Osage,"29,151",0.013,141
+Missouri,Ozark,"29,153",0.472,26
+Missouri,Pemiscot,"29,155",0.9535,"1,503"
+Missouri,Perry,"29,157",0.2202,"2,099"
+Missouri,Pettis,"29,159",0.6773,"1,888"
+Missouri,Phelps,"29,161",0.669,645
+Missouri,Pike,"29,163",0.5843,500
+Missouri,Platte,"29,165",0.1006,"1,903"
+Missouri,Polk,"29,167",0.5929,232
+Missouri,Pulaski,"29,169",0.6432,"1,744"
+Missouri,Putnam,"29,171",0.2941,41
+Missouri,Ralls,"29,173",0.1053,130
+Missouri,Randolph,"29,175",0.4682,191
+Missouri,Ray,"29,177",0.098,377
+Missouri,Reynolds,"29,179",0.5602,60
+Missouri,Ripley,"29,181",0.6273,254
+Missouri,St. Charles,"29,183",0.036,0
+Missouri,St. Clair,"29,185",0.4427,43
+Missouri,Ste. Genevieve,"29,186",0.0882,288
+Missouri,St. Francois,"29,187",0.7113,"2,177"
+Missouri,St. Louis,"29,189",0.3199,0
+Missouri,Saline,"29,195",0.5729,"3,865"
+Missouri,Schuyler,"29,197",0.2075,65
+Missouri,Scotland,"29,199",0.4841,143
+Missouri,Scott,"29,201",0.746,"2,491"
+Missouri,Shannon,"29,203",0.5834,281
+Missouri,Shelby,"29,205",0.3641,55
+Missouri,Stoddard,"29,207",0.5624,"1,919"
+Missouri,Stone,"29,209",0.4609,275
+Missouri,Sullivan,"29,211",0.4459,"1,514"
+Missouri,Taney,"29,213",0.7187,"1,369"
+Missouri,Texas,"29,215",0.88,119
+Missouri,Vernon,"29,217",0.64,367
+Missouri,Warren,"29,219",0.2298,879
+Missouri,Washington,"29,221",0.8036,332
+Missouri,Wayne,"29,223",0.6241,63
+Missouri,Webster,"29,225",0.5582,601
+Missouri,Worth,"29,227",0.24,52
+Missouri,Wright,"29,229",0.8759,395
+Missouri,St. Louis City,"29,510",0.8517,0
+Montana,Beaverhead,"30,001",0.2559,35
+Montana,Big Horn,"30,003",0.6661,"1,295"
+Montana,Broadwater,"30,007",0.0802,80
+Montana,Carbon,"30,009",0.0751,388
+Montana,Cascade,"30,013",0.5283,522
+Montana,Custer,"30,017",0.4071,430
+Montana,Dawson,"30,021",0.177,104
+Montana,Deer Lodge,"30,023",0.6607,60
+Montana,Fallon,"30,025",0.1448,3
+Montana,Fergus,"30,027",0.2813,26
+Montana,Flathead,"30,029",0.2272,864
+Montana,Gallatin,"30,031",0.078,"4,539"
+Montana,Garfield,"30,033",0.077,2
+Montana,Glacier,"30,035",0.9067,330
+Montana,Golden Valley,"30,037",0.1537,39
+Montana,Granite,"30,039",0.1209,63
+Montana,Hill,"30,041",0.5458,96
+Montana,Jefferson,"30,043",0.0971,72
+Montana,Lake,"30,047",0.7276,453
+Montana,Lewis and Clark,"30,049",0.1423,510
+Montana,Liberty,"30,051",0.408,13
+Montana,Lincoln,"30,053",0.4558,184
+Montana,Madison,"30,057",0.1146,287
+Montana,Meagher,"30,059",0.0687,40
+Montana,Missoula,"30,063",0.247,"1,553"
+Montana,Musselshell,"30,065",0.3787,13
+Montana,Park,"30,067",0.1591,197
+Montana,Pondera,"30,073",0.719,27
+Montana,Ravalli,"30,081",0.2673,486
+Montana,Richland,"30,083",0.2081,311
+Montana,Roosevelt,"30,085",0.7954,104
+Montana,Rosebud,"30,087",0.6066,144
+Montana,Sanders,"30,089",0.4268,3
+Montana,Sheridan,"30,091",0.1158,13
+Montana,Silver Bow,"30,093",0.4532,277
+Montana,Stillwater,"30,095",0.0385,96
+Montana,Teton,"30,099",0.2915,141
+Montana,Toole,"30,101",0.5789,403
+Montana,Treasure,"30,103",0.1206,26
+Montana,Valley,"30,105",0.3151,52
+Montana,Wheatland,"30,107",0.2594,21
+Montana,Wibaux,"30,109",0.1677,1
+Montana,Yellowstone,"30,111",0.3084,"4,674"
+Nebraska,Adams,"31,001",0.471,"3,970"
+Nebraska,Antelope,"31,003",0.1085,144
+Nebraska,Banner,"31,007",0.0232,25
+Nebraska,Boone,"31,011",0.0283,91
+Nebraska,Box Butte,"31,013",0.4112,45
+Nebraska,Boyd,"31,015",0.0474,13
+Nebraska,Buffalo,"31,019",0.3848,"2,616"
+Nebraska,Burt,"31,021",0.2091,184
+Nebraska,Butler,"31,023",0.0875,669
+Nebraska,Cass,"31,025",0.0455,"1,014"
+Nebraska,Cedar,"31,027",0.006,233
+Nebraska,Chase,"31,029",0.2537,13
+Nebraska,Cherry,"31,031",0.1502,30
+Nebraska,Cheyenne,"31,033",0.2193,257
+Nebraska,Clay,"31,035",0.1123,369
+Nebraska,Colfax,"31,037",0.3854,"8,756"
+Nebraska,Cuming,"31,039",0.161,484
+Nebraska,Custer,"31,041",0.1824,521
+Nebraska,Dakota,"31,043",0.7689,0
+Nebraska,Dawes,"31,045",0.2336,57
+Nebraska,Dawson,"31,047",0.7435,"11,276"
+Nebraska,Deuel,"31,049",0.0999,1
+Nebraska,Dixon,"31,051",0.2502,675
+Nebraska,Dodge,"31,053",0.6407,"9,120"
+Nebraska,Douglas,"31,055",0.6003,0
+Nebraska,Fillmore,"31,059",0.014,215
+Nebraska,Franklin,"31,061",0.0818,100
+Nebraska,Frontier,"31,063",0.1951,17
+Nebraska,Furnas,"31,065",0.1563,130
+Nebraska,Gage,"31,067",0.184,775
+Nebraska,Garden,"31,069",0.168,52
+Nebraska,Garfield,"31,071",0.0083,21
+Nebraska,Gosper,"31,073",0.0032,169
+Nebraska,Greeley,"31,077",0.0331,57
+Nebraska,Hall,"31,079",0.7228,0
+Nebraska,Hamilton,"31,081",0.0064,907
+Nebraska,Harlan,"31,083",0.2304,13
+Nebraska,Hitchcock,"31,087",0.2833,13
+Nebraska,Holt,"31,089",0.1213,46
+Nebraska,Hooker,"31,091",0.1429,22
+Nebraska,Howard,"31,093",0.1149,602
+Nebraska,Jefferson,"31,095",0.2495,134
+Nebraska,Johnson,"31,097",0.4284,93
+Nebraska,Kearney,"31,099",0.1518,221
+Nebraska,Keith,"31,101",0.3717,56
+Nebraska,Kimball,"31,105",0.5267,146
+Nebraska,Knox,"31,107",0.2066,303
+Nebraska,Lancaster,"31,109",0.3781,0
+Nebraska,Lincoln,"31,111",0.3842,806
+Nebraska,McPherson,"31,117",0,15
+Nebraska,Madison,"31,119",0.5261,"4,976"
+Nebraska,Merrick,"31,121",0.2995,507
+Nebraska,Morrill,"31,123",0.3176,647
+Nebraska,Nance,"31,125",0.063,61
+Nebraska,Nemaha,"31,127",0.3288,70
+Nebraska,Nuckolls,"31,129",0.0707,23
+Nebraska,Otoe,"31,131",0.2864,340
+Nebraska,Pawnee,"31,133",0.5751,4
+Nebraska,Phelps,"31,137",0.2323,348
+Nebraska,Pierce,"31,139",0.05,127
+Nebraska,Platte,"31,141",0.3902,"8,840"
+Nebraska,Polk,"31,143",0.2021,167
+Nebraska,Red Willow,"31,145",0.3765,100
+Nebraska,Richardson,"31,147",0.1744,83
+Nebraska,Rock,"31,149",0.0321,25
+Nebraska,Saline,"31,151",0.5977,"7,055"
+Nebraska,Sarpy,"31,153",0.113,0
+Nebraska,Saunders,"31,155",0.0127,"1,100"
+Nebraska,Scotts Bluff,"31,157",0.6709,"3,012"
+Nebraska,Seward,"31,159",0.0586,574
+Nebraska,Sheridan,"31,161",0.5118,101
+Nebraska,Sherman,"31,163",0.1092,65
+Nebraska,Sioux,"31,165",0.2553,78
+Nebraska,Stanton,"31,167",0.0251,273
+Nebraska,Thayer,"31,169",0.0567,68
+Nebraska,Thomas,"31,171",0.0019,13
+Nebraska,Thurston,"31,173",0.7989,"2,009"
+Nebraska,Valley,"31,175",0.1009,104
+Nebraska,Washington,"31,177",0.0315,702
+Nebraska,Wayne,"31,179",0.0541,387
+Nebraska,Webster,"31,181",0.0582,95
+Nebraska,York,"31,185",0.1378,626
+Nevada,Churchill,"32,001",0.6219,283
+Nevada,Clark,"32,003",0.8565,0
+Nevada,Douglas,"32,005",0.2037,"1,032"
+Nevada,Elko,"32,007",0.5751,"2,495"
+Nevada,Eureka,"32,011",0.2387,13
+Nevada,Humboldt,"32,013",0.6079,"1,135"
+Nevada,Lander,"32,015",0.6999,512
+Nevada,Lincoln,"32,017",0.6623,26
+Nevada,Lyon,"32,019",0.5863,"1,754"
+Nevada,Mineral,"32,021",0.705,70
+Nevada,Nye,"32,023",0.8176,"2,109"
+Nevada,Pershing,"32,027",0.7196,125
+Nevada,Storey,"32,029",0.1165,26
+Nevada,Washoe,"32,031",0.6744,0
+Nevada,White Pine,"32,033",0.2884,83
+Nevada,Carson City,"32,510",0.8504,"2,501"
+New Hampshire,Belknap,"33,001",0.183,"1,122"
+New Hampshire,Carroll,"33,003",0.1318,833
+New Hampshire,Cheshire,"33,005",0.2237,964
+New Hampshire,Coos,"33,007",0.508,117
+New Hampshire,Grafton,"33,009",0.2969,"1,162"
+New Hampshire,Hillsborough,"33,011",0.2543,0
+New Hampshire,Merrimack,"33,013",0.2215,"5,486"
+New Hampshire,Rockingham,"33,015",0.0261,0
+New Hampshire,Strafford,"33,017",0.2651,"3,865"
+New Hampshire,Sullivan,"33,019",0.1219,456
+New Jersey,Atlantic,"34,001",0.8771,0
+New Jersey,Bergen,"34,003",0.3838,0
+New Jersey,Burlington,"34,005",0.2648,0
+New Jersey,Camden,"34,007",0.7629,0
+New Jersey,Cape May,"34,009",0.4169,"9,454"
+New Jersey,Cumberland,"34,011",0.9812,0
+New Jersey,Essex,"34,013",0.9392,0
+New Jersey,Gloucester,"34,015",0.191,0
+New Jersey,Hudson,"34,017",0.7963,0
+New Jersey,Hunterdon,"34,019",0.0353,0
+New Jersey,Mercer,"34,021",0.7104,0
+New Jersey,Middlesex,"34,023",0.6391,0
+New Jersey,Monmouth,"34,025",0.2276,0
+New Jersey,Morris,"34,027",0.1633,0
+New Jersey,Ocean,"34,029",0.4074,0
+New Jersey,Passaic,"34,031",0.9064,0
+New Jersey,Salem,"34,033",0.6865,"10,541"
+New Jersey,Somerset,"34,035",0.1703,0
+New Jersey,Sussex,"34,037",0.0484,0
+New Jersey,Union,"34,039",0.795,0
+New Jersey,Warren,"34,041",0.2454,0
+New Mexico,Bernalillo,"35,001",0.7785,0
+New Mexico,Catron,"35,003",0.4548,30
+New Mexico,Chaves,"35,005",0.9516,"1,838"
+New Mexico,Cibola,"35,006",0.9815,"3,153"
+New Mexico,Colfax,"35,007",0.9306,120
+New Mexico,Curry,"35,009",0.9281,"2,847"
+New Mexico,Doña Ana,"35,013",0.9898,0
+New Mexico,Eddy,"35,015",0.6935,"1,527"
+New Mexico,Grant,"35,017",0.9004,362
+New Mexico,Guadalupe,"35,019",0.74,260
+New Mexico,Harding,"35,021",0.5777,13
+New Mexico,Hidalgo,"35,023",0.9488,837
+New Mexico,Lea,"35,025",0.9083,"2,903"
+New Mexico,Lincoln,"35,027",0.7107,227
+New Mexico,Los Alamos,"35,028",0.0121,133
+New Mexico,Luna,"35,029",0.9971,"1,434"
+New Mexico,McKinley,"35,031",0.9704,0
+New Mexico,Mora,"35,033",0.7311,11
+New Mexico,Otero,"35,035",0.922,"12,108"
+New Mexico,Quay,"35,037",0.6792,135
+New Mexico,Rio Arriba,"35,039",0.8148,"1,595"
+New Mexico,Roosevelt,"35,041",0.9784,962
+New Mexico,Sandoval,"35,043",0.4723,"10,327"
+New Mexico,San Juan,"35,045",0.9335,0
+New Mexico,San Miguel,"35,047",0.9615,310
+New Mexico,Santa Fe,"35,049",0.7648,"3,871"
+New Mexico,Sierra,"35,051",0.8402,184
+New Mexico,Socorro,"35,053",0.937,804
+New Mexico,Taos,"35,055",0.8386,657
+New Mexico,Torrance,"35,057",0.7374,"1,159"
+New Mexico,Union,"35,059",0.8275,110
+New Mexico,Valencia,"35,061",0.8676,"2,201"
+New York,Albany,"36,001",0.4325,0
+New York,Allegany,"36,003",0.4367,835
+New York,Broome,"36,007",0.7024,"10,104"
+New York,Cattaraugus,"36,009",0.656,"1,706"
+New York,Cayuga,"36,011",0.479,"1,598"
+New York,Chautauqua,"36,013",0.6458,"1,935"
+New York,Chemung,"36,015",0.5799,"1,910"
+New York,Chenango,"36,017",0.5188,"2,068"
+New York,Clinton,"36,019",0.3889,"1,370"
+New York,Columbia,"36,021",0.4201,"6,244"
+New York,Cortland,"36,023",0.3202,700
+New York,Delaware,"36,025",0.4729,"1,186"
+New York,Dutchess,"36,027",0.4561,0
+New York,Erie,"36,029",0.4698,0
+New York,Essex,"36,031",0.3307,740
+New York,Franklin,"36,033",0.5735,442
+New York,Fulton,"36,035",0.409,"3,417"
+New York,Genesee,"36,037",0.1795,"3,172"
+New York,Greene,"36,039",0.4023,"3,429"
+New York,Hamilton,"36,041",0.1878,78
+New York,Herkimer,"36,043",0.3631,"2,356"
+New York,Jefferson,"36,045",0.6604,"1,233"
+New York,Lewis,"36,049",0.1515,402
+New York,Livingston,"36,051",0.2266,"1,801"
+New York,Madison,"36,053",0.1302,"4,782"
+New York,Monroe,"36,055",0.5859,0
+New York,Montgomery,"36,057",0.7756,"1,627"
+New York,Nassau,"36,059",0.2782,0
+New York,Niagara,"36,063",0.3434,0
+New York,Oneida,"36,065",0.5974,0
+New York,Onondaga,"36,067",0.557,0
+New York,Ontario,"36,069",0.2607,"3,740"
+New York,Orange,"36,071",0.6626,0
+New York,Orleans,"36,073",0.5901,"3,705"
+New York,Oswego,"36,075",0.5509,"2,760"
+New York,Otsego,"36,077",0.3835,"1,128"
+New York,Putnam,"36,079",0.12,0
+New York,Rensselaer,"36,083",0.3418,"7,587"
+New York,Rockland,"36,087",0.7164,0
+New York,St. Lawrence,"36,089",0.6919,"2,946"
+New York,Saratoga,"36,091",0.0496,"7,571"
+New York,Schenectady,"36,093",0.4825,"11,001"
+New York,Schoharie,"36,095",0.3908,782
+New York,Schuyler,"36,097",0.3425,177
+New York,Seneca,"36,099",0.485,936
+New York,Steuben,"36,101",0.4376,"3,534"
+New York,Suffolk,"36,103",0.2645,0
+New York,Sullivan,"36,105",0.7864,0
+New York,Tioga,"36,107",0.1343,"1,978"
+New York,Tompkins,"36,109",0.4182,"2,353"
+New York,Ulster,"36,111",0.5643,0
+New York,Warren,"36,113",0.1439,"3,543"
+New York,Washington,"36,115",0.4529,"3,219"
+New York,Wayne,"36,117",0.3234,"2,522"
+New York,Westchester,"36,119",0.6817,0
+New York,Wyoming,"36,121",0.1442,"1,282"
+New York,Yates,"36,123",0.5783,621
+North Carolina,Alamance,"37,001",0.7721,0
+North Carolina,Alexander,"37,003",0.6012,"1,797"
+North Carolina,Alleghany,"37,005",0.626,503
+North Carolina,Anson,"37,007",0.9574,"2,228"
+North Carolina,Ashe,"37,009",0.3733,778
+North Carolina,Avery,"37,011",0.7317,267
+North Carolina,Beaufort,"37,013",0.846,"1,591"
+North Carolina,Bertie,"37,015",0.9685,"1,980"
+North Carolina,Bladen,"37,017",0.8765,"5,406"
+North Carolina,Brunswick,"37,019",0.4083,"9,294"
+North Carolina,Buncombe,"37,021",0.5398,"9,826"
+North Carolina,Burke,"37,023",0.7457,0
+North Carolina,Cabarrus,"37,025",0.4338,0
+North Carolina,Caldwell,"37,027",0.7088,"7,192"
+North Carolina,Camden,"37,029",0.478,436
+North Carolina,Carteret,"37,031",0.4007,"1,486"
+North Carolina,Caswell,"37,033",0.753,"1,923"
+North Carolina,Catawba,"37,035",0.6808,"4,542"
+North Carolina,Chatham,"37,037",0.4192,"5,906"
+North Carolina,Cherokee,"37,039",0.4701,727
+North Carolina,Chowan,"37,041",0.8358,408
+North Carolina,Clay,"37,043",0.4847,158
+North Carolina,Cleveland,"37,045",0.8756,"5,641"
+North Carolina,Columbus,"37,047",0.9523,"7,597"
+North Carolina,Craven,"37,049",0.867,"5,435"
+North Carolina,Cumberland,"37,051",0.9338,0
+North Carolina,Currituck,"37,053",0.092,292
+North Carolina,Dare,"37,055",0.2772,"1,156"
+North Carolina,Davidson,"37,057",0.668,0
+North Carolina,Davie,"37,059",0.4583,"3,016"
+North Carolina,Duplin,"37,061",0.9013,0
+North Carolina,Durham,"37,063",0.7285,0
+North Carolina,Edgecombe,"37,065",0.9634,"4,653"
+North Carolina,Forsyth,"37,067",0.7766,0
+North Carolina,Franklin,"37,069",0.7193,"5,565"
+North Carolina,Gaston,"37,071",0.7167,0
+North Carolina,Gates,"37,073",0.599,366
+North Carolina,Graham,"37,075",0.5035,130
+North Carolina,Granville,"37,077",0.6598,"11,407"
+North Carolina,Greene,"37,079",0.9844,"2,575"
+North Carolina,Guilford,"37,081",0.7941,0
+North Carolina,Halifax,"37,083",0.9768,"4,670"
+North Carolina,Harnett,"37,085",0.7823,"9,530"
+North Carolina,Haywood,"37,087",0.3549,"1,447"
+North Carolina,Henderson,"37,089",0.3832,"10,374"
+North Carolina,Hertford,"37,091",0.9669,"2,262"
+North Carolina,Hoke,"37,093",0.9236,"5,553"
+North Carolina,Hyde,"37,095",0.8043,304
+North Carolina,Iredell,"37,097",0.4032,"7,253"
+North Carolina,Jackson,"37,099",0.7218,"2,092"
+North Carolina,Johnston,"37,101",0.6302,0
+North Carolina,Jones,"37,103",0.909,496
+North Carolina,Lee,"37,105",0.8877,"11,612"
+North Carolina,Lenoir,"37,107",0.9952,"5,218"
+North Carolina,Lincoln,"37,109",0.3367,"4,538"
+North Carolina,McDowell,"37,111",0.7508,"3,771"
+North Carolina,Macon,"37,113",0.5637,"3,979"
+North Carolina,Madison,"37,115",0.3663,204
+North Carolina,Martin,"37,117",0.8934,"2,004"
+North Carolina,Mecklenburg,"37,119",0.605,0
+North Carolina,Mitchell,"37,121",0.4494,647
+North Carolina,Montgomery,"37,123",0.8129,"4,747"
+North Carolina,Moore,"37,125",0.4163,"7,420"
+North Carolina,Nash,"37,127",0.9274,"7,404"
+North Carolina,New Hanover,"37,129",0.4618,982
+North Carolina,Northampton,"37,131",0.9268,"2,486"
+North Carolina,Onslow,"37,133",0.7721,"4,840"
+North Carolina,Orange,"37,135",0.3988,"10,273"
+North Carolina,Pamlico,"37,137",0.661,375
+North Carolina,Pasquotank,"37,139",0.7718,"2,997"
+North Carolina,Pender,"37,141",0.6114,"4,259"
+North Carolina,Perquimans,"37,143",0.4965,489
+North Carolina,Person,"37,145",0.5936,"1,592"
+North Carolina,Pitt,"37,147",0.9109,"11,169"
+North Carolina,Polk,"37,149",0.3647,"1,146"
+North Carolina,Randolph,"37,151",0.704,0
+North Carolina,Richmond,"37,153",0.9742,"4,376"
+North Carolina,Robeson,"37,155",0.9924,0
+North Carolina,Rockingham,"37,157",0.8151,"3,575"
+North Carolina,Rowan,"37,159",0.8736,0
+North Carolina,Rutherford,"37,161",0.8421,"4,763"
+North Carolina,Sampson,"37,163",0.9421,0
+North Carolina,Scotland,"37,165",0.993,"2,036"
+North Carolina,Stanly,"37,167",0.5541,"6,562"
+North Carolina,Stokes,"37,169",0.4341,"1,962"
+North Carolina,Surry,"37,171",0.8043,"7,005"
+North Carolina,Swain,"37,173",0.8644,846
+North Carolina,Transylvania,"37,175",0.5223,494
+North Carolina,Tyrrell,"37,177",0.8288,378
+North Carolina,Union,"37,179",0.2212,0
+North Carolina,Vance,"37,181",0.9714,"7,075"
+North Carolina,Wake,"37,183",0.3428,0
+North Carolina,Warren,"37,185",0.9701,"2,300"
+North Carolina,Washington,"37,187",0.9373,567
+North Carolina,Watauga,"37,189",0.4815,"1,360"
+North Carolina,Wayne,"37,191",0.9519,0
+North Carolina,Wilkes,"37,193",0.6244,"7,838"
+North Carolina,Wilson,"37,195",0.9647,"10,929"
+North Carolina,Yadkin,"37,197",0.6216,"4,686"
+North Carolina,Yancey,"37,199",0.5996,672
+North Dakota,Barnes,"38,003",0.0853,291
+North Dakota,Benson,"38,005",0.8135,118
+North Dakota,Billings,"38,007",0.0579,13
+North Dakota,Bottineau,"38,009",0.0487,68
+North Dakota,Bowman,"38,011",0.1404,13
+North Dakota,Burke,"38,013",0.008,81
+North Dakota,Burleigh,"38,015",0.2024,"4,851"
+North Dakota,Cass,"38,017",0.2177,0
+North Dakota,Cavalier,"38,019",0.182,117
+North Dakota,Dickey,"38,021",0.0573,60
+North Dakota,Divide,"38,023",0.155,13
+North Dakota,Dunn,"38,025",0.3921,236
+North Dakota,Eddy,"38,027",0.4258,65
+North Dakota,Emmons,"38,029",0.0611,53
+North Dakota,Foster,"38,031",0.0414,35
+North Dakota,Golden Valley,"38,033",0.1241,1
+North Dakota,Grand Forks,"38,035",0.344,"5,448"
+North Dakota,Grant,"38,037",0.0898,41
+North Dakota,Griggs,"38,039",0.0376,26
+North Dakota,Hettinger,"38,041",0.0827,13
+North Dakota,Kidder,"38,043",0.0958,29
+North Dakota,LaMoure,"38,045",0.021,171
+North Dakota,Logan,"38,047",0.0201,4
+North Dakota,McHenry,"38,049",0.057,82
+North Dakota,McIntosh,"38,051",0.1229,53
+North Dakota,McKenzie,"38,053",0.465,397
+North Dakota,McLean,"38,055",0.049,144
+North Dakota,Mercer,"38,057",0.2234,100
+North Dakota,Morton,"38,059",0.0512,"1,500"
+North Dakota,Mountrail,"38,061",0.613,745
+North Dakota,Nelson,"38,063",0.0506,20
+North Dakota,Oliver,"38,065",0.2088,26
+North Dakota,Pembina,"38,067",0.0901,157
+North Dakota,Pierce,"38,069",0.2247,81
+North Dakota,Ramsey,"38,071",0.4615,206
+North Dakota,Ransom,"38,073",0.0528,253
+North Dakota,Renville,"38,075",0.0589,71
+North Dakota,Richland,"38,077",0.226,575
+North Dakota,Rolette,"38,079",0.8813,146
+North Dakota,Sargent,"38,081",0.0258,89
+North Dakota,Sheridan,"38,083",0.0325,20
+North Dakota,Sioux,"38,085",0.881,391
+North Dakota,Slope,"38,087",0.0095,39
+North Dakota,Stark,"38,089",0.2444,"1,118"
+North Dakota,Steele,"38,091",0.0067,40
+North Dakota,Stutsman,"38,093",0.3816,849
+North Dakota,Towner,"38,095",0.14,17
+North Dakota,Traill,"38,097",0.056,308
+North Dakota,Walsh,"38,099",0.3456,493
+North Dakota,Ward,"38,101",0.2524,878
+North Dakota,Wells,"38,103",0.0866,121
+North Dakota,Williams,"38,105",0.4491,727
+Ohio,Adams,"39,001",0.7371,317
+Ohio,Allen,"39,003",0.591,"4,381"
+Ohio,Ashland,"39,005",0.3189,818
+Ohio,Ashtabula,"39,007",0.8192,"5,700"
+Ohio,Athens,"39,009",0.5742,"1,287"
+Ohio,Auglaize,"39,011",0.0337,"1,398"
+Ohio,Belmont,"39,013",0.2346,"7,234"
+Ohio,Brown,"39,015",0.3619,760
+Ohio,Butler,"39,017",0.3673,0
+Ohio,Carroll,"39,019",0.2874,807
+Ohio,Champaign,"39,021",0.1846,601
+Ohio,Clark,"39,023",0.6798,"10,193"
+Ohio,Clermont,"39,025",0.1509,"5,713"
+Ohio,Clinton,"39,027",0.4488,970
+Ohio,Columbiana,"39,029",0.4472,0
+Ohio,Coshocton,"39,031",0.5971,"1,585"
+Ohio,Crawford,"39,033",0.3221,"1,780"
+Ohio,Cuyahoga,"39,035",0.7333,0
+Ohio,Darke,"39,037",0.0808,"3,275"
+Ohio,Defiance,"39,039",0.2011,677
+Ohio,Delaware,"39,041",0.0204,"8,256"
+Ohio,Erie,"39,043",0.2922,"3,374"
+Ohio,Fairfield,"39,045",0.2062,"7,982"
+Ohio,Fayette,"39,047",0.4755,656
+Ohio,Franklin,"39,049",0.6356,0
+Ohio,Fulton,"39,051",0.0996,830
+Ohio,Gallia,"39,053",0.4949,240
+Ohio,Geauga,"39,055",0.1111,"5,383"
+Ohio,Greene,"39,057",0.1623,"3,842"
+Ohio,Guernsey,"39,059",0.5598,972
+Ohio,Hamilton,"39,061",0.6006,0
+Ohio,Hancock,"39,063",0.1712,"1,071"
+Ohio,Hardin,"39,065",0.3676,"1,587"
+Ohio,Harrison,"39,067",0.5983,161
+Ohio,Henry,"39,069",0.0983,416
+Ohio,Highland,"39,071",0.5652,627
+Ohio,Hocking,"39,073",0.3393,"1,032"
+Ohio,Holmes,"39,075",0.4313,"3,156"
+Ohio,Huron,"39,077",0.2801,"2,956"
+Ohio,Jackson,"39,079",0.5051,328
+Ohio,Jefferson,"39,081",0.4176,"1,291"
+Ohio,Knox,"39,083",0.2463,669
+Ohio,Lake,"39,085",0.1579,"7,038"
+Ohio,Lawrence,"39,087",0.4293,"1,002"
+Ohio,Licking,"39,089",0.2116,"6,776"
+Ohio,Logan,"39,091",0.1314,847
+Ohio,Lorain,"39,093",0.4679,"2,942"
+Ohio,Lucas,"39,095",0.7101,0
+Ohio,Madison,"39,097",0.2167,"2,678"
+Ohio,Mahoning,"39,099",0.6378,0
+Ohio,Marion,"39,101",0.5022,0
+Ohio,Medina,"39,103",0.0111,"7,121"
+Ohio,Meigs,"39,105",0.5904,158
+Ohio,Mercer,"39,107",0.0207,"3,768"
+Ohio,Miami,"39,109",0.0907,"6,267"
+Ohio,Monroe,"39,111",0.2482,"1,152"
+Ohio,Montgomery,"39,113",0.7171,0
+Ohio,Morgan,"39,115",0.4287,145
+Ohio,Morrow,"39,117",0.1668,"1,552"
+Ohio,Muskingum,"39,119",0.4873,"1,175"
+Ohio,Noble,"39,121",0.5143,159
+Ohio,Ottawa,"39,123",0.1267,"2,143"
+Ohio,Paulding,"39,125",0.1474,355
+Ohio,Perry,"39,127",0.4768,504
+Ohio,Pickaway,"39,129",0.318,0
+Ohio,Pike,"39,131",0.6038,328
+Ohio,Portage,"39,133",0.2877,"6,044"
+Ohio,Preble,"39,135",0.043,"1,049"
+Ohio,Putnam,"39,137",0.0105,"1,722"
+Ohio,Richland,"39,139",0.6566,"4,608"
+Ohio,Ross,"39,141",0.6101,"1,724"
+Ohio,Sandusky,"39,143",0.2858,"1,904"
+Ohio,Scioto,"39,145",0.7511,706
+Ohio,Seneca,"39,147",0.2339,480
+Ohio,Shelby,"39,149",0.1957,913
+Ohio,Stark,"39,151",0.323,0
+Ohio,Summit,"39,153",0.4586,0
+Ohio,Trumbull,"39,155",0.492,"6,581"
+Ohio,Tuscarawas,"39,157",0.4424,"7,510"
+Ohio,Union,"39,159",0.0223,"1,208"
+Ohio,Van Wert,"39,161",0.0821,526
+Ohio,Vinton,"39,163",0.5251,291
+Ohio,Warren,"39,165",0.0516,"8,709"
+Ohio,Washington,"39,167",0.3374,"1,804"
+Ohio,Wayne,"39,169",0.4274,"4,764"
+Ohio,Williams,"39,171",0.134,939
+Ohio,Wood,"39,173",0.176,"5,879"
+Ohio,Wyandot,"39,175",0.099,791
+Oklahoma,Adair,"40,001",0.9262,"1,687"
+Oklahoma,Alfalfa,"40,003",0.2807,13
+Oklahoma,Atoka,"40,005",0.8036,391
+Oklahoma,Beaver,"40,007",0.429,412
+Oklahoma,Beckham,"40,009",0.8024,185
+Oklahoma,Blaine,"40,011",0.7046,243
+Oklahoma,Bryan,"40,013",0.8746,"1,948"
+Oklahoma,Caddo,"40,015",0.9048,"2,602"
+Oklahoma,Canadian,"40,017",0.2906,"5,347"
+Oklahoma,Carter,"40,019",0.7976,"1,936"
+Oklahoma,Cherokee,"40,021",0.9491,"1,338"
+Oklahoma,Choctaw,"40,023",0.9223,"1,569"
+Oklahoma,Cimarron,"40,025",0.4484,13
+Oklahoma,Cleveland,"40,027",0.4914,935
+Oklahoma,Coal,"40,029",0.8215,126
+Oklahoma,Comanche,"40,031",0.9293,"6,061"
+Oklahoma,Cotton,"40,033",0.5878,115
+Oklahoma,Craig,"40,035",0.8931,312
+Oklahoma,Creek,"40,037",0.5025,"2,473"
+Oklahoma,Custer,"40,039",0.6945,907
+Oklahoma,Delaware,"40,041",0.8055,"2,687"
+Oklahoma,Dewey,"40,043",0.3074,52
+Oklahoma,Ellis,"40,045",0.4621,20
+Oklahoma,Garfield,"40,047",0.7215,"1,201"
+Oklahoma,Garvin,"40,049",0.514,"1,334"
+Oklahoma,Grady,"40,051",0.3488,"2,679"
+Oklahoma,Grant,"40,053",0.1948,28
+Oklahoma,Greer,"40,055",0.7094,871
+Oklahoma,Harmon,"40,057",0.7944,32
+Oklahoma,Harper,"40,059",0.5446,14
+Oklahoma,Haskell,"40,061",0.8049,183
+Oklahoma,Hughes,"40,063",0.8348,173
+Oklahoma,Jackson,"40,065",0.732,683
+Oklahoma,Jefferson,"40,067",0.7957,170
+Oklahoma,Johnston,"40,069",0.8141,190
+Oklahoma,Kay,"40,071",0.8482,"1,515"
+Oklahoma,Kingfisher,"40,073",0.3059,492
+Oklahoma,Kiowa,"40,075",0.5824,180
+Oklahoma,Latimer,"40,077",0.8797,216
+Oklahoma,Le Flore,"40,079",0.894,604
+Oklahoma,Lincoln,"40,081",0.4137,502
+Oklahoma,Logan,"40,083",0.337,967
+Oklahoma,Love,"40,085",0.8062,513
+Oklahoma,McClain,"40,087",0.2887,"2,830"
+Oklahoma,McCurtain,"40,089",0.8975,"7,475"
+Oklahoma,McIntosh,"40,091",0.7836,979
+Oklahoma,Major,"40,093",0.3195,138
+Oklahoma,Marshall,"40,095",0.7556,522
+Oklahoma,Mayes,"40,097",0.7578,"1,380"
+Oklahoma,Murray,"40,099",0.7518,296
+Oklahoma,Muskogee,"40,101",0.9761,"2,151"
+Oklahoma,Noble,"40,103",0.3708,614
+Oklahoma,Nowata,"40,105",0.6674,482
+Oklahoma,Okfuskee,"40,107",0.866,220
+Oklahoma,Oklahoma,"40,109",0.825,0
+Oklahoma,Okmulgee,"40,111",0.8912,"1,515"
+Oklahoma,Osage,"40,113",0.6082,"2,543"
+Oklahoma,Ottawa,"40,115",0.9398,"1,538"
+Oklahoma,Pawnee,"40,117",0.4475,824
+Oklahoma,Payne,"40,119",0.5411,"5,857"
+Oklahoma,Pittsburg,"40,121",0.8631,888
+Oklahoma,Pontotoc,"40,123",0.6601,770
+Oklahoma,Pottawatomie,"40,125",0.7533,"1,767"
+Oklahoma,Pushmataha,"40,127",0.8784,264
+Oklahoma,Roger Mills,"40,129",0.261,3
+Oklahoma,Rogers,"40,131",0.3603,"3,538"
+Oklahoma,Seminole,"40,133",0.9586,704
+Oklahoma,Sequoyah,"40,135",0.8622,716
+Oklahoma,Stephens,"40,137",0.6903,961
+Oklahoma,Texas,"40,139",0.8835,"6,951"
+Oklahoma,Tillman,"40,141",0.9322,328
+Oklahoma,Tulsa,"40,143",0.7753,0
+Oklahoma,Wagoner,"40,145",0.4822,"4,371"
+Oklahoma,Washington,"40,147",0.5073,"5,585"
+Oklahoma,Washita,"40,149",0.5694,85
+Oklahoma,Woods,"40,151",0.4433,104
+Oklahoma,Woodward,"40,153",0.6178,185
+Oregon,Baker,"41,001",0.6022,100
+Oregon,Benton,"41,003",0.4443,"1,312"
+Oregon,Clackamas,"41,005",0.3004,"9,678"
+Oregon,Clatsop,"41,007",0.5608,694
+Oregon,Columbia,"41,009",0.31,573
+Oregon,Coos,"41,011",0.7591,623
+Oregon,Crook,"41,013",0.4644,198
+Oregon,Curry,"41,015",0.6264,110
+Oregon,Deschutes,"41,017",0.3122,"3,019"
+Oregon,Douglas,"41,019",0.6279,714
+Oregon,Gilliam,"41,021",0.3756,13
+Oregon,Grant,"41,023",0.5286,13
+Oregon,Harney,"41,025",0.5436,20
+Oregon,Hood River,"41,027",0.6642,"1,272"
+Oregon,Jackson,"41,029",0.6976,"2,090"
+Oregon,Jefferson,"41,031",0.9179,"1,902"
+Oregon,Josephine,"41,033",0.7126,712
+Oregon,Klamath,"41,035",0.8673,"1,712"
+Oregon,Lake,"41,037",0.8256,290
+Oregon,Lane,"41,039",0.7336,"3,303"
+Oregon,Lincoln,"41,041",0.7151,"4,573"
+Oregon,Linn,"41,043",0.6738,"2,164"
+Oregon,Malheur,"41,045",0.9943,"3,432"
+Oregon,Marion,"41,047",0.8857,0
+Oregon,Morrow,"41,049",0.7225,"1,545"
+Oregon,Multnomah,"41,051",0.577,0
+Oregon,Polk,"41,053",0.5099,"2,161"
+Oregon,Sherman,"41,055",0.3281,42
+Oregon,Tillamook,"41,057",0.5968,196
+Oregon,Umatilla,"41,059",0.9475,"8,212"
+Oregon,Union,"41,061",0.675,"4,707"
+Oregon,Wallowa,"41,063",0.3059,155
+Oregon,Wasco,"41,065",0.8778,"1,303"
+Oregon,Washington,"41,067",0.3495,0
+Oregon,Yamhill,"41,071",0.5999,"2,150"
+Pennsylvania,Adams,"42,001",0.2072,"4,779"
+Pennsylvania,Allegheny,"42,003",0.2944,0
+Pennsylvania,Armstrong,"42,005",0.1735,"1,056"
+Pennsylvania,Beaver,"42,007",0.2447,"10,128"
+Pennsylvania,Bedford,"42,009",0.1435,"1,176"
+Pennsylvania,Berks,"42,011",0.6384,0
+Pennsylvania,Blair,"42,013",0.3768,"1,194"
+Pennsylvania,Bradford,"42,015",0.395,756
+Pennsylvania,Bucks,"42,017",0.1372,0
+Pennsylvania,Butler,"42,019",0.0812,"4,954"
+Pennsylvania,Cambria,"42,021",0.3326,"1,455"
+Pennsylvania,Cameron,"42,023",0.5506,50
+Pennsylvania,Carbon,"42,025",0.2664,"3,790"
+Pennsylvania,Centre,"42,027",0.3033,"3,032"
+Pennsylvania,Chester,"42,029",0.1665,0
+Pennsylvania,Clarion,"42,031",0.3657,671
+Pennsylvania,Clearfield,"42,033",0.5649,"1,063"
+Pennsylvania,Clinton,"42,035",0.5191,"1,138"
+Pennsylvania,Columbia,"42,037",0.2209,"5,379"
+Pennsylvania,Crawford,"42,039",0.5019,930
+Pennsylvania,Cumberland,"42,041",0.1961,"11,862"
+Pennsylvania,Dauphin,"42,043",0.5315,0
+Pennsylvania,Delaware,"42,045",0.5477,0
+Pennsylvania,Elk,"42,047",0.0656,319
+Pennsylvania,Erie,"42,049",0.6464,"8,875"
+Pennsylvania,Fayette,"42,051",0.577,"2,136"
+Pennsylvania,Forest,"42,053",0.5617,91
+Pennsylvania,Franklin,"42,055",0.3154,"9,706"
+Pennsylvania,Fulton,"42,057",0.1451,240
+Pennsylvania,Greene,"42,059",0.3482,713
+Pennsylvania,Huntingdon,"42,061",0.3332,"3,321"
+Pennsylvania,Indiana,"42,063",0.5366,"1,661"
+Pennsylvania,Jefferson,"42,065",0.2632,425
+Pennsylvania,Juniata,"42,067",0.4351,"1,485"
+Pennsylvania,Lackawanna,"42,069",0.5449,0
+Pennsylvania,Lancaster,"42,071",0.5586,0
+Pennsylvania,Lawrence,"42,073",0.4787,"1,891"
+Pennsylvania,Lebanon,"42,075",0.62,0
+Pennsylvania,Lehigh,"42,077",0.7384,0
+Pennsylvania,Luzerne,"42,079",0.6346,0
+Pennsylvania,Lycoming,"42,081",0.4653,"2,925"
+Pennsylvania,McKean,"42,083",0.4357,258
+Pennsylvania,Mercer,"42,085",0.5496,"2,084"
+Pennsylvania,Mifflin,"42,087",0.4752,885
+Pennsylvania,Monroe,"42,089",0.3994,0
+Pennsylvania,Montgomery,"42,091",0.2142,0
+Pennsylvania,Montour,"42,093",0.3472,997
+Pennsylvania,Northampton,"42,095",0.3517,0
+Pennsylvania,Northumberland,"42,097",0.4262,"4,342"
+Pennsylvania,Perry,"42,099",0.1365,"1,158"
+Pennsylvania,Philadelphia,"42,101",0.9484,0
+Pennsylvania,Pike,"42,103",0.2123,"6,542"
+Pennsylvania,Potter,"42,105",0.4803,224
+Pennsylvania,Schuylkill,"42,107",0.4316,"9,924"
+Pennsylvania,Snyder,"42,109",0.2438,911
+Pennsylvania,Somerset,"42,111",0.3377,910
+Pennsylvania,Sullivan,"42,113",0.346,122
+Pennsylvania,Susquehanna,"42,115",0.2218,"2,465"
+Pennsylvania,Tioga,"42,117",0.3011,356
+Pennsylvania,Union,"42,119",0.3759,"1,262"
+Pennsylvania,Venango,"42,121",0.3651,409
+Pennsylvania,Warren,"42,123",0.1477,104
+Pennsylvania,Washington,"42,125",0.1859,"4,662"
+Pennsylvania,Wayne,"42,127",0.332,"1,833"
+Pennsylvania,Westmoreland,"42,129",0.1203,"9,455"
+Pennsylvania,Wyoming,"42,131",0.1289,542
+Pennsylvania,York,"42,133",0.3323,0
+Rhode Island,Bristol,"44,001",0.1544,"3,325"
+Rhode Island,Kent,"44,003",0.2183,0
+Rhode Island,Newport,"44,005",0.3027,"4,280"
+Rhode Island,Providence,"44,007",0.7893,0
+Rhode Island,Washington,"44,009",0.1257,"6,988"
+South Carolina,Abbeville,"45,001",0.8281,"1,787"
+South Carolina,Aiken,"45,003",0.668,"7,513"
+South Carolina,Allendale,"45,005",0.9975,923
+South Carolina,Anderson,"45,007",0.6871,"8,310"
+South Carolina,Bamberg,"45,009",0.9173,"2,092"
+South Carolina,Barnwell,"45,011",0.9577,"1,432"
+South Carolina,Beaufort,"45,013",0.507,0
+South Carolina,Berkeley,"45,015",0.6213,0
+South Carolina,Calhoun,"45,017",0.8068,"1,640"
+South Carolina,Charleston,"45,019",0.4519,0
+South Carolina,Cherokee,"45,021",0.7155,"2,792"
+South Carolina,Chester,"45,023",0.648,"3,236"
+South Carolina,Chesterfield,"45,025",0.9316,"5,439"
+South Carolina,Clarendon,"45,027",0.9758,"5,986"
+South Carolina,Colleton,"45,029",0.8701,"5,402"
+South Carolina,Darlington,"45,031",0.9303,"6,746"
+South Carolina,Dillon,"45,033",0.9599,"4,645"
+South Carolina,Dorchester,"45,035",0.6461,"1,772"
+South Carolina,Edgefield,"45,037",0.8304,"1,407"
+South Carolina,Fairfield,"45,039",0.7304,"4,346"
+South Carolina,Florence,"45,041",0.8453,0
+South Carolina,Georgetown,"45,043",0.7037,"8,943"
+South Carolina,Greenville,"45,045",0.6041,0
+South Carolina,Greenwood,"45,047",0.9169,"8,594"
+South Carolina,Hampton,"45,049",0.853,"1,203"
+South Carolina,Horry,"45,051",0.7368,0
+South Carolina,Jasper,"45,053",0.9433,"2,810"
+South Carolina,Kershaw,"45,055",0.4879,"10,455"
+South Carolina,Lancaster,"45,057",0.5165,"7,679"
+South Carolina,Laurens,"45,059",0.9061,"8,502"
+South Carolina,Lee,"45,061",0.9265,"4,229"
+South Carolina,Lexington,"45,063",0.4984,0
+South Carolina,McCormick,"45,065",0.5872,419
+South Carolina,Marion,"45,067",0.9354,"3,713"
+South Carolina,Marlboro,"45,069",0.9892,"4,212"
+South Carolina,Newberry,"45,071",0.8227,"4,551"
+South Carolina,Oconee,"45,073",0.7817,"4,847"
+South Carolina,Orangeburg,"45,075",0.8924,"6,338"
+South Carolina,Pickens,"45,077",0.5659,"3,738"
+South Carolina,Richland,"45,079",0.781,0
+South Carolina,Saluda,"45,081",0.8826,"3,288"
+South Carolina,Spartanburg,"45,083",0.7772,0
+South Carolina,Sumter,"45,085",0.9179,0
+South Carolina,Union,"45,087",0.8571,"1,662"
+South Carolina,Williamsburg,"45,089",0.964,"5,976"
+South Carolina,York,"45,091",0.3727,0
+South Dakota,Aurora,"46,003",0.1569,442
+South Dakota,Beadle,"46,005",0.6044,"7,097"
+South Dakota,Bennett,"46,007",0.8743,52
+South Dakota,Bon Homme,"46,009",0.1789,161
+South Dakota,Brookings,"46,011",0.1416,"1,095"
+South Dakota,Brown,"46,013",0.2008,"4,567"
+South Dakota,Brule,"46,015",0.2966,402
+South Dakota,Buffalo,"46,017",0.9863,"1,042"
+South Dakota,Butte,"46,019",0.4997,16
+South Dakota,Campbell,"46,021",0.0236,12
+South Dakota,Charles Mix,"46,023",0.7288,"1,211"
+South Dakota,Clark,"46,025",0.1445,195
+South Dakota,Clay,"46,027",0.5684,"1,173"
+South Dakota,Codington,"46,029",0.3466,"1,118"
+South Dakota,Corson,"46,031",0.7575,249
+South Dakota,Custer,"46,033",0.3453,132
+South Dakota,Davison,"46,035",0.3291,646
+South Dakota,Day,"46,037",0.1353,239
+South Dakota,Deuel,"46,039",0.0344,54
+South Dakota,Dewey,"46,041",0.8224,261
+South Dakota,Douglas,"46,043",0.2365,117
+South Dakota,Edmunds,"46,045",0.0089,103
+South Dakota,Fall River,"46,047",0.5509,163
+South Dakota,Faulk,"46,049",0.2546,304
+South Dakota,Grant,"46,051",0.0929,193
+South Dakota,Gregory,"46,053",0.1582,59
+South Dakota,Haakon,"46,055",0.3052,9
+South Dakota,Hamlin,"46,057",0.1238,168
+South Dakota,Hand,"46,059",0.0347,91
+South Dakota,Hanson,"46,061",0.0022,149
+South Dakota,Hughes,"46,065",0.3701,865
+South Dakota,Hutchinson,"46,067",0.1741,196
+South Dakota,Hyde,"46,069",0.0051,39
+South Dakota,Jackson,"46,071",0.9793,81
+South Dakota,Jerauld,"46,073",0.1311,507
+South Dakota,Jones,"46,075",0.1283,7
+South Dakota,Kingsbury,"46,077",0.0461,84
+South Dakota,Lake,"46,079",0.1531,333
+South Dakota,Lawrence,"46,081",0.338,252
+South Dakota,Lincoln,"46,083",0.0395,"4,900"
+South Dakota,Lyman,"46,085",0.7708,986
+South Dakota,McCook,"46,087",0.0792,186
+South Dakota,McPherson,"46,089",0.1114,66
+South Dakota,Marshall,"46,091",0.112,65
+South Dakota,Meade,"46,093",0.19,676
+South Dakota,Mellette,"46,095",0.8463,91
+South Dakota,Miner,"46,097",0.1525,127
+South Dakota,Minnehaha,"46,099",0.4013,0
+South Dakota,Moody,"46,101",0.2731,299
+South Dakota,Oglala Lakota,"46,102",0.9911,"1,328"
+South Dakota,Pennington,"46,103",0.5726,"7,764"
+South Dakota,Perkins,"46,105",0.3342,4
+South Dakota,Roberts,"46,109",0.7409,688
+South Dakota,Sanborn,"46,111",0.0837,156
+South Dakota,Spink,"46,115",0.0554,161
+South Dakota,Stanley,"46,117",0.015,178
+South Dakota,Sully,"46,119",0.0302,13
+South Dakota,Todd,"46,121",0.9628,788
+South Dakota,Tripp,"46,123",0.5121,238
+South Dakota,Turner,"46,125",0.0856,353
+South Dakota,Union,"46,127",0.0697,"1,832"
+South Dakota,Walworth,"46,129",0.4838,200
+South Dakota,Yankton,"46,135",0.2737,"1,072"
+South Dakota,Ziebach,"46,137",0.9106,24
+Tennessee,Anderson,"47,001",0.6299,"2,142"
+Tennessee,Bedford,"47,003",0.6989,"7,642"
+Tennessee,Benton,"47,005",0.4418,183
+Tennessee,Bledsoe,"47,007",0.6757,"8,118"
+Tennessee,Blount,"47,009",0.2842,"3,596"
+Tennessee,Bradley,"47,011",0.7292,"8,784"
+Tennessee,Campbell,"47,013",0.7568,766
+Tennessee,Cannon,"47,015",0.3144,566
+Tennessee,Carroll,"47,017",0.5493,647
+Tennessee,Carter,"47,019",0.6454,"1,038"
+Tennessee,Cheatham,"47,021",0.2763,"3,259"
+Tennessee,Chester,"47,023",0.5064,652
+Tennessee,Claiborne,"47,025",0.6369,743
+Tennessee,Clay,"47,027",0.6477,246
+Tennessee,Cocke,"47,029",0.6814,"1,494"
+Tennessee,Coffee,"47,031",0.5414,"1,707"
+Tennessee,Crockett,"47,033",0.7594,602
+Tennessee,Cumberland,"47,035",0.4328,"2,564"
+Tennessee,Davidson,"47,037",0.6916,0
+Tennessee,Decatur,"47,039",0.3679,341
+Tennessee,DeKalb,"47,041",0.6267,985
+Tennessee,Dickson,"47,043",0.3463,"3,076"
+Tennessee,Dyer,"47,045",0.6973,"3,505"
+Tennessee,Fayette,"47,047",0.4656,"4,449"
+Tennessee,Fentress,"47,049",0.4628,320
+Tennessee,Franklin,"47,051",0.528,"1,306"
+Tennessee,Gibson,"47,053",0.7829,"1,999"
+Tennessee,Giles,"47,055",0.4844,"1,068"
+Tennessee,Grainger,"47,057",0.5045,634
+Tennessee,Greene,"47,059",0.5885,"1,621"
+Tennessee,Grundy,"47,061",0.8186,821
+Tennessee,Hamblen,"47,063",0.8689,"5,218"
+Tennessee,Hamilton,"47,065",0.5404,0
+Tennessee,Hancock,"47,067",0.8367,107
+Tennessee,Hardeman,"47,069",0.8889,"4,904"
+Tennessee,Hardin,"47,071",0.5216,"1,547"
+Tennessee,Hawkins,"47,073",0.5796,951
+Tennessee,Haywood,"47,075",0.8816,"1,407"
+Tennessee,Henderson,"47,077",0.6162,771
+Tennessee,Henry,"47,079",0.6133,624
+Tennessee,Hickman,"47,081",0.3386,"1,209"
+Tennessee,Houston,"47,083",0.4946,229
+Tennessee,Humphreys,"47,085",0.3068,470
+Tennessee,Jackson,"47,087",0.6155,480
+Tennessee,Jefferson,"47,089",0.563,"2,020"
+Tennessee,Johnson,"47,091",0.6337,577
+Tennessee,Knox,"47,093",0.3498,0
+Tennessee,Lake,"47,095",0.9526,"9,026"
+Tennessee,Lauderdale,"47,097",0.972,"2,138"
+Tennessee,Lawrence,"47,099",0.802,"2,552"
+Tennessee,Lewis,"47,101",0.5111,110
+Tennessee,Lincoln,"47,103",0.4539,995
+Tennessee,Loudon,"47,105",0.2479,"3,951"
+Tennessee,McMinn,"47,107",0.6537,"3,338"
+Tennessee,McNairy,"47,109",0.4144,"1,152"
+Tennessee,Macon,"47,111",0.5611,"6,884"
+Tennessee,Madison,"47,113",0.8536,"4,277"
+Tennessee,Marion,"47,115",0.4271,"1,092"
+Tennessee,Marshall,"47,117",0.4933,"1,326"
+Tennessee,Maury,"47,119",0.3278,"5,254"
+Tennessee,Meigs,"47,121",0.4978,455
+Tennessee,Monroe,"47,123",0.6474,"1,893"
+Tennessee,Montgomery,"47,125",0.5589,"8,478"
+Tennessee,Moore,"47,127",0.1108,213
+Tennessee,Morgan,"47,129",0.6884,375
+Tennessee,Obion,"47,131",0.7626,"1,527"
+Tennessee,Overton,"47,133",0.4497,877
+Tennessee,Perry,"47,135",0.5487,470
+Tennessee,Pickett,"47,137",0.2794,86
+Tennessee,Polk,"47,139",0.4666,645
+Tennessee,Putnam,"47,141",0.6365,"7,172"
+Tennessee,Rhea,"47,143",0.7505,"3,948"
+Tennessee,Roane,"47,145",0.3205,932
+Tennessee,Robertson,"47,147",0.3097,"11,457"
+Tennessee,Rutherford,"47,149",0.3975,0
+Tennessee,Scott,"47,151",0.7454,284
+Tennessee,Sequatchie,"47,153",0.5401,558
+Tennessee,Sevier,"47,155",0.6633,"11,079"
+Tennessee,Shelby,"47,157",0.8803,0
+Tennessee,Smith,"47,159",0.3861,"1,801"
+Tennessee,Stewart,"47,161",0.295,326
+Tennessee,Sullivan,"47,163",0.5452,"2,186"
+Tennessee,Sumner,"47,165",0.3001,0
+Tennessee,Tipton,"47,167",0.3937,"8,703"
+Tennessee,Trousdale,"47,169",0.3141,0
+Tennessee,Unicoi,"47,171",0.6286,736
+Tennessee,Union,"47,173",0.5105,272
+Tennessee,Van Buren,"47,175",0.5767,106
+Tennessee,Warren,"47,177",0.7836,"1,348"
+Tennessee,Washington,"47,179",0.6136,"2,682"
+Tennessee,Wayne,"47,181",0.7406,"1,286"
+Tennessee,Weakley,"47,183",0.6404,891
+Tennessee,White,"47,185",0.4691,"1,020"
+Tennessee,Williamson,"47,187",0.0213,0
+Tennessee,Wilson,"47,189",0.1738,"5,563"
+Texas,Anderson,"48,001",0.8428,0
+Texas,Andrews,"48,003",0.6419,"1,633"
+Texas,Angelina,"48,005",0.9889,"8,449"
+Texas,Aransas,"48,007",0.9376,578
+Texas,Archer,"48,009",0.2301,124
+Texas,Armstrong,"48,011",0.1356,39
+Texas,Atascosa,"48,013",0.7877,"2,354"
+Texas,Austin,"48,015",0.7613,"1,422"
+Texas,Bailey,"48,017",0.7928,"1,397"
+Texas,Bandera,"48,019",0.6104,427
+Texas,Bastrop,"48,021",0.8008,"7,858"
+Texas,Baylor,"48,023",0.3087,13
+Texas,Bee,"48,025",0.9472,"1,355"
+Texas,Bell,"48,027",0.9214,0
+Texas,Bexar,"48,029",0.9249,0
+Texas,Blanco,"48,031",0.3297,528
+Texas,Bosque,"48,035",0.6486,369
+Texas,Bowie,"48,037",0.8581,"6,185"
+Texas,Brazoria,"48,039",0.6174,0
+Texas,Brazos,"48,041",0.8132,0
+Texas,Brewster,"48,043",0.7849,"1,908"
+Texas,Briscoe,"48,045",0.5197,97
+Texas,Brooks,"48,047",0.9764,293
+Texas,Brown,"48,049",0.7855,"1,867"
+Texas,Burleson,"48,051",0.5226,"1,520"
+Texas,Burnet,"48,053",0.6076,"2,534"
+Texas,Caldwell,"48,055",0.9055,"7,044"
+Texas,Calhoun,"48,057",0.7393,"1,598"
+Texas,Callahan,"48,059",0.2778,301
+Texas,Cameron,"48,061",0.9828,0
+Texas,Camp,"48,063",0.8717,"1,679"
+Texas,Carson,"48,065",0.0379,109
+Texas,Cass,"48,067",0.8393,710
+Texas,Castro,"48,069",0.8409,"1,405"
+Texas,Chambers,"48,071",0.4742,"6,213"
+Texas,Cherokee,"48,073",0.9494,"3,582"
+Texas,Childress,"48,075",0.718,91
+Texas,Clay,"48,077",0.2295,160
+Texas,Cochran,"48,079",0.9026,47
+Texas,Coke,"48,081",0.4924,69
+Texas,Coleman,"48,083",0.6117,51
+Texas,Collin,"48,085",0.2931,0
+Texas,Collingsworth,"48,087",0.9624,78
+Texas,Colorado,"48,089",0.7339,"1,703"
+Texas,Comal,"48,091",0.2992,"5,453"
+Texas,Comanche,"48,093",0.6913,310
+Texas,Concho,"48,095",0.4987,155
+Texas,Cooke,"48,097",0.6394,957
+Texas,Coryell,"48,099",0.816,"4,717"
+Texas,Cottle,"48,101",0.8651,52
+Texas,Crane,"48,103",0.6388,799
+Texas,Crockett,"48,105",0.7027,290
+Texas,Crosby,"48,107",0.9278,395
+Texas,Culberson,"48,109",0.985,60
+Texas,Dallam,"48,111",0.6305,"1,355"
+Texas,Dallas,"48,113",0.8899,0
+Texas,Dawson,"48,115",0.9908,959
+Texas,Deaf Smith,"48,117",0.7654,"4,921"
+Texas,Delta,"48,119",0.3504,95
+Texas,Denton,"48,121",0.3447,0
+Texas,DeWitt,"48,123",0.874,"1,601"
+Texas,Dickens,"48,125",0.8829,26
+Texas,Dimmit,"48,127",1,301
+Texas,Donley,"48,129",0.3383,376
+Texas,Duval,"48,131",0.9825,886
+Texas,Eastland,"48,133",0.8237,192
+Texas,Ector,"48,135",0.8985,0
+Texas,Edwards,"48,137",0.6735,52
+Texas,Ellis,"48,139",0.5334,"1,879"
+Texas,El Paso,"48,141",0.9803,0
+Texas,Erath,"48,143",0.7998,"2,311"
+Texas,Falls,"48,145",0.9905,565
+Texas,Fannin,"48,147",0.5681,"1,606"
+Texas,Fayette,"48,149",0.4535,"1,658"
+Texas,Fisher,"48,151",0.2441,147
+Texas,Floyd,"48,153",0.7616,579
+Texas,Foard,"48,155",0.6881,5
+Texas,Fort Bend,"48,157",0.4513,0
+Texas,Franklin,"48,159",0.4309,692
+Texas,Freestone,"48,161",0.8472,696
+Texas,Frio,"48,163",0.9838,"3,563"
+Texas,Gaines,"48,165",0.7584,454
+Texas,Galveston,"48,167",0.7352,0
+Texas,Garza,"48,169",0.6359,216
+Texas,Gillespie,"48,171",0.5923,698
+Texas,Glasscock,"48,173",0.352,72
+Texas,Goliad,"48,175",0.543,281
+Texas,Gonzales,"48,177",0.8867,"4,146"
+Texas,Gray,"48,179",0.7759,"1,635"
+Texas,Grayson,"48,181",0.6741,"8,810"
+Texas,Gregg,"48,183",0.9128,"8,143"
+Texas,Grimes,"48,185",0.8749,"7,835"
+Texas,Guadalupe,"48,187",0.5331,"7,753"
+Texas,Hale,"48,189",0.9313,"7,913"
+Texas,Hall,"48,191",0.9045,26
+Texas,Hamilton,"48,193",0.5882,341
+Texas,Hansford,"48,195",0.7638,423
+Texas,Hardeman,"48,197",0.6445,66
+Texas,Hardin,"48,199",0.4889,"4,166"
+Texas,Harris,"48,201",0.8953,0
+Texas,Harrison,"48,203",0.8959,"4,954"
+Texas,Hartley,"48,205",0.5964,575
+Texas,Haskell,"48,207",0.9386,76
+Texas,Hays,"48,209",0.6585,0
+Texas,Hemphill,"48,211",0.6941,221
+Texas,Henderson,"48,213",0.859,"2,750"
+Texas,Hidalgo,"48,215",0.9882,0
+Texas,Hill,"48,217",0.8781,"1,438"
+Texas,Hockley,"48,219",0.9395,"1,130"
+Texas,Hood,"48,221",0.4545,"1,929"
+Texas,Hopkins,"48,223",0.6801,994
+Texas,Houston,"48,225",0.9465,"2,275"
+Texas,Howard,"48,227",0.9096,729
+Texas,Hudspeth,"48,229",0.9997,214
+Texas,Hunt,"48,231",0.8842,"7,976"
+Texas,Hutchinson,"48,233",0.45,929
+Texas,Irion,"48,235",0.3746,32
+Texas,Jack,"48,237",0.8167,155
+Texas,Jackson,"48,239",0.7645,898
+Texas,Jasper,"48,241",0.9424,864
+Texas,Jeff Davis,"48,243",0.6044,58
+Texas,Jefferson,"48,245",0.9554,0
+Texas,Jim Hogg,"48,247",0.9679,334
+Texas,Jim Wells,"48,249",0.8628,"3,000"
+Texas,Johnson,"48,251",0.6108,"8,867"
+Texas,Jones,"48,253",0.6362,"7,900"
+Texas,Karnes,"48,255",0.8469,836
+Texas,Kaufman,"48,257",0.7008,"10,168"
+Texas,Kendall,"48,259",0.2244,"1,208"
+Texas,Kenedy,"48,261",0.6649,18
+Texas,Kent,"48,263",0.1731,1
+Texas,Kerr,"48,265",0.7842,"1,741"
+Texas,Kimble,"48,267",0.627,102
+Texas,Kinney,"48,271",0.7132,32
+Texas,Kleberg,"48,273",0.9876,"1,593"
+Texas,Knox,"48,275",0.7339,63
+Texas,Lamar,"48,277",0.8523,"4,612"
+Texas,Lamb,"48,279",0.8848,826
+Texas,Lampasas,"48,281",0.7002,376
+Texas,La Salle,"48,283",0.8679,602
+Texas,Lavaca,"48,285",0.5812,"2,964"
+Texas,Lee,"48,287",0.7031,"1,094"
+Texas,Leon,"48,289",0.7295,860
+Texas,Liberty,"48,291",0.9787,"5,858"
+Texas,Limestone,"48,293",0.9414,"1,029"
+Texas,Lipscomb,"48,295",0.6505,144
+Texas,Live Oak,"48,297",0.7995,684
+Texas,Llano,"48,299",0.6652,320
+Texas,Lubbock,"48,303",0.8269,0
+Texas,Lynn,"48,305",0.8345,588
+Texas,McCulloch,"48,307",0.7782,277
+Texas,McLennan,"48,309",0.9144,0
+Texas,McMullen,"48,311",0.7202,1
+Texas,Madison,"48,313",0.832,"1,012"
+Texas,Marion,"48,315",0.7043,486
+Texas,Martin,"48,317",0.3931,275
+Texas,Mason,"48,319",0.4373,451
+Texas,Matagorda,"48,321",0.9341,"3,944"
+Texas,Maverick,"48,323",0.9822,"8,047"
+Texas,Medina,"48,325",0.7463,"4,187"
+Texas,Menard,"48,327",0.7702,144
+Texas,Midland,"48,329",0.6614,"4,991"
+Texas,Milam,"48,331",0.8806,"1,556"
+Texas,Mills,"48,333",0.5993,49
+Texas,Mitchell,"48,335",0.5656,228
+Texas,Montague,"48,337",0.6776,303
+Texas,Montgomery,"48,339",0.5293,0
+Texas,Moore,"48,341",0.8001,"11,791"
+Texas,Morris,"48,343",0.7915,610
+Texas,Motley,"48,345",0.4446,20
+Texas,Nacogdoches,"48,347",0.9965,"6,488"
+Texas,Navarro,"48,349",0.958,"5,679"
+Texas,Newton,"48,351",0.8596,165
+Texas,Nolan,"48,353",0.9707,701
+Texas,Nueces,"48,355",0.9233,0
+Texas,Ochiltree,"48,357",0.8109,756
+Texas,Oldham,"48,359",0.1528,53
+Texas,Orange,"48,361",0.6206,"5,155"
+Texas,Palo Pinto,"48,363",0.7887,641
+Texas,Panola,"48,365",0.6954,"2,874"
+Texas,Parker,"48,367",0.3116,"5,836"
+Texas,Parmer,"48,369",0.5748,"2,935"
+Texas,Pecos,"48,371",0.9115,"1,766"
+Texas,Polk,"48,373",0.9453,"3,275"
+Texas,Potter,"48,375",0.9774,0
+Texas,Presidio,"48,377",0.9994,290
+Texas,Rains,"48,379",0.4115,201
+Texas,Randall,"48,381",0.3584,"5,585"
+Texas,Reagan,"48,383",0.4936,277
+Texas,Real,"48,385",0.8106,55
+Texas,Red River,"48,387",0.6509,"1,532"
+Texas,Reeves,"48,389",0.9042,801
+Texas,Refugio,"48,391",0.929,465
+Texas,Roberts,"48,393",0.1139,66
+Texas,Robertson,"48,395",0.8568,"1,045"
+Texas,Rockwall,"48,397",0.1407,"5,440"
+Texas,Runnels,"48,399",0.543,249
+Texas,Rusk,"48,401",0.7979,"3,526"
+Texas,Sabine,"48,403",0.5239,373
+Texas,San Augustine,"48,405",0.9389,"1,558"
+Texas,San Jacinto,"48,407",0.7231,882
+Texas,San Patricio,"48,409",0.9201,"3,153"
+Texas,San Saba,"48,411",0.7763,93
+Texas,Schleicher,"48,413",0.7069,288
+Texas,Scurry,"48,415",0.7699,"1,893"
+Texas,Shackelford,"48,417",0.7416,77
+Texas,Shelby,"48,419",0.9596,"3,776"
+Texas,Sherman,"48,421",0.4198,403
+Texas,Smith,"48,423",0.8189,"3,867"
+Texas,Somervell,"48,425",0.5481,237
+Texas,Starr,"48,427",0.986,"10,516"
+Texas,Stephens,"48,429",0.9589,146
+Texas,Sutton,"48,435",0.7495,200
+Texas,Swisher,"48,437",0.9796,596
+Texas,Tarrant,"48,439",0.7476,0
+Texas,Taylor,"48,441",0.7696,"8,989"
+Texas,Terrell,"48,443",0.162,26
+Texas,Terry,"48,445",0.987,527
+Texas,Throckmorton,"48,447",0.402,13
+Texas,Titus,"48,449",0.8724,"10,034"
+Texas,Tom Green,"48,451",0.8262,"6,573"
+Texas,Travis,"48,453",0.578,0
+Texas,Trinity,"48,455",0.9198,718
+Texas,Tyler,"48,457",0.9131,414
+Texas,Upshur,"48,459",0.6932,"1,048"
+Texas,Upton,"48,461",0.501,103
+Texas,Uvalde,"48,463",0.9885,"2,369"
+Texas,Val Verde,"48,465",0.9866,"5,170"
+Texas,Van Zandt,"48,467",0.5792,"1,881"
+Texas,Victoria,"48,469",0.8883,"1,724"
+Texas,Walker,"48,471",0.8412,0
+Texas,Waller,"48,473",0.8526,"2,698"
+Texas,Ward,"48,475",0.7314,429
+Texas,Washington,"48,477",0.7619,"4,243"
+Texas,Webb,"48,479",0.9771,0
+Texas,Wharton,"48,481",0.951,"3,581"
+Texas,Wheeler,"48,483",0.8138,253
+Texas,Wichita,"48,485",0.8285,"6,852"
+Texas,Wilbarger,"48,487",0.9402,190
+Texas,Willacy,"48,489",0.9605,"3,340"
+Texas,Williamson,"48,491",0.3444,0
+Texas,Wilson,"48,493",0.4036,"2,044"
+Texas,Winkler,"48,495",0.5668,460
+Texas,Wise,"48,497",0.585,"2,044"
+Texas,Wood,"48,499",0.7056,"1,449"
+Texas,Yoakum,"48,501",0.4831,503
+Texas,Young,"48,503",0.5391,546
+Texas,Zapata,"48,505",0.9962,844
+Texas,Zavala,"48,507",0.9357,824
+Utah,Beaver,"49,001",0.0974,148
+Utah,Box Elder,"49,003",0.1626,"2,593"
+Utah,Cache,"49,005",0.3682,0
+Utah,Carbon,"49,007",0.5945,219
+Utah,Davis,"49,011",0.0659,0
+Utah,Duchesne,"49,013",0.5894,233
+Utah,Emery,"49,015",0.156,117
+Utah,Garfield,"49,017",0.4026,221
+Utah,Grand,"49,019",0.5815,270
+Utah,Iron,"49,021",0.4943,"4,492"
+Utah,Juab,"49,023",0.1986,385
+Utah,Kane,"49,025",0.3109,166
+Utah,Millard,"49,027",0.3969,956
+Utah,Morgan,"49,029",0.0003,350
+Utah,Piute,"49,031",0.2998,51
+Utah,Rich,"49,033",0.1362,52
+Utah,Salt Lake,"49,035",0.4363,0
+Utah,San Juan,"49,037",0.9328,"5,688"
+Utah,Sanpete,"49,039",0.457,853
+Utah,Sevier,"49,041",0.4449,715
+Utah,Summit,"49,043",0.0796,"7,113"
+Utah,Tooele,"49,045",0.2591,"3,962"
+Utah,Uintah,"49,047",0.6308,489
+Utah,Utah,"49,049",0.2839,0
+Utah,Wasatch,"49,051",0.0652,"5,686"
+Utah,Washington,"49,053",0.4634,0
+Utah,Weber,"49,057",0.3275,0
+Vermont,Addison,"50,001",0.1394,884
+Vermont,Bennington,"50,003",0.3167,954
+Vermont,Caledonia,"50,005",0.339,272
+Vermont,Chittenden,"50,007",0.2132,"8,301"
+Vermont,Essex,"50,009",0.3106,54
+Vermont,Franklin,"50,011",0.1232,"1,428"
+Vermont,Grand Isle,"50,013",0.007,139
+Vermont,Lamoille,"50,015",0.1636,457
+Vermont,Orange,"50,017",0.1321,127
+Vermont,Orleans,"50,019",0.3129,182
+Vermont,Rutland,"50,021",0.3237,976
+Vermont,Washington,"50,023",0.1973,547
+Vermont,Windham,"50,025",0.38,"1,273"
+Vermont,Windsor,"50,027",0.1346,786
+Virginia,Accomack,"51,001",0.8775,0
+Virginia,Albemarle,"51,003",0.2425,"6,443"
+Virginia,Alleghany,"51,005",0.3991,524
+Virginia,Amelia,"51,007",0.4067,619
+Virginia,Amherst,"51,009",0.3479,497
+Virginia,Appomattox,"51,011",0.1954,581
+Virginia,Arlington,"51,013",0.1929,0
+Virginia,Augusta,"51,015",0.1922,"2,602"
+Virginia,Bath,"51,017",0.3361,7
+Virginia,Bedford,"51,019",0.0735,"1,891"
+Virginia,Bland,"51,021",0.2288,31
+Virginia,Botetourt,"51,023",0.0118,"1,881"
+Virginia,Brunswick,"51,025",0.8698,"1,558"
+Virginia,Buchanan,"51,027",0.6318,472
+Virginia,Buckingham,"51,029",0.775,"7,423"
+Virginia,Campbell,"51,031",0.3682,727
+Virginia,Caroline,"51,033",0.3256,"1,733"
+Virginia,Carroll,"51,035",0.3947,"3,100"
+Virginia,Charles City,"51,036",0.2826,530
+Virginia,Charlotte,"51,037",0.7966,446
+Virginia,Chesterfield,"51,041",0.2785,0
+Virginia,Clarke,"51,043",0.0859,751
+Virginia,Craig,"51,045",0.0299,110
+Virginia,Culpeper,"51,047",0.4764,"10,851"
+Virginia,Cumberland,"51,049",0.3845,755
+Virginia,Dickenson,"51,051",0.7177,68
+Virginia,Dinwiddie,"51,053",0.4589,"1,978"
+Virginia,Essex,"51,057",0.8342,796
+Virginia,Fairfax,"51,059",0.2623,0
+Virginia,Fauquier,"51,061",0.0815,"5,965"
+Virginia,Floyd,"51,063",0.0993,268
+Virginia,Fluvanna,"51,065",0.1018,"1,634"
+Virginia,Franklin,"51,067",0.4236,"1,327"
+Virginia,Frederick,"51,069",0.2161,"6,916"
+Virginia,Giles,"51,071",0.133,232
+Virginia,Gloucester,"51,073",0.0637,760
+Virginia,Goochland,"51,075",0.0538,"1,662"
+Virginia,Grayson,"51,077",0.5722,"1,173"
+Virginia,Greene,"51,079",0.288,"1,002"
+Virginia,Greensville,"51,081",0.7603,"4,834"
+Virginia,Halifax,"51,083",0.7015,933
+Virginia,Hanover,"51,085",0.0191,"5,964"
+Virginia,Henrico,"51,087",0.3612,0
+Virginia,Henry,"51,089",0.7912,"4,116"
+Virginia,Highland,"51,091",0.0926,39
+Virginia,Isle of Wight,"51,093",0.3412,"2,680"
+Virginia,James City,"51,095",0.1894,"4,097"
+Virginia,King and Queen,"51,097",0.0452,332
+Virginia,King George,"51,099",0.0525,"1,322"
+Virginia,King William,"51,101",0.0057,639
+Virginia,Lancaster,"51,103",0.4134,163
+Virginia,Lee,"51,105",0.8787,208
+Virginia,Loudoun,"51,107",0.0952,0
+Virginia,Louisa,"51,109",0.331,"1,707"
+Virginia,Lunenburg,"51,111",0.8183,507
+Virginia,Madison,"51,113",0.1811,593
+Virginia,Mathews,"51,115",0.1254,84
+Virginia,Mecklenburg,"51,117",0.6525,"3,282"
+Virginia,Middlesex,"51,119",0.2928,204
+Virginia,Montgomery,"51,121",0.3132,"2,234"
+Virginia,Nelson,"51,125",0.2285,284
+Virginia,New Kent,"51,127",0.0092,837
+Virginia,Northampton,"51,131",0.7778,"3,542"
+Virginia,Northumberland,"51,133",0.1534,506
+Virginia,Nottoway,"51,135",0.8332,"1,512"
+Virginia,Orange,"51,137",0.3943,"2,029"
+Virginia,Page,"51,139",0.3348,"3,784"
+Virginia,Patrick,"51,141",0.3246,627
+Virginia,Pittsylvania,"51,143",0.6712,"1,920"
+Virginia,Powhatan,"51,145",0.0045,"1,135"
+Virginia,Prince Edward,"51,147",0.8514,"2,902"
+Virginia,Prince George,"51,149",0.3918,"3,273"
+Virginia,Prince William,"51,153",0.443,0
+Virginia,Pulaski,"51,155",0.3329,643
+Virginia,Rappahannock,"51,157",0.0726,363
+Virginia,Richmond,"51,159",0.6088,"3,947"
+Virginia,Roanoke,"51,161",0.1197,"3,884"
+Virginia,Rockbridge,"51,163",0.1865,434
+Virginia,Rockingham,"51,165",0.254,"9,899"
+Virginia,Russell,"51,167",0.4243,223
+Virginia,Scott,"51,169",0.4669,153
+Virginia,Shenandoah,"51,171",0.359,"7,811"
+Virginia,Smyth,"51,173",0.7807,553
+Virginia,Southampton,"51,175",0.4402,"2,204"
+Virginia,Spotsylvania,"51,177",0.2699,0
+Virginia,Stafford,"51,179",0.2311,998
+Virginia,Surry,"51,181",0.5341,227
+Virginia,Sussex,"51,183",0.7903,"2,738"
+Virginia,Tazewell,"51,185",0.6254,290
+Virginia,Warren,"51,187",0.3727,"3,933"
+Virginia,Washington,"51,191",0.2724,962
+Virginia,Westmoreland,"51,193",0.5913,"1,821"
+Virginia,Wise,"51,195",0.803,450
+Virginia,Wythe,"51,197",0.2708,737
+Virginia,York,"51,199",0.2126,"1,823"
+Virginia,Alexandria City,"51,510",0.3285,0
+Virginia,Bristol City,"51,520",0.7915,106
+Virginia,Buena Vista City,"51,530",0.5312,226
+Virginia,Charlottesville City,"51,540",0.5662,"3,274"
+Virginia,Chesapeake City,"51,550",0.3873,"1,931"
+Virginia,Colonial Heights City,"51,570",0.5503,"1,970"
+Virginia,Covington City,"51,580",0.1432,65
+Virginia,Danville City,"51,590",0.9841,"1,401"
+Virginia,Emporia City,"51,595",0.9854,"1,876"
+Virginia,Fairfax City,"51,600",0.2508,933
+Virginia,Falls Church City,"51,610",0.2085,695
+Virginia,Franklin City,"51,620",0.8081,819
+Virginia,Fredericksburg City,"51,630",0.726,"3,448"
+Virginia,Galax City,"51,640",0.9978,"3,619"
+Virginia,Hampton City,"51,650",0.7053,"5,544"
+Virginia,Harrisonburg City,"51,660",0.837,"12,620"
+Virginia,Hopewell City,"51,670",0.9087,"2,510"
+Virginia,Lexington City,"51,678",0.1763,183
+Virginia,Lynchburg City,"51,680",0.7845,"2,242"
+Virginia,Manassas City,"51,683",0.6805,0
+Virginia,Manassas Park City,"51,685",0.6731,"5,829"
+Virginia,Martinsville City,"51,690",0.9208,"1,279"
+Virginia,Newport News City,"51,700",0.8705,"8,502"
+Virginia,Norfolk City,"51,710",0.8822,987
+Virginia,Norton City,"51,720",0.7123,52
+Virginia,Petersburg City,"51,730",0.9752,"3,935"
+Virginia,Poquoson City,"51,735",0.0013,258
+Virginia,Portsmouth City,"51,740",0.8084,"7,896"
+Virginia,Radford City,"51,750",0.4185,197
+Virginia,Richmond City,"51,760",0.8549,0
+Virginia,Roanoke City,"51,770",0.8335,"6,807"
+Virginia,Salem City,"51,775",0.3985,"1,100"
+Virginia,Staunton City,"51,790",0.584,"1,111"
+Virginia,Suffolk City,"51,800",0.4297,"6,478"
+Virginia,Virginia Beach City,"51,810",0.3211,0
+Virginia,Waynesboro City,"51,820",0.6693,"1,393"
+Virginia,Williamsburg City,"51,830",0.4771,963
+Virginia,Winchester City,"51,840",0.8635,"4,405"
+Washington,Adams,"53,001",0.9656,"2,602"
+Washington,Asotin,"53,003",0.3721,273
+Washington,Benton,"53,005",0.5426,0
+Washington,Chelan,"53,007",0.7788,"6,191"
+Washington,Clallam,"53,009",0.6229,630
+Washington,Clark,"53,011",0.3915,"3,644"
+Washington,Columbia,"53,013",0.2705,107
+Washington,Cowlitz,"53,015",0.7066,"3,038"
+Washington,Douglas,"53,017",0.823,"4,220"
+Washington,Ferry,"53,019",0.7871,24
+Washington,Franklin,"53,021",0.8969,0
+Washington,Garfield,"53,023",0.0888,4
+Washington,Grant,"53,025",0.9029,"9,780"
+Washington,Grays Harbor,"53,027",0.8122,454
+Washington,Island,"53,029",0.2938,"2,609"
+Washington,Jefferson,"53,031",0.3695,527
+Washington,King,"53,033",0.3743,0
+Washington,Kitsap,"53,035",0.3081,"3,445"
+Washington,Kittitas,"53,037",0.3008,"2,083"
+Washington,Klickitat,"53,039",0.5764,940
+Washington,Lewis,"53,041",0.7743,"1,087"
+Washington,Lincoln,"53,043",0.154,52
+Washington,Mason,"53,045",0.5958,727
+Washington,Okanogan,"53,047",0.9532,"2,200"
+Washington,Pacific,"53,049",0.6572,234
+Washington,Pend Oreille,"53,051",0.4214,94
+Washington,Pierce,"53,053",0.5302,0
+Washington,San Juan,"53,055",0.1244,260
+Washington,Skagit,"53,057",0.5484,"7,408"
+Washington,Skamania,"53,059",0.3043,219
+Washington,Snohomish,"53,061",0.3523,0
+Washington,Spokane,"53,063",0.5153,0
+Washington,Stevens,"53,065",0.4478,286
+Washington,Thurston,"53,067",0.3724,"4,301"
+Washington,Wahkiakum,"53,069",0.1706,65
+Washington,Walla Walla,"53,071",0.7623,"2,637"
+Washington,Whatcom,"53,073",0.5277,"8,903"
+Washington,Whitman,"53,075",0.5213,622
+Washington,Yakima,"53,077",0.957,0
+West Virginia,Barbour,"54,001",0.3819,225
+West Virginia,Berkeley,"54,003",0.366,"6,573"
+West Virginia,Boone,"54,005",0.4246,366
+West Virginia,Braxton,"54,007",0.4593,48
+West Virginia,Brooke,"54,009",0.2934,236
+West Virginia,Cabell,"54,011",0.7129,"2,301"
+West Virginia,Calhoun,"54,013",0.3749,40
+West Virginia,Clay,"54,015",0.6095,145
+West Virginia,Fayette,"54,019",0.6181,981
+West Virginia,Gilmer,"54,021",0.4745,169
+West Virginia,Grant,"54,023",0.3609,229
+West Virginia,Greenbrier,"54,025",0.5274,868
+West Virginia,Hampshire,"54,027",0.3405,548
+West Virginia,Hancock,"54,029",0.3934,447
+West Virginia,Hardy,"54,031",0.2588,595
+West Virginia,Harrison,"54,033",0.4195,"1,233"
+West Virginia,Jackson,"54,035",0.1992,"1,900"
+West Virginia,Jefferson,"54,037",0.1852,"3,229"
+West Virginia,Kanawha,"54,039",0.535,"4,918"
+West Virginia,Lewis,"54,041",0.4863,271
+West Virginia,Lincoln,"54,043",0.3905,116
+West Virginia,Logan,"54,045",0.6811,407
+West Virginia,McDowell,"54,047",0.7524,93
+West Virginia,Marion,"54,049",0.423,"1,189"
+West Virginia,Marshall,"54,051",0.141,682
+West Virginia,Mason,"54,053",0.2492,288
+West Virginia,Mercer,"54,055",0.8218,734
+West Virginia,Mineral,"54,057",0.3622,803
+West Virginia,Mingo,"54,059",0.6754,341
+West Virginia,Monongalia,"54,061",0.4504,"5,031"
+West Virginia,Monroe,"54,063",0.3593,195
+West Virginia,Morgan,"54,065",0.0942,260
+West Virginia,Nicholas,"54,067",0.3654,213
+West Virginia,Ohio,"54,069",0.4793,"1,594"
+West Virginia,Pendleton,"54,071",0.2432,190
+West Virginia,Pleasants,"54,073",0.3533,66
+West Virginia,Pocahontas,"54,075",0.5315,448
+West Virginia,Preston,"54,077",0.4405,"1,198"
+West Virginia,Putnam,"54,079",0.0834,979
+West Virginia,Raleigh,"54,081",0.7183,883
+West Virginia,Randolph,"54,083",0.4866,"2,302"
+West Virginia,Ritchie,"54,085",0.2377,26
+West Virginia,Roane,"54,087",0.5229,149
+West Virginia,Summers,"54,089",0.7199,26
+West Virginia,Taylor,"54,091",0.3539,257
+West Virginia,Tucker,"54,093",0.225,79
+West Virginia,Tyler,"54,095",0.1588,90
+West Virginia,Upshur,"54,097",0.6009,318
+West Virginia,Wayne,"54,099",0.3635,"1,570"
+West Virginia,Webster,"54,101",0.5439,9
+West Virginia,Wetzel,"54,103",0.268,311
+West Virginia,Wirt,"54,105",0.3606,66
+West Virginia,Wood,"54,107",0.3711,"1,966"
+West Virginia,Wyoming,"54,109",0.4927,91
+Wisconsin,Adams,"55,001",0.536,437
+Wisconsin,Ashland,"55,003",0.5124,60
+Wisconsin,Barron,"55,005",0.3542,520
+Wisconsin,Bayfield,"55,007",0.1003,60
+Wisconsin,Brown,"55,009",0.2919,0
+Wisconsin,Buffalo,"55,011",0.0783,138
+Wisconsin,Burnett,"55,013",0.2018,59
+Wisconsin,Calumet,"55,015",0.0124,"1,732"
+Wisconsin,Chippewa,"55,017",0.1171,"1,543"
+Wisconsin,Clark,"55,019",0.5907,"1,218"
+Wisconsin,Columbia,"55,021",0.0869,"1,392"
+Wisconsin,Crawford,"55,023",0.2868,552
+Wisconsin,Dane,"55,025",0.2027,0
+Wisconsin,Dodge,"55,027",0.1671,"6,433"
+Wisconsin,Door,"55,029",0.0872,646
+Wisconsin,Douglas,"55,031",0.2852,622
+Wisconsin,Dunn,"55,033",0.2384,637
+Wisconsin,Eau Claire,"55,035",0.2514,"3,965"
+Wisconsin,Florence,"55,037",0.1566,51
+Wisconsin,Fond du Lac,"55,039",0.1505,"4,571"
+Wisconsin,Forest,"55,041",0.4306,560
+Wisconsin,Grant,"55,043",0.2381,"2,412"
+Wisconsin,Green,"55,045",0.1101,"1,318"
+Wisconsin,Green Lake,"55,047",0.4052,517
+Wisconsin,Iowa,"55,049",0.0073,512
+Wisconsin,Iron,"55,051",0.2107,132
+Wisconsin,Jackson,"55,053",0.5866,404
+Wisconsin,Jefferson,"55,055",0.1875,"4,057"
+Wisconsin,Juneau,"55,057",0.4278,602
+Wisconsin,Kenosha,"55,059",0.5442,0
+Wisconsin,Kewaunee,"55,061",0.0185,891
+Wisconsin,La Crosse,"55,063",0.2097,"7,088"
+Wisconsin,Lafayette,"55,065",0.1747,"1,003"
+Wisconsin,Langlade,"55,067",0.1891,139
+Wisconsin,Lincoln,"55,069",0.091,231
+Wisconsin,Manitowoc,"55,071",0.1047,"1,679"
+Wisconsin,Marathon,"55,073",0.1766,"3,110"
+Wisconsin,Marinette,"55,075",0.2619,"1,028"
+Wisconsin,Marquette,"55,077",0.2151,463
+Wisconsin,Menominee,"55,078",0.7381,106
+Wisconsin,Milwaukee,"55,079",0.8396,0
+Wisconsin,Monroe,"55,081",0.4211,"1,350"
+Wisconsin,Oconto,"55,083",0.0239,953
+Wisconsin,Oneida,"55,085",0.0277,307
+Wisconsin,Outagamie,"55,087",0.0773,"7,641"
+Wisconsin,Ozaukee,"55,089",0.0388,"3,801"
+Wisconsin,Pepin,"55,091",0.0863,77
+Wisconsin,Pierce,"55,093",0.028,"1,108"
+Wisconsin,Polk,"55,095",0.0885,829
+Wisconsin,Portage,"55,097",0.1299,"2,734"
+Wisconsin,Price,"55,099",0.2015,56
+Wisconsin,Racine,"55,101",0.4637,0
+Wisconsin,Richland,"55,103",0.4319,203
+Wisconsin,Rock,"55,105",0.4281,987
+Wisconsin,Rusk,"55,107",0.302,143
+Wisconsin,St. Croix,"55,109",0.0137,"3,089"
+Wisconsin,Sauk,"55,111",0.2292,"1,795"
+Wisconsin,Sawyer,"55,113",0.3402,177
+Wisconsin,Shawano,"55,115",0.1976,"1,152"
+Wisconsin,Sheboygan,"55,117",0.1801,"3,341"
+Wisconsin,Taylor,"55,119",0.3014,224
+Wisconsin,Trempealeau,"55,121",0.2136,"2,012"
+Wisconsin,Vernon,"55,123",0.4596,509
+Wisconsin,Vilas,"55,125",0.1101,175
+Wisconsin,Walworth,"55,127",0.2206,"9,297"
+Wisconsin,Washburn,"55,129",0.1162,64
+Wisconsin,Washington,"55,131",0.0108,"5,950"
+Wisconsin,Waukesha,"55,133",0.0356,0
+Wisconsin,Waupaca,"55,135",0.1486,"1,974"
+Wisconsin,Waushara,"55,137",0.3698,491
+Wisconsin,Winnebago,"55,139",0.2059,"9,558"
+Wisconsin,Wood,"55,141",0.1426,"1,188"
+Wyoming,Albany,"56,001",0.2572,557
+Wyoming,Big Horn,"56,003",0.4777,334
+Wyoming,Campbell,"56,005",0.3227,984
+Wyoming,Carbon,"56,007",0.5207,357
+Wyoming,Converse,"56,009",0.1601,351
+Wyoming,Crook,"56,011",0.0465,92
+Wyoming,Fremont,"56,013",0.7269,"4,883"
+Wyoming,Goshen,"56,015",0.4128,107
+Wyoming,Hot Springs,"56,017",0.2486,169
+Wyoming,Johnson,"56,019",0.127,265
+Wyoming,Laramie,"56,021",0.2715,"3,994"
+Wyoming,Lincoln,"56,023",0.1454,485
+Wyoming,Natrona,"56,025",0.4605,"1,976"
+Wyoming,Niobrara,"56,027",0.388,26
+Wyoming,Park,"56,029",0.0703,952
+Wyoming,Platte,"56,031",0.1461,52
+Wyoming,Sheridan,"56,033",0.1983,369
+Wyoming,Sublette,"56,035",0.0977,88
+Wyoming,Sweetwater,"56,037",0.374,"1,593"
+Wyoming,Teton,"56,039",0.1919,"1,925"
+Wyoming,Uinta,"56,041",0.4064,"2,515"
+Wyoming,Washakie,"56,043",0.2661,522
+Wyoming,Weston,"56,045",0.232,21

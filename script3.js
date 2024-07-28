@@ -31,8 +31,9 @@ const tooltip = d3.select("body").append("div")
 d3.csv("data/2020_SVI_county.csv").then(data => {
     // Parse the data
     data.forEach(d => {
-        d.FIPS = +d.FIPS;
-        d.RPL_THEMES = +d.RPL_THEMES;
+        d.FIPS = +d.FIPS.replace(/,/g, '');
+        d.SVI = +d.SVI;
+        d.cases = +d.cases.replace(/,/g, ''); // Remove commas in case numbers
     });
 
     // Get the unique states for the dropdown menu
@@ -51,8 +52,8 @@ d3.csv("data/2020_SVI_county.csv").then(data => {
     colorScale.domain(states);
 
     // Set domains for scales
-    xScale.domain(d3.extent(data, d => d.FIPS)).nice();
-    yScale.domain(d3.extent(data, d => d.RPL_THEMES)).nice();
+    xScale.domain(d3.extent(data, d => d.SVI)).nice();
+    yScale.domain(d3.extent(data, d => d.cases)).nice();
 
     // Append axes
     svg.append("g")
@@ -64,7 +65,7 @@ d3.csv("data/2020_SVI_county.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("FIPS");
+        .text("SVI");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -75,7 +76,7 @@ d3.csv("data/2020_SVI_county.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("RPL_THEMES");
+        .text("Cases");
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
@@ -90,15 +91,16 @@ d3.csv("data/2020_SVI_county.csv").then(data => {
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.FIPS))
-            .attr("cy", d => yScale(d.RPL_THEMES))
+            .attr("cx", d => xScale(d.SVI))
+            .attr("cy", d => yScale(d.cases))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.STATE))
             .on("mouseover", (event, d) => {
                 tooltip.transition().duration(200).style("opacity", .9);
                 tooltip.html(`<strong>${d.COUNTY}, ${d.STATE}</strong><br>
                               FIPS: ${d.FIPS}<br>
-                              RPL_THEMES: ${d.RPL_THEMES}`)
+                              SVI: ${d.SVI}<br>
+                              Cases: ${d.cases}`)
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
 
