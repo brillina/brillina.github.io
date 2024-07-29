@@ -25,3 +25,6 @@
 .data-sources a:hover {
     text-decoration: underline;
 }
+* {
+    font-family: sans-serif;
+}
