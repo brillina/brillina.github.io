@@ -52,8 +52,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
     colorScale.domain(states);
 
     // Set domains for scales
-    xScale.domain(d3.extent(data, d => d.Population)).nice();
-    yScale.domain(d3.extent(data, d => d.cases)).nice();
+    xScale.domain(d3.extent(data, d => d.cases)).nice();
+    yScale.domain(d3.extent(data, d => d.Population)).nice();
 
     // Append axes
     svg.append("g")
@@ -65,7 +65,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("Population");
+        .text("Cases");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -76,7 +76,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("Cases");
+        .text("Population");
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
@@ -91,8 +91,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.Population))
-            .attr("cy", d => yScale(d.cases))
+            .attr("cx", d => xScale(d.cases))
+            .attr("cy", d => yScale(d.Population))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.State))
             .on("mouseover", (event, d) => {

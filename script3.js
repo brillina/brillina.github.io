@@ -28,7 +28,7 @@ const tooltip = d3.select("body").append("div")
     .style("opacity", 0);
 
 // Load the CSV data
-d3.csv("data/2020_SVI_county.csv").then(data => {
+d3.csv("data/SVI_2020_US_county.csv").then(data => {
     // Parse the data
     data.forEach(d => {
         d.FIPS = +d.FIPS.replace(/,/g, '');
