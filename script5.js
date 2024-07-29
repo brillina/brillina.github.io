@@ -17,8 +17,8 @@ const tooltip = d3.select("body").append("div")
 
 // Load and process the data
 Promise.all([
-    d3.json("us-states.json"), // GeoJSON file for US states
-    d3.csv("state_summary.csv") // CSV file with state populations and cases
+    d3.json("data/us-states.json"), // GeoJSON file for US states
+    d3.csv("data/state_summary.csv") // CSV file with state populations and cases
 ]).then(([us, data]) => {
     const stateData = data.reduce((acc, d) => {
         acc[d.State] = { population: +d.Population, cases: +d.cases };

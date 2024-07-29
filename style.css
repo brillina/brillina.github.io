@@ -1,39 +1,97 @@
-.axis path,
-.axis line {
-  fill: none;
-	stroke: black;
-	shape-rendering: crispEdges;
-}
-.axis text {
-	font-family: sans-serif;
-	font-size: 11px;
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-.data-sources {
-    margin-bottom: 20px; /* Add margin to create space between this section and the buttons */
-    font-size: 14px;
-    text-align: left; /* Align text to the left */
-    font-style: italic; /* Italicize the text */
+.dot {
+    stroke: #000;
+    stroke-width: 1px;
 }
 
-.data-sources a {
-    display: block;
-    color: #626262;
+.tooltip {
+    position: absolute;
+    text-align: left;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+#scatterplot {
+    margin-top: 20px;
+}
+
+#legend {
+    margin-top: 20px;
+    width: 150px;
+    overflow-y: auto;
+}
+
+.btn {
+    display: inline-block;
+    font: 12px sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: #00b049;
+    border: 1px solid #00943e;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     text-decoration: none;
 }
 
-.data-sources a:hover {
-    text-decoration: underline;
+.btn:hover {
+    color: #fff;
+    background-color: #00943e;
+    border-color: #007631;
+    text-decoration: none;
 }
-* {
-    font-family: sans-serif;
+
+.btn-s {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#select-state {
+    width: 200px; /* Adjust the width as needed */
+}
+
+.legend {
+    margin-bottom: 5px;
+}
+
+.legend div {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.legend span {
+    margin-left: 5px;
+    vertical-align: middle;
 }
 
 .footer {
-    position: absolute; /* Changed from fixed to absolute */
-    bottom: 20px; /* Adjust the distance from the bottom if needed */
-    left: 20px; /* Adjust the distance from the left if needed */
-    margin: 0;
-    width: calc(100% - 40px); /* Make the footer span the full width minus padding */
-    text-align: left; /* Align the text to the left */
+    margin-top: 20px;
+    text-align: center;
 }
