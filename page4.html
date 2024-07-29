@@ -24,6 +24,13 @@
         }
         #scatterplot {
             margin-top: 20px;
+            float: left;
+        }
+        #legend {
+            margin-top: 20px;
+            float: right;
+            width: 150px;
+            overflow-y: auto;
         }
         .btn {
             display: inline-block;
@@ -53,29 +60,44 @@
             font-size: 0.875rem;
             line-height: 1.5;
         }
+        .legend {
+            margin-bottom: 5px;
+        }
+        .legend div {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .legend span {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Cases by County vs. Population 🧑‍🤝‍🧑</h2>
         <ul>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between the Social Vulnerability Index (SVI) and the number of COVID-19 cases by county.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The SVI is represented on the y-axis, while the number of COVID-19 cases is represented on the x-axis.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between population and the number of COVID-19 cases by county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The population is represented on the x-axis, while the number of COVID-19 cases is represented on the y-axis.</li>
             <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Use the dropdown menu to filter data by state.</li>
             <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Hover over the dots to see detailed information about each county.</li>
         </ul>
-    <label>
-        <input type="checkbox" id="hide-zero-cases" checked>
-        Hide counties with 0 reported cases
-    </label>
-    <label for="select-state">Filter by State:</label>
-    <select id="select-state">
-    </select>
-    <div id="scatterplot"></div>
-    <script src="script4.js"></script>
-    <p>
-        <a class="btn btn-s" href="page3.html" role="button">Previous</a>
-        <a class="btn btn-s" href="page4.html" role="button">Next</a>
-    </p>
+        <label>
+            <input type="checkbox" id="hide-zero-cases" checked>
+            Hide counties with 0 reported cases
+        </label>
+        <label for="select-state">Filter by State:</label>
+        <select id="select-state">
+        </select>
+        <div id="scatterplot"></div>
+        <div id="legend"></div>
+        <script src="script4.js"></script>
+        <p>
+            <a class="btn btn-s" href="page3.html" role="button">Previous</a>
+            <a class="btn btn-s" href="page4.html" role="button">Next</a>
+        </p>
+    </div>
 </body>
 </html>

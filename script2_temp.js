@@ -82,9 +82,8 @@ d3.csv("data/mask_averages.csv").then(data => {
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
-        
-        const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
         const hideZeroCases = d3.select("#hide-zero-cases").property("checked");
+        const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
         const displayData = hideZeroCases ? filteredData.filter(d => d.cases > 0) : filteredData;
 
         svg.selectAll(".dot").remove();
@@ -140,6 +139,11 @@ d3.csv("data/mask_averages.csv").then(data => {
         updateScatterplot(selectedState);
     });
 
+    // Handle checkbox change
+    d3.select("#hide-zero-cases").on("change", function() {
+        updateScatterplot(d3.select("#select-state").property("value"));
+    });
+
     // Add legend container
     const legendContainer = d3.select("#scatterplot").append("div")
         .style("width", `${legendWidth}px`)
@@ -163,7 +167,7 @@ d3.csv("data/mask_averages.csv").then(data => {
     legend.append("div")
         .style("width", "18px")
         .style("height", "18px")
-        .style("background-color", colorScale)
+        .style("background-color", d => colorScale(d))
         .style("display", "inline-block")
         .style("vertical-align", "middle");
 
