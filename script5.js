@@ -18,12 +18,10 @@ const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-// Load and process the data
 Promise.all([
-    d3.json("data/us-states.json"), // GeoJSON file for US states
-    d3.csv("data/state_summary.csv") // CSV file with state populations and cases
+    d3.json("data/us_states.json"),
+    d3.csv("data/state_summary.csv")
 ]).then(([us, data]) => {
-    // Process CSV data
     const stateData = data.reduce((acc, d) => {
         acc[d.State] = { population: +d.Population, cases: +d.cases };
         return acc;
@@ -33,11 +31,9 @@ Promise.all([
     console.log("CSV data:", data);
     console.log("Processed state data:", stateData);
 
-    // Define color scale
     const colorScale = d3.scaleSequential(d3.interpolateBlues)
         .domain([0, d3.max(data, d => +d.cases)]);
 
-    // Draw states
     svg.append("g")
         .attr("class", "states")
         .selectAll("path")
