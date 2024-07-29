@@ -8,6 +8,7 @@
     <style>
         * {
             font-family: sans-serif;
+            box-sizing: border-box;
         }
         .dot {
             stroke: #000;
@@ -25,17 +26,11 @@
             border-radius: 8px;
             pointer-events: none;
         }
-        #map {
-            margin-top: 20px;
-            float: left;
-        }
         #scatterplot {
             margin-top: 20px;
-            float: left;
         }
         #legend {
             margin-top: 20px;
-            float: right;
             width: 150px;
             overflow-y: auto;
         }
@@ -67,6 +62,13 @@
             font-size: 0.875rem;
             line-height: 1.5;
         }
+        .controls {
+            margin-bottom: 20px;
+        }
+        .controls label {
+            display: block;
+            margin-bottom: 10px;
+        }
         #select-state {
             width: 200px; /* Adjust the width as needed */
         }
@@ -83,17 +85,25 @@
             margin-left: 5px;
             vertical-align: middle;
         }
+        .footer {
+            position: absolute; /* Changed from fixed to absolute */
+            bottom: 20px; /* Adjust the distance from the bottom if needed */
+            left: 20px; /* Adjust the distance from the left if needed */
+            margin: 0;
+            width: calc(100% - 40px); /* Make the footer span the full width minus padding */
+            text-align: left; /* Align the text to the left */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Takeaways</h2>
+    <div class="container" style="position: relative; min-height: 100vh;">
+        <h2>Cases by County vs. Population 🧑‍🤝‍🧑</h2>
         <ul>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>There is no direct correlation between mask usage and COVID-19 cases, as there are counties with lower weighted mask usage and higher reported numbers of deaths, and vice versa.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>There also seems to be no trend between the vulnerability of a county and the reported COVID-19 cases. However, some states have more vulnerable counties than others, but the number of reported cases remains persistent.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Population may have a stronger effect on cases. For many states, counties with a lower population are more clustered near the origin which indicates fewer reported cases as well.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>We might draw the conclusion that the number of COVID-19 deaths per county corresponds more to its population and geographical location (the county's distance from a major city) than to the frequency of mask usage and SVI score.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the map to see the total population and cases by state.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between population and the number of COVID-19 cases by county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The population is represented on the x-axis, while the number of COVID-19 cases is represented on the y-axis.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>🔽 Use the dropdown menu to filter data by state.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>✅ Use the checkbox to hide counties with no reported cases.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the dots to see detailed information about each county.</li>
         </ul>
         <div class="controls">
             <label>
@@ -104,11 +114,11 @@
             <select id="select-state"></select>
         </div>
         <div id="scatterplot"></div>
-        <script src="script5.js"></script>
-        <p>
-            <a class="btn btn-s" href="page4.html" role="button">Previous</a>
+        <script src="script4.js"></script>
+        <div class="footer">
+            <a class="btn btn-s" href="page3.html" role="button">Previous</a>
             <a class="btn btn-s" href="index.html" role="button">Homepage</a>
-        </p>
+        </div>
     </div>
 </body>
 </html>

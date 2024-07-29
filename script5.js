@@ -16,8 +16,8 @@ const path = d3.geoPath().projection(projection);
 
 // Load the GeoJSON and CSV data
 Promise.all([
-    d3.json("path/to/us-states.json"), // Path to your GeoJSON file
-    d3.csv("path/to/state_summary.csv") // Path to your aggregated data file
+    d3.json("data/us-states.json"),
+    d3.csv("data/state_summary.csv")
 ]).then(([geojson, stateData]) => {
     // Process and merge data
     const stateDataMap = new Map(stateData.map(d => [d.State, { cases: +d.cases, population: +d.Population }]));
@@ -56,6 +56,34 @@ Promise.all([
         .attr("id", "tooltip")
         .attr("class", "tooltip")
         .style("opacity", 0);
+
+// Add a legend to the map
+    const legend = svg.append("g")
+        .attr("transform", "translate(20,20)");
+
+    const legendScale = d3.scaleLinear()
+        .domain([0, d3.max(stateData, d => +d.cases)])
+        .range([0, 200]); // Adjust range to fit your legend width
+
+    legend.selectAll("rect")
+        .data(d3.range(0, d3.max(stateData, d => +d.cases), (d3.max(stateData, d => +d.cases) / 10)))
+        .enter().append("rect")
+        .attr("x", (d, i) => i * 20)
+        .attr("y", 0)
+        .attr("width", 20)
+        .attr("height", 20)
+        .style("fill", d => colorScale(d));
+
+    legend.append("text")
+        .attr("x", 0)
+        .attr("y", 30)
+        .text("Low Cases");
+
+    legend.append("text")
+        .attr("x", 180)
+        .attr("y", 30)
+        .text("High Cases");
+
 
 }).catch(error => {
     console.error('Error loading data:', error);

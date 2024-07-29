@@ -28,3 +28,12 @@
 * {
     font-family: sans-serif;
 }
+
+.footer {
+    position: absolute; /* Changed from fixed to absolute */
+    bottom: 20px; /* Adjust the distance from the bottom if needed */
+    left: 20px; /* Adjust the distance from the left if needed */
+    margin: 0;
+    width: calc(100% - 40px); /* Make the footer span the full width minus padding */
+    text-align: left; /* Align the text to the left */
+}
