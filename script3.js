@@ -52,8 +52,8 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
     colorScale.domain(states);
 
     // Set domains for scales
-    xScale.domain(d3.extent(data, d => d.SVI)).nice();
-    yScale.domain(d3.extent(data, d => d.cases)).nice();
+    xScale.domain(d3.extent(data, d => d.cases)).nice();
+    yScale.domain(d3.extent(data, d => d.SVI)).nice();
 
     // Append axes
     svg.append("g")
@@ -65,7 +65,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("SVI");
+        .text("Cases");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -76,7 +76,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("Cases");
+        .text("SVI");
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
@@ -86,12 +86,13 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         // Remove existing dots
         svg.selectAll(".dot").remove();
 
+        // Append dots
         svg.selectAll(".dot")
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.SVI))
-            .attr("cy", d => yScale(d.cases))
+            .attr("cx", d => xScale(d.cases))
+            .attr("cy", d => yScale(d.SVI))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.STATE))
             .on("mouseover", (event, d) => {
@@ -103,6 +104,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
 
+                // Increase the size and change color on hover
                 const originalColor = d3.color(colorScale(d.STATE));
                 const hoverColor = originalColor.brighter(1);
                 d3.select(event.currentTarget)
@@ -114,6 +116,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             .on("mouseout", (event, d) => {
                 tooltip.transition().duration(500).style("opacity", 0);
 
+                // Reset the size and color when mouse leaves
                 d3.select(event.currentTarget)
                   .attr("r", 5)
                   .attr("fill", colorScale(d.STATE))
@@ -122,13 +125,16 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             });
     }
 
+    // Initialize scatterplot with all data
     updateScatterplot("all");
 
+    // Handle dropdown change
     d3.select("#select-state").on("change", function() {
         const selectedState = d3.select(this).property("value");
         updateScatterplot(selectedState);
     });
 
+    // Add legend container
     const legendContainer = d3.select("#scatterplot").append("div")
         .style("width", `${legendWidth}px`)
         .style("height", `${height}px`)
@@ -136,11 +142,12 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
-    legendContainer.append("div")
+        legendContainer.append("div")
         .style("font-weight", "bold")
         .style("margin-bottom", "10px")
         .text("State Legend");
 
+    // Add legend items
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
         .enter().append("div")
