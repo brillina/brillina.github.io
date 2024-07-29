@@ -1,23 +1,18 @@
-// Set up dimensions and margins
 const width = 960;
 const height = 600;
 
-// Create an SVG container
 const svg = d3.select("#map")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
 
-// Define a projection and path generator
 const projection = d3.geoAlbersUsa().scale(1000).translate([width / 2, height / 2]);
 const path = d3.geoPath().projection(projection);
 
-// Create a tooltip
 const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-// Map STATEFP codes to state names
 const stateFPtoName = {
     "01": "Alabama",
     "02": "Alaska",
@@ -72,7 +67,6 @@ const stateFPtoName = {
     "56": "Wyoming"
 };
 
-// Load the data
 Promise.all([
     d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
     d3.csv("data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
@@ -80,7 +74,6 @@ Promise.all([
     console.log("GeoJSON data:", geojson.features.slice(0, 5)); // Log first 5 features
     console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
 
-    // Process the COVID data
     const covidByCounty = {};
     covidData.forEach(d => {
         const countyKey = `${d.county}, ${d.state}`;
@@ -89,15 +82,12 @@ Promise.all([
 
     console.log("Processed COVID data:", covidByCounty);
 
-    // Create a color scale for the states
     const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
     
-    // Create a color scale for the cases
     const caseColorScale = d3.scaleQuantize()
         .domain([0, d3.max(covidData, d => +d.cases.replace(/,/g, ''))])
         .range(d3.schemeReds[9]);
 
-    // Draw the counties
     svg.selectAll(".county")
         .data(geojson.features)
         .enter().append("path")
