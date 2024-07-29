@@ -1,8 +1,5 @@
-// script5.js
-
-// Set up the SVG dimensions and map projection
-const width = document.getElementById('map').offsetWidth;
-const height = 500; // Adjust as needed
+const width = 960;
+const height = 600;
 
 const svg = d3.select("#map").append("svg")
     .attr("width", width)
@@ -10,81 +7,48 @@ const svg = d3.select("#map").append("svg")
 
 const projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([width / 1.5]);
+    .scale([1000]);
 
 const path = d3.geoPath().projection(projection);
 
-// Load the GeoJSON and CSV data
+const tooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+// Load and process the data
 Promise.all([
-    d3.json("data/us-states.json"),
-    d3.csv("data/state_summary.csv")
-]).then(([geojson, stateData]) => {
-    // Process and merge data
-    const stateDataMap = new Map(stateData.map(d => [d.State, { cases: +d.cases, population: +d.Population }]));
+    d3.json("us-states.json"), // GeoJSON file for US states
+    d3.csv("state_summary.csv") // CSV file with state populations and cases
+]).then(([us, data]) => {
+    const stateData = data.reduce((acc, d) => {
+        acc[d.State] = { population: +d.Population, cases: +d.cases };
+        return acc;
+    }, {});
 
-    // Set up color scale for cases
-    const colorScale = d3.scaleSequential(d3.interpolateReds)
-        .domain([0, d3.max(stateData, d => +d.cases)]);
+    const colorScale = d3.scaleSequential(d3.interpolateBlues)
+        .domain([0, d3.max(data, d => +d.cases)]);
 
-    // Draw the map
-    svg.selectAll("path")
-        .data(geojson.features)
+    svg.append("g")
+        .attr("class", "states")
+        .selectAll("path")
+        .data(us.features)
         .enter().append("path")
+        .attr("class", "state")
         .attr("d", path)
         .attr("fill", d => {
-            const data = stateDataMap.get(d.properties.name) || { cases: 0 };
-            return colorScale(data.cases);
+            const state = stateData[d.properties.name];
+            return state ? colorScale(state.cases) : "#ccc";
         })
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 0.5)
         .on("mouseover", (event, d) => {
-            const data = stateDataMap.get(d.properties.name) || { cases: 0, population: 0 };
-            d3.select("#tooltip")
-                .style("opacity", 1)
-                .html(`
-                    <strong>${d.properties.name}</strong><br>
-                    Cases: ${data.cases}<br>
-                    Population: ${data.population}
-                `);
+            const state = stateData[d.properties.name];
+            tooltip.transition().duration(200).style("opacity", .9);
+            tooltip.html(`<strong>${d.properties.name}</strong><br>
+                          Population: ${state ? state.population : 'N/A'}<br>
+                          Cases: ${state ? state.cases : 'N/A'}`)
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
         })
         .on("mouseout", () => {
-            d3.select("#tooltip").style("opacity", 0);
+            tooltip.transition().duration(500).style("opacity", 0);
         });
-
-    // Add tooltip
-    d3.select("body").append("div")
-        .attr("id", "tooltip")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
-
-// Add a legend to the map
-    const legend = svg.append("g")
-        .attr("transform", "translate(20,20)");
-
-    const legendScale = d3.scaleLinear()
-        .domain([0, d3.max(stateData, d => +d.cases)])
-        .range([0, 200]); // Adjust range to fit your legend width
-
-    legend.selectAll("rect")
-        .data(d3.range(0, d3.max(stateData, d => +d.cases), (d3.max(stateData, d => +d.cases) / 10)))
-        .enter().append("rect")
-        .attr("x", (d, i) => i * 20)
-        .attr("y", 0)
-        .attr("width", 20)
-        .attr("height", 20)
-        .style("fill", d => colorScale(d));
-
-    legend.append("text")
-        .attr("x", 0)
-        .attr("y", 30)
-        .text("Low Cases");
-
-    legend.append("text")
-        .attr("x", 180)
-        .attr("y", 30)
-        .text("High Cases");
-
-
-}).catch(error => {
-    console.error('Error loading data:', error);
 });
