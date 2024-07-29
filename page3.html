@@ -6,6 +6,9 @@
     <title>Scatterplot with State Filter</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
+        * {
+            font-family: sans-serif;
+        }
         .dot {
             stroke: #000;
             stroke-width: 1px;
@@ -86,14 +89,15 @@
             <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>✅ Use the checkbox to hide counties with no reported cases.</li>
             <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the dots to see detailed information about each county.</li>
         </ul>
-        <label>
-            <input type="checkbox" id="hide-zero-cases" checked>
-            Hide counties with 0 reported cases
-        </label>
-        <label for="select-state">Filter by State:</label>
-        <select id="select-state"></select>
+        <div class="controls">
+            <label>
+                <input type="checkbox" id="hide-zero-cases" checked>
+                Hide counties with 0 reported cases
+            </label>
+            <label for="select-state">Filter by State:</label>
+            <select id="select-state"></select>
+        </div>
         <div id="scatterplot"></div>
-        <div id="legend"></div>
         <script src="script3.js"></script>
         <p>
             <a class="btn btn-s" href="page2.html" role="button">Previous</a>

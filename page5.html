@@ -25,8 +25,19 @@
             border-radius: 8px;
             pointer-events: none;
         }
+        #map {
+            margin-top: 20px;
+            float: left;
+        }
         #scatterplot {
             margin-top: 20px;
+            float: left;
+        }
+        #legend {
+            margin-top: 20px;
+            float: right;
+            width: 150px;
+            overflow-y: auto;
         }
         .btn {
             display: inline-block;
@@ -56,31 +67,33 @@
             font-size: 0.875rem;
             line-height: 1.5;
         }
-        .controls {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        #hide-zero-cases {
-            margin-left: 20px;
-        }
         #select-state {
             width: 200px; /* Adjust the width as needed */
+        }
+        .legend {
+            margin-bottom: 5px;
+        }
+        .legend div {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .legend span {
+            margin-left: 5px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Cases by County vs. Weighted Mask Average 😷</h2>
+        <h2>Takeaways</h2>
         <ul>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between the frequency of mask usage and the number of COVID-19 cases by county.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The weighted mask average represents the overall mask-wearing behavior in a population, combining different frequency levels into an overall value.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Averages are calculated to reflect both the frequency of mask-wearing and the number of individuals in each category.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>❗ A higher weighted mask average indicates more frequent mask usage in that county.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>🔽 Use the dropdown menu to filter data by state.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>✅ Use the checkbox to hide counties with no reported cases.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the dots to see detailed information about each county, including population survey results regarding mask usage.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>There is no direct correlation between mask usage and COVID-19 cases, as there are counties with lower weighted mask usage and higher reported numbers of deaths, and vice versa.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>There also seems to be no trend between the vulnerability of a county and the reported COVID-19 cases. However, some states have more vulnerable counties than others, but the number of reported cases remains persistent.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Population may have a stronger effect on cases. For many states, counties with a lower population are more clustered near the origin which indicates fewer reported cases as well.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>We might draw the conclusion that the number of COVID-19 deaths per county corresponds more to its population and geographical location (the county's distance from a major city) than to the frequency of mask usage and SVI score.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the map to see the total population and cases by state.</li>
         </ul>
         <div class="controls">
             <label>
@@ -91,10 +104,10 @@
             <select id="select-state"></select>
         </div>
         <div id="scatterplot"></div>
-        <script src="script2_temp.js"></script>
+        <script src="script4.js"></script>
         <p>
-            <a class="btn btn-s" href="index.html" role="button">Previous</a>
-            <a class="btn btn-s" href="page3.html" role="button">Next</a>
+            <a class="btn btn-s" href="page4.html" role="button">Previous</a>
+            <a class="btn btn-s" href="index.html" role="button">Homepage</a>
         </p>
     </div>
 </body>
