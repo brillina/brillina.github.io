@@ -9,19 +9,25 @@ const svg = d3.select("#scatterplot").append("svg")
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-const xScale = d3.scaleLinear().range([0, width]);
-const yScale = d3.scaleLinear().range([height, 0]);
+// Define the scales
+const xScale = d3.scaleLinear().range([0, width]); // x-axis: weightedAverage
+const yScale = d3.scaleLinear().range([height, 0]); // y-axis: cases
 
+// Define the axes
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
 
+// Define the color scale
 const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
+// Define the tooltip
 const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
+// Load the CSV data
 d3.csv("data/mask_averages.csv").then(data => {
+    // Parse the data
     data.forEach(d => {
         d.weightedAverage = +d.weightedAverage;
         d.cases = +d.cases.replace(/,/g, '');
@@ -33,8 +39,10 @@ d3.csv("data/mask_averages.csv").then(data => {
         d.ALWAYS = +d.ALWAYS;
     });
 
+    // Get the unique states for the dropdown menu
     const states = Array.from(new Set(data.map(d => d.state)));
 
+    // Populate the dropdown menu
     const stateSelect = d3.select("#select-state");
     stateSelect.append("option").attr("value", "all").text("All States");
     states.forEach(stateName => {
@@ -45,9 +53,11 @@ d3.csv("data/mask_averages.csv").then(data => {
 
     colorScale.domain(states);
 
-    xScale.domain(d3.extent(data, d => d.cases)).nice();
-    yScale.domain(d3.extent(data, d => d.weightedAverage)).nice();
+    // Set domains for scales
+    xScale.domain(d3.extent(data, d => d.weightedAverage)).nice();
+    yScale.domain(d3.extent(data, d => d.cases)).nice();
 
+    // Append axes
     svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${height})`)
@@ -57,7 +67,7 @@ d3.csv("data/mask_averages.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("Cases");
+        .text("Weighted Average");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -68,19 +78,23 @@ d3.csv("data/mask_averages.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("Weighted Average");
+        .text("Cases");
 
+    // Function to update the scatterplot
     function updateScatterplot(selectedState) {
+        // Filter data based on the selected state
         const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
 
+        // Remove existing dots
         svg.selectAll(".dot").remove();
 
+        // Append dots
         svg.selectAll(".dot")
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.cases))
-            .attr("cy", d => yScale(d.weightedAverage))
+            .attr("cx", d => xScale(d.weightedAverage))
+            .attr("cy", d => yScale(d.cases))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.state))
             .on("mouseover", (event, d) => {
@@ -116,13 +130,16 @@ d3.csv("data/mask_averages.csv").then(data => {
             });
     }
 
+    // Initialize scatterplot with all data
     updateScatterplot("all");
 
+    // Handle dropdown change
     d3.select("#select-state").on("change", function() {
         const selectedState = d3.select(this).property("value");
         updateScatterplot(selectedState);
     });
 
+    // Add legend container
     const legendContainer = d3.select("#scatterplot").append("div")
         .style("width", `${legendWidth}px`)
         .style("height", `${height}px`)
@@ -130,11 +147,12 @@ d3.csv("data/mask_averages.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
-        legendContainer.append("div")
+    legendContainer.append("div")
         .style("font-weight", "bold")
         .style("margin-bottom", "10px")
         .text("State Legend");
 
+    // Add legend items
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
         .enter().append("div")

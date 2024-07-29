@@ -11,8 +11,8 @@ const svg = d3.select("#scatterplot").append("svg")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 // Define the scales
-const xScale = d3.scaleLinear().range([0, width]);
-const yScale = d3.scaleLinear().range([height, 0]);
+const xScale = d3.scaleLinear().range([0, width]); // x-axis: SVI
+const yScale = d3.scaleLinear().range([height, 0]); // y-axis: cases
 
 // Define the axes
 const xAxis = d3.axisBottom(xScale);
@@ -47,12 +47,12 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             .text(stateName);
     });
 
-    // Get the unique states for the color scale domain
+    // Set the domain for the color scale
     colorScale.domain(states);
 
     // Set domains for scales
-    xScale.domain(d3.extent(data, d => d.cases)).nice();
-    yScale.domain(d3.extent(data, d => d.SVI)).nice();
+    xScale.domain(d3.extent(data, d => d.SVI)).nice();
+    yScale.domain(d3.extent(data, d => d.cases)).nice();
 
     // Append axes
     svg.append("g")
@@ -64,7 +64,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("Cases");
+        .text("SVI");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -75,7 +75,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("SVI");
+        .text("Cases");
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
@@ -90,8 +90,8 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.cases))
-            .attr("cy", d => yScale(d.SVI))
+            .attr("cx", d => xScale(d.SVI))
+            .attr("cy", d => yScale(d.cases))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.STATE))
             .on("mouseover", (event, d) => {
@@ -141,7 +141,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
-        legendContainer.append("div")
+    legendContainer.append("div")
         .style("font-weight", "bold")
         .style("margin-bottom", "10px")
         .text("State Legend");
