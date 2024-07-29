@@ -120,6 +120,11 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
+        legendContainer.append("div")
+        .style("font-weight", "bold")
+        .style("margin-bottom", "10px")
+        .text("State Legend");
+
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
         .enter().append("div")

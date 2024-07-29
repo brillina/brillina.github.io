@@ -130,6 +130,11 @@ d3.csv("data/mask_averages.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
+        legendContainer.append("div")
+        .style("font-weight", "bold")
+        .style("margin-bottom", "10px")
+        .text("State Legend");
+
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
         .enter().append("div")

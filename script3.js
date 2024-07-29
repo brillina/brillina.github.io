@@ -142,6 +142,11 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
+        legendContainer.append("div")
+        .style("font-weight", "bold")
+        .style("margin-bottom", "10px")
+        .text("State Legend");
+
     // Add legend items
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
