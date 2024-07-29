@@ -128,8 +128,63 @@ d3.csv("data/mask_averages.csv").then(data => {
                   .attr("stroke", null)
                   .attr("stroke-width", null);
             });
-    }
 
+        // Annotations for Los Angeles, CA and Kenedy, TX
+        const losAngeles = data.find(d => d.county === "Los Angeles" && d.state === "California");
+        const kenedy = data.find(d => d.county === "Kenedy" && d.state === "Texas");
+
+        if (losAngeles) {
+            svg.append("text")
+                .attr("x", xScale(losAngeles.weightedAverage) + 10)
+                .attr("y", yScale(losAngeles.cases) - 30)
+                .attr("class", "annotation")
+                .text(`Los Angeles, CA`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+
+            svg.append("text")
+                .attr("x", xScale(losAngeles.weightedAverage) + 10)
+                .attr("y", yScale(losAngeles.cases) - 15)
+                .attr("class", "annotation")
+                .text(`Mask: ${losAngeles.NEVER + losAngeles.RARELY + losAngeles.SOMETIMES + losAngeles.FREQUENTLY + losAngeles.ALWAYS}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+
+            svg.append("text")
+                .attr("x", xScale(losAngeles.weightedAverage) + 10)
+                .attr("y", yScale(losAngeles.cases))
+                .attr("class", "annotation")
+                .text(`Cases: ${losAngeles.cases}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+        }
+
+        if (kenedy) {
+            svg.append("text")
+                .attr("x", xScale(kenedy.weightedAverage) + 10)
+                .attr("y", yScale(kenedy.cases) - 30)
+                .attr("class", "annotation")
+                .text(`Kenedy, TX`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+
+            svg.append("text")
+                .attr("x", xScale(kenedy.weightedAverage) + 10)
+                .attr("y", yScale(kenedy.cases) - 15)
+                .attr("class", "annotation")
+                .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+
+            svg.append("text")
+                .attr("x", xScale(kenedy.weightedAverage) + 10)
+                .attr("y", yScale(kenedy.cases))
+                .attr("class", "annotation")
+                .text(`Cases: ${kenedy.cases}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+        }
+    }
     // Initialize scatterplot with all data
     updateScatterplot("all");
 
