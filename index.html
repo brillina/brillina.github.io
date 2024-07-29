@@ -29,7 +29,7 @@
             vertical-align: middle;
             user-select: none;
             background-color: #00b049;
-            border: 1px solid #007330;
+            border: 1px solid #00943e;
             padding: 0.375rem 0.75rem;
             font-size: 1rem;
             line-height: 1.5;
@@ -39,8 +39,8 @@
         }
         .btn:hover {
             color: #fff;
-            background-color: #007330;
-            border-color: #004a1f;
+            background-color: #00943e;
+            border-color: #007631;
             text-decoration: none;
         }
         .btn-s {
@@ -48,19 +48,37 @@
             font-size: 0.875rem;
             line-height: 1.5;
         }
+        .data-sources {
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .data-sources a {
+            display: block;
+            color: #0000EE;
+            text-decoration: none;
+        }
+        .data-sources a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>Factors influencing the risk of COVID-19 in US counties 🦠</h1>
-    <h2>What county-level factors affect COVID-19 case numbers in the United States?</h2>
-    <h3>Interactive slideshow</h3>
-    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-
+    <!-- <h2>What county-level factors affect COVID-19 case numbers in the United States?</h2> -->
+    <h3>This interactive slideshow compares COVID-19 cases across different counties, examining various county-level factors and determinants.</h3>
+    <p class="lead">Specifically, we will explore how mask usage, levels of vulnerability, and population size influence COVID-19 case rates.</p>
     <div id="map"></div>
     <script src="script.js"></script>
     <p>
         <a class="btn btn-primary btn-s" href="index.html" role="button">Previous</a>
         <a class="btn btn-primary btn-s" href="page2.html" role="button">Next</a>
     </p>
+    <div class="data-sources">
+        <h4>Data Sources:</h4>
+        <a href="https://github.com/nytimes/covid-19-data/tree/master/mask-use" target="_blank">NY Times Mask Use Data 2020</a>
+        <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2020.html" target="_blank">CDC SVC Documentation 2020</a>
+        <a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html" target="_blank">U.S. Census Bureau County Population Totals 2020</a>
+    </div>
 </body>
 </html>
