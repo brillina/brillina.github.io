@@ -65,16 +65,22 @@
         #hide-zero-cases {
             margin-left: 20px;
         }
+        #select-state {
+            width: 200px; /* Adjust the width as needed */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Cases by County vs. Weighted Mask Average 😷</h2>
         <ul>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between the Social Vulnerability Index (SVI) and the number of COVID-19 cases by county.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The SVI is represented on the y-axis, while the number of COVID-19 cases is represented on the x-axis.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Use the dropdown menu to filter data by state.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Hover over the dots to see detailed information about each county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between the frequency of mask usage and the number of COVID-19 cases by county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The weighted mask average represents the overall mask-wearing behavior in a population, combining different frequency levels into an overall value.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Averages are calculated to reflect both the frequency of mask-wearing and the number of individuals in each category.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>❗ A higher weighted mask average indicates more frequent mask usage in that county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>🔽 Use the dropdown menu to filter data by state.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>✅ Use the checkbox to hide counties with no reported cases.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the dots to see detailed information about each county, including population survey results regarding mask usage.</li>
         </ul>
         <div class="controls">
             <label>

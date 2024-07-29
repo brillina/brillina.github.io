@@ -69,24 +69,29 @@
             margin-left: 5px;
             vertical-align: middle;
         }
+        #select-state {
+            width: 200px; /* Adjust the width as needed */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Cases by County vs. Population 🚨</h2>
+        <h2>Cases by County vs. SVI 🚨</h2>
         <ul>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between population and the number of COVID-19 cases by county.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The population is represented on the x-axis, while the number of COVID-19 cases is represented on the y-axis.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Use the dropdown menu to filter data by state.</li>
-            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Hover over the dots to see detailed information about each county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between Social Vulnerability and the number of COVID-19 cases by county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Social Vulnerability refers to the demographic and socioeconomic factors (socioeconomic status, household characteristics, racial/ethnic minority status, housing type & transportation) that adversely affect communities that encounter stressors at the community-level.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>These variables are combined into a single measure of overall social vulnerability called the Social Vulnerability Index (SVI).</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>❗ A higher SVI score indicates greater social vulnerability in that county, meaning they need more resources to thrive.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>🔽 Use the dropdown menu to filter data by state.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>✅ Use the checkbox to hide counties with no reported cases.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>👆 Hover over the dots to see detailed information about each county.</li>
         </ul>
         <label>
             <input type="checkbox" id="hide-zero-cases" checked>
             Hide counties with 0 reported cases
         </label>
         <label for="select-state">Filter by State:</label>
-        <select id="select-state">
-        </select>
+        <select id="select-state"></select>
         <div id="scatterplot"></div>
         <div id="legend"></div>
         <script src="script3.js"></script>
