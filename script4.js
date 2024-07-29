@@ -40,8 +40,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
 
     colorScale.domain(states);
 
-    xScale.domain(d3.extent(data, d => d.cases)).nice();
-    yScale.domain(d3.extent(data, d => d.Population)).nice();
+    xScale.domain(d3.extent(data, d => d.Population)).nice();
+    yScale.domain(d3.extent(data, d => d.cases)).nice();
 
     svg.append("g")
         .attr("class", "x-axis")
@@ -52,7 +52,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .attr("y", -10)
         .attr("fill", "#000")
         .attr("text-anchor", "end")
-        .text("Cases");
+        .text("Population");
 
     svg.append("g")
         .attr("class", "y-axis")
@@ -63,7 +63,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .attr("fill", "#000")
         .attr("text-anchor", "start")
         .attr("transform", "rotate(-90)")
-        .text("Population");
+        .text("Cases");
 
     function updateScatterplot(selectedState) {
         const filteredData = selectedState === "all" ? data : data.filter(d => d.State === selectedState);
@@ -74,8 +74,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
             .data(filteredData)
           .enter().append("circle")
             .attr("class", "dot")
-            .attr("cx", d => xScale(d.cases))
-            .attr("cy", d => yScale(d.Population))
+            .attr("cx", d => xScale(d.Population))
+            .attr("cy", d => yScale(d.cases))
             .attr("r", 5)
             .attr("fill", d => colorScale(d.State))
             .on("mouseover", (event, d) => {
@@ -120,7 +120,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .style("float", "right")
         .style("padding", "10px");
 
-        legendContainer.append("div")
+    legendContainer.append("div")
         .style("font-weight", "bold")
         .style("margin-bottom", "10px")
         .text("State Legend");
