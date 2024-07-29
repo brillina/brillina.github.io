@@ -9,7 +9,7 @@ const svg = d3.select("#map").append("svg")
 // Define the projection and path generator
 const projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([1000]);  // Adjust the scale as necessary
+    .scale(1000);  // Adjust the scale as necessary
 
 const path = d3.geoPath().projection(projection);
 
@@ -28,6 +28,10 @@ Promise.all([
         acc[d.State] = { population: +d.Population, cases: +d.cases };
         return acc;
     }, {});
+
+    console.log("GeoJSON data:", us);
+    console.log("CSV data:", data);
+    console.log("Processed state data:", stateData);
 
     // Define color scale
     const colorScale = d3.scaleSequential(d3.interpolateBlues)
@@ -57,4 +61,6 @@ Promise.all([
         .on("mouseout", () => {
             tooltip.transition().duration(500).style("opacity", 0);
         });
+}).catch(error => {
+    console.error("Error loading data:", error);
 });
