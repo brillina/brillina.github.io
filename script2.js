@@ -33,7 +33,7 @@ const stateColorScale = d3.scaleOrdinal(d3.schemeCategory10);
 Promise.all([
     d3.json("data/counties.geojson"),
     d3.csv("data/filtered_total_cases_deaths_per_county.csv"),
-    d3.csv("data/mask_averages.csv") // Updated to use the new CSV
+    d3.csv("data/mask_averages.csv")
 ]).then(([geojson, covidData, maskData]) => {
     if (!maskData) {
         console.error("Mask data is undefined or not loaded properly.");
@@ -48,7 +48,7 @@ Promise.all([
 
     const maskByCounty = {};
     maskData.forEach(d => {
-        const fips = d.fips.replace(/"/g, '');  // Remove quotes
+        const fips = d.fips.replace(/"/g, '');
         maskByCounty[fips] = {
             weightedAverage: +d.weightedAverage
         };
@@ -66,7 +66,7 @@ Promise.all([
 
         if (!stateFP || !countyName || !fips) {
             console.error("Incomplete data for feature:", feature);
-            return; // Skip this feature
+            return;
         }
 
         const stateName = stateFPtoName[stateFP] || "Unknown State";
@@ -81,7 +81,6 @@ Promise.all([
     console.log("Combined Data (Sample):", Object.entries(combinedData).slice(0, 10));
     console.log("Combined Data:", combinedData);
 
-    // Populate dropdown
     const stateSelect = d3.select("#select-state");
     stateSelect.append("option").attr("value", "all").text("All States");
     Object.values(stateFPtoName).forEach(stateName => {
@@ -90,7 +89,6 @@ Promise.all([
             .text(stateName);
     });
 
-    // Prepare scatterplot data
     const scatterplotData = Object.values(combinedData)
         .filter(d => d.cases !== undefined && d.weightedAverage !== undefined)
         .map(d => ({
@@ -100,7 +98,6 @@ Promise.all([
 
     console.log("Scatterplot Data (Filtered):", scatterplotData);
 
-    // Check scales
     const xScale = d3.scaleLinear()
         .domain([0, d3.max(scatterplotData, d => d.cases) || 1])
         .range([40, 560]);
@@ -112,7 +109,6 @@ Promise.all([
     console.log("X Scale Domain:", xScale.domain());
     console.log("Y Scale Domain:", yScale.domain());
 
-    // Create scatterplot
     const svgScatter = d3.select("#scatterplot")
         .append("svg")
         .attr("width", 600)

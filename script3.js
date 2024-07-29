@@ -1,8 +1,7 @@
-// Set up margins and dimensions
 const margin = {top: 20, right: 30, bottom: 50, left: 60};
 const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
-const legendWidth = 150; // Width for the legend
+const legendWidth = 150;
 
 // Append SVG to the body and set up the chart area
 const svg = d3.select("#scatterplot").append("svg")

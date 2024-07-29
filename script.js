@@ -68,11 +68,11 @@ const stateFPtoName = {
 };
 
 Promise.all([
-    d3.json("data/counties.geojson"),  // GeoJSON file with county shapes
-    d3.csv("data/filtered_total_cases_deaths_per_county.csv")  // CSV file with COVID case counts
+    d3.json("data/counties.geojson"),
+    d3.csv("data/filtered_total_cases_deaths_per_county.csv")
 ]).then(([geojson, covidData]) => {
-    console.log("GeoJSON data:", geojson.features.slice(0, 5)); // Log first 5 features
-    console.log("CSV data:", covidData.slice(0, 5)); // Log first 5 rows
+    console.log("GeoJSON data:", geojson.features.slice(0, 5));
+    console.log("CSV data:", covidData.slice(0, 5));
 
     const covidByCounty = {};
     covidData.forEach(d => {

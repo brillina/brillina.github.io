@@ -25,17 +25,53 @@
         #scatterplot {
             margin-top: 20px;
         }
+        .btn {
+            display: inline-block;
+            font: 12px sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: #00b049;
+            border: 1px solid #007330;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            text-decoration: none;
+        }
+        .btn:hover {
+            color: #fff;
+            background-color: #007330;
+            border-color: #004a1f;
+            text-decoration: none;
+        }
+        .btn-s {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
-    <label for="select-state">Select a State:</label>
+    <div class="container">
+        <h2>Cases by County vs. Weighted Mask Average</h2>
+        <ul>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>This scatterplot shows the relationship between the Social Vulnerability Index (SVI) and the number of COVID-19 cases by county.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>The SVI is represented on the y-axis, while the number of COVID-19 cases is represented on the x-axis.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Use the dropdown menu to filter data by state.</li>
+            <li class="info-bullet"><span class="glyphicon glyphicon-info-sign info-icon"></span>Hover over the dots to see detailed information about each county.</li>
+        </ul>
+    <label for="select-state">Filter by State:</label>
     <select id="select-state">
     </select>
     <div id="scatterplot"></div>
-    <script src="script2_temp.js"></script>
+    <script src="script3.js"></script>
     <p>
-        <a class="btn btn-primary btn-s" href="index.html" role="button">Previous</a>
-        <a class="btn btn-primary btn-s" href="page3.html" role="button">Next</a>
+        <a class="btn btn-s" href="index.html" role="button">Previous</a>
+        <a class="btn btn-s" href="page3.html" role="button">Next</a>
     </p>
 </body>
 </html>
