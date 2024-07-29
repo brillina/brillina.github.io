@@ -82,15 +82,16 @@ d3.csv("data/mask_averages.csv").then(data => {
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
-        // Filter data based on the selected state
+        
         const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
+        const hideZeroCases = d3.select("#hide-zero-cases").property("checked");
+        const displayData = hideZeroCases ? filteredData.filter(d => d.cases > 0) : filteredData;
 
-        // Remove existing dots
         svg.selectAll(".dot").remove();
 
         // Append dots
         svg.selectAll(".dot")
-            .data(filteredData)
+            .data(displayData)
           .enter().append("circle")
             .attr("class", "dot")
             .attr("cx", d => xScale(d.weightedAverage))

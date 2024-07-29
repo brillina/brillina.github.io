@@ -87,14 +87,15 @@ d3.csv("data/2020_county_population.csv").then(data => {
 
     // Function to update the scatterplot
     function updateScatterplot(selectedState) {
-        const filteredData = selectedState === "all" ? data : data.filter(d => d.State === selectedState);
+        const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
+        const hideZeroCases = d3.select("#hide-zero-cases").property("checked");
+        const displayData = hideZeroCases ? filteredData.filter(d => d.cases > 0) : filteredData;
 
-        // Remove existing dots
         svg.selectAll(".dot").remove();
 
         // Append dots
         svg.selectAll(".dot")
-            .data(filteredData)
+            .data(displayData)
           .enter().append("circle")
             .attr("class", "dot")
             .attr("cx", d => xScale(d.Population))
