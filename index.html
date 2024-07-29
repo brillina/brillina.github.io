@@ -49,9 +49,10 @@
             line-height: 1.5;
         }
         .data-sources {
-            margin-top: 30px;
+            margin-bottom: 20px; /* Space between the data sources and buttons */
             font-size: 14px;
-            text-align: center;
+            text-align: left; /* Align text to the left */
+            font-style: italic; /* Italicize the text */
         }
         .data-sources a {
             display: block;
@@ -70,15 +71,16 @@
     <p class="lead">Specifically, we will explore how mask usage, levels of vulnerability, and population size influence COVID-19 case rates.</p>
     <div id="map"></div>
     <script src="script.js"></script>
-    <p>
-        <a class="btn btn-primary btn-s" href="index.html" role="button">Previous</a>
-        <a class="btn btn-primary btn-s" href="page2.html" role="button">Next</a>
-    </p>
     <div class="data-sources">
         <h4>Data Sources:</h4>
         <a href="https://github.com/nytimes/covid-19-data/tree/master/mask-use" target="_blank">NY Times Mask Use Data 2020</a>
         <a href="https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2020.html" target="_blank">CDC SVC Documentation 2020</a>
         <a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-counties-total.html" target="_blank">U.S. Census Bureau County Population Totals 2020</a>
     </div>
+    <p>
+        <a class="btn btn-primary btn-s" href="index.html" role="button">Previous</a>
+        <a class="btn btn-primary btn-s" href="page2.html" role="button">Next</a>
+    </p>
+
 </body>
 </html>
