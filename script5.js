@@ -9,7 +9,7 @@ const svg = d3.select("#map").append("svg")
 // Define the projection and path generator
 const projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([1000]);  // Adjust the scale as necessary
+    .scale([1000]);
 
 const path = d3.geoPath().projection(projection);
 
@@ -42,19 +42,36 @@ Promise.all([
         .attr("class", "state")
         .attr("d", path)
         .attr("fill", d => {
-            const state = stateData[d.properties.NAME]; // Adjusted for new GeoJSON property
+            const state = stateData[d.properties.NAME];
             return state ? colorScale(state.cases) : "#ccc";
         })
+        .attr("stroke", "#fff") // Optional: Add stroke to outline states
+        .attr("stroke-width", "1") // Optional: Define stroke width
         .on("mouseover", (event, d) => {
-            const state = stateData[d.properties.NAME]; // Adjusted for new GeoJSON property
+            const state = stateData[d.properties.NAME];
             tooltip.transition().duration(200).style("opacity", .9);
             tooltip.html(`<strong>${d.properties.NAME}</strong><br>
                           Population: ${state ? state.population : 'N/A'}<br>
                           Cases: ${state ? state.cases : 'N/A'}`)
                 .style("left", (event.pageX + 5) + "px")
                 .style("top", (event.pageY - 28) + "px");
+            
+            // Change the fill and stroke on hover
+            d3.select(event.currentTarget)
+                .attr("fill", "#ffcc00") // Highlight color
+                .attr("stroke", "#000") // Highlight border color
+                .attr("stroke-width", "2"); // Highlight border width
         })
-        .on("mouseout", () => {
+        .on("mouseout", (event, d) => {
             tooltip.transition().duration(500).style("opacity", 0);
+            
+            // Revert to original fill and stroke
+            d3.select(event.currentTarget)
+                .attr("fill", d => {
+                    const state = stateData[d.properties.NAME];
+                    return state ? colorScale(state.cases) : "#ccc";
+                })
+                .attr("stroke", "#fff") // Original border color
+                .attr("stroke-width", "1"); // Original border width
         });
 });
