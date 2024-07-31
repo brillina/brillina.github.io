@@ -130,31 +130,31 @@ d3.csv("data/mask_averages.csv").then(data => {
             });
 
         // Annotations for Los Angeles, CA and Kenedy, TX
-        const losAngeles = data.find(d => d.county === "Los Angeles" && d.state === "California");
+        const mower = data.find(d => d.county === "Mower" && d.state === "Minnesota");
         const kenedy = data.find(d => d.county === "Kenedy" && d.state === "Texas");
 
-        if (losAngeles) {
+        if (mower) {
             svg.append("text")
-                .attr("x", xScale(losAngeles.weightedAverage) + 10)
-                .attr("y", yScale(losAngeles.cases) - 30)
+                .attr("x", xScale(mower.weightedAverage) + 10)
+                .attr("y", yScale(mower.cases) - 30)
                 .attr("class", "annotation")
-                .text(`Los Angeles, CA`)
+                .text(`Mower, MN`)
                 .style("font-size", "12px")
                 .style("fill", "black");
 
             svg.append("text")
-                .attr("x", xScale(losAngeles.weightedAverage) + 10)
-                .attr("y", yScale(losAngeles.cases) - 15)
+                .attr("x", xScale(mower.weightedAverage) + 10)
+                .attr("y", yScale(mower.cases) - 15)
                 .attr("class", "annotation")
-                .text(`Mask: ${losAngeles.NEVER + losAngeles.RARELY + losAngeles.SOMETIMES + losAngeles.FREQUENTLY + losAngeles.ALWAYS}`)
+                .text(`Mask: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
 
             svg.append("text")
-                .attr("x", xScale(losAngeles.weightedAverage) + 10)
-                .attr("y", yScale(losAngeles.cases))
+                .attr("x", xScale(mower.weightedAverage) + 10)
+                .attr("y", yScale(mower.cases))
                 .attr("class", "annotation")
-                .text(`Cases: ${losAngeles.cases}`)
+                .text(`Cases: ${mower.cases}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
         }

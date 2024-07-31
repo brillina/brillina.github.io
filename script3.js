@@ -124,23 +124,23 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             });
 
         // Annotations for Los Angeles, CA and Kenedy, TX
-        const losAngeles = data.find(d => d.COUNTY === "Los Angeles" && d.STATE === "California");
+        const mower = data.find(d => d.COUNTY === "Los Angeles" && d.STATE === "Minnesota");
         const kenedy = data.find(d => d.COUNTY === "Kenedy" && d.STATE === "Texas");
 
-        if (losAngeles) {
+        if (mower) {
             svg.append("text")
-                .attr("x", xScale(losAngeles.SVI) + 10)
-                .attr("y", yScale(losAngeles.cases) - 30)
+                .attr("x", xScale(mower.SVI) + 10)
+                .attr("y", yScale(mower.cases) - 30)
                 .attr("class", "annotation")
                 .text(`Los Angeles, CA`)
                 .style("font-size", "12px")
                 .style("fill", "black");
 
             svg.append("text")
-                .attr("x", xScale(losAngeles.SVI) + 10)
-                .attr("y", yScale(losAngeles.cases) - 15)
+                .attr("x", xScale(mower.SVI) + 10)
+                .attr("y", yScale(mower.cases) - 15)
                 .attr("class", "annotation")
-                .text(`Cases: ${losAngeles.cases}`)
+                .text(`Cases: ${mower.cases}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
         }

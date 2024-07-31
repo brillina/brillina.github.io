@@ -58,9 +58,9 @@ Promise.all([
             
             // Change the fill and stroke on hover
             d3.select(event.currentTarget)
-                .attr("fill", "#ffcc00") // Highlight color
-                .attr("stroke", "#000") // Highlight border color
-                .attr("stroke-width", "2"); // Highlight border width
+                .attr("fill", "#0b1524") // Highlight color
+                // .attr("stroke", "#000") // Highlight border color
+                // .attr("stroke-width", "2"); // Highlight border width
         })
         .on("mouseout", (event, d) => {
             tooltip.transition().duration(500).style("opacity", 0);
