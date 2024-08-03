@@ -3,50 +3,40 @@ const width = 800 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 const legendWidth = 150;
 
-// Append SVG to the body and set up the chart area
 const svg = d3.select("#scatterplot").append("svg")
     .attr("width", width + margin.left + margin.right + legendWidth)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-// Define the scales
 const xScale = d3.scaleLinear().range([0, width]);
 const yScale = d3.scaleLinear().range([height, 0]);
 
-// Define the axes
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
 
-// Define the color scale
-const colorScale = d3.scaleOrdinal(d3.schemeCategory10); // Use D3 color schemes
+const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-// Define the tooltip
 const tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-// Load the CSV data
 d3.csv("data/2020_county_population.csv").then(data => {
-    // Parse the data
     data.forEach(d => {
         d.FIPS = +d.FIPS.replace(/,/g, '');
         d.Population = +d.Population.replace(/,/g, '');
         d.cases = +d.cases.replace(/,/g, '');
     });
 
-    // Cap extreme population values (e.g., 1 million)
-    const populationCap = 1000000; // Set a cap for the population
+    const populationCap = 1000000;
     data.forEach(d => {
         if (d.Population > populationCap) {
             d.Population = populationCap;
         }
     });
 
-    // Get the unique states for the dropdown menu
     const states = Array.from(new Set(data.map(d => d.State)));
 
-    // Populate the dropdown menu
     const stateSelect = d3.select("#select-state");
     stateSelect.append("option").attr("value", "all").text("All States");
     states.forEach(stateName => {
@@ -55,14 +45,11 @@ d3.csv("data/2020_county_population.csv").then(data => {
             .text(stateName);
     });
 
-    // Set the domain for the color scale
     colorScale.domain(states);
 
-    // Set domains for scales
     xScale.domain(d3.extent(data, d => d.Population)).nice();
     yScale.domain(d3.extent(data, d => d.cases)).nice();
 
-    // Append axes
     svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${height})`)
@@ -85,7 +72,6 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .attr("transform", "rotate(-90)")
         .text("Cases");
 
-    // Function to update the scatterplot
     function updateScatterplot(selectedState) {
         const hideZeroCases = d3.select("#hide-zero-cases").property("checked");
         const filteredData = selectedState === "all" ? data : data.filter(d => d.State === selectedState);
@@ -93,7 +79,6 @@ d3.csv("data/2020_county_population.csv").then(data => {
 
         svg.selectAll(".dot").remove();
 
-        // Append dots
         svg.selectAll(".dot")
             .data(displayData)
           .enter().append("circle")
@@ -129,7 +114,6 @@ d3.csv("data/2020_county_population.csv").then(data => {
                   .attr("stroke-width", null);
             });
 
-        // Annotations for Los Angeles, CA and Kenedy, TX
         const mower = data.find(d => d.County === "Los Angeles" && d.State === "Minnesota");
         const kenedy = data.find(d => d.County === "Kenedy" && d.State === "Texas");
 
@@ -170,21 +154,17 @@ d3.csv("data/2020_county_population.csv").then(data => {
         }
     }
 
-    // Initialize scatterplot with all data
     updateScatterplot("all");
 
-    // Handle dropdown change
     d3.select("#select-state").on("change", function() {
         const selectedState = d3.select(this).property("value");
         updateScatterplot(selectedState);
     });
 
-    // Handle checkbox change
     d3.select("#hide-zero-cases").on("change", function() {
         updateScatterplot(d3.select("#select-state").property("value"));
     });
 
-    // Add legend container
     const legendContainer = d3.select("#scatterplot").append("div")
         .style("width", `${legendWidth}px`)
         .style("height", `${height}px`)
@@ -197,7 +177,6 @@ d3.csv("data/2020_county_population.csv").then(data => {
         .style("margin-bottom", "10px")
         .text("State Legend");
 
-    // Add legend items
     const legend = legendContainer.selectAll(".legend")
         .data(colorScale.domain())
         .enter().append("div")
