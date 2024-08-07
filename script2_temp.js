@@ -35,7 +35,6 @@ const tooltip = d3.select("body").append("div")
     
         const states = Array.from(new Set(data.map(d => d.state)));
     
-        // Populate state select dropdown
         const stateSelect = d3.select("#select-state");
         stateSelect.append("option").attr("value", "all").text("All States");
         states.forEach(stateName => {
@@ -46,11 +45,9 @@ const tooltip = d3.select("body").append("div")
     
         colorScale.domain(states);
     
-        // Set domain for scales
         xScale.domain(d3.extent(data, d => d.weightedAverage)).nice();
         yScale.domain(d3.extent(data, d => d.cases)).nice();
     
-        // Add X axis
         svg.append("g")
             .attr("class", "x-axis")
             .attr("transform", `translate(0,${height})`)
@@ -62,7 +59,6 @@ const tooltip = d3.select("body").append("div")
             .attr("text-anchor", "end")
             .text("Weighted Average");
     
-        // Add Y axis
         svg.append("g")
             .attr("class", "y-axis")
             .call(yAxis)
@@ -74,16 +70,13 @@ const tooltip = d3.select("body").append("div")
             .attr("transform", "rotate(-90)")
             .text("Cases");
     
-        // Function to update scatterplot
         function updateScatterplot(selectedState) {
             const hideZeroCases = d3.select("#hide-zero-cases").property("checked");
             const filteredData = selectedState === "all" ? data : data.filter(d => d.state === selectedState);
             const displayData = hideZeroCases ? filteredData.filter(d => d.cases > 0) : filteredData;
     
-            // Remove old dots
             svg.selectAll(".dot").remove();
     
-            // Add new dots
             svg.selectAll(".dot")
                 .data(displayData)
               .enter().append("circle")
@@ -124,7 +117,6 @@ const tooltip = d3.select("body").append("div")
                       .attr("stroke-width", null);
                 });
     
-            // Add annotations
             const mower = data.find(d => d.county === "Mower" && d.state === "Minnesota");
             const kenedy = data.find(d => d.county === "Kenedy" && d.state === "Texas");
     
@@ -156,24 +148,24 @@ const tooltip = d3.select("body").append("div")
     
             if (kenedy) {
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
-                    .attr("y", yScale(kenedy.cases) - 20) // Shift up
+                    .attr("x", xScale(kenedy.weightedAverage) + 100)
+                    .attr("y", yScale(kenedy.cases) - 20)
                     .attr("class", "annotation")
                     .text(`Kenedy, TX`)
                     .style("font-size", "12px")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
-                    .attr("y", yScale(kenedy.cases) - 5) // Shift up
+                    .attr("x", xScale(kenedy.weightedAverage) + 100)
+                    .attr("y", yScale(kenedy.cases) - 5)
                     .attr("class", "annotation")
                     .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
                     .style("font-size", "12px")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
-                    .attr("y", yScale(kenedy.cases) + 10) // Shift up
+                    .attr("x", xScale(kenedy.weightedAverage) + 100)
+                    .attr("y", yScale(kenedy.cases) + 10)
                     .attr("class", "annotation")
                     .text(`Cases: ${kenedy.cases}`)
                     .style("font-size", "12px")
@@ -181,21 +173,17 @@ const tooltip = d3.select("body").append("div")
             }
         }
     
-        // Initial plot
         updateScatterplot("all");
     
-        // State select dropdown change
         d3.select("#select-state").on("change", function() {
             const selectedState = d3.select(this).property("value");
             updateScatterplot(selectedState);
         });
     
-        // Hide zero cases checkbox change
         d3.select("#hide-zero-cases").on("change", function() {
             updateScatterplot(d3.select("#select-state").property("value"));
         });
     
-        // Create legend
         const legendContainer = d3.select("#scatterplot").append("div")
             .style("width", `${legendWidth}px`)
             .style("height", `${height}px`)
