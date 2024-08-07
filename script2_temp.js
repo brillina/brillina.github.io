@@ -148,23 +148,23 @@ const tooltip = d3.select("body").append("div")
     
             if (kenedy) {
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 100)
-                    .attr("y", yScale(kenedy.cases) - 20)
+                    .attr("x", xScale(kenedy.weightedAverage) + 150)
+                    .attr("y", yScale(kenedy.cases) - 50)
                     .attr("class", "annotation")
                     .text(`Kenedy, TX`)
                     .style("font-size", "12px")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 100)
-                    .attr("y", yScale(kenedy.cases) - 5)
+                    .attr("x", xScale(kenedy.weightedAverage) + 150)
+                    .attr("y", yScale(kenedy.cases) - 50)
                     .attr("class", "annotation")
                     .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
                     .style("font-size", "12px")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) + 100)
+                    .attr("x", xScale(kenedy.weightedAverage) + 150)
                     .attr("y", yScale(kenedy.cases) + 10)
                     .attr("class", "annotation")
                     .text(`Cases: ${kenedy.cases}`)
