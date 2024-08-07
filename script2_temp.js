@@ -125,7 +125,7 @@ const tooltip = d3.select("body").append("div")
             
                 if (mower) {
                     svg.append("text")
-                        .attr("x", xScale(mower.weightedAverage) + 20)
+                        .attr("x", xScale(mower.weightedAverage) + 150)
                         .attr("y", yScale(mower.cases) - 30)
                         .attr("class", "annotation")
                         .text(`Mower, MN`)
