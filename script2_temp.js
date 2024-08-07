@@ -174,6 +174,33 @@ d3.csv("data/mask_averages.csv").then(data => {
     }
     updateScatterplot("all");
 
+    if (kenedy) {
+        svg.append("text")
+            .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+            .attr("y", yScale(kenedy.cases) - 20) // Shift up
+            .attr("class", "annotation")
+            .text(`Kenedy, TX`)
+            .style("font-size", "12px")
+            .style("fill", "black");
+    
+        svg.append("text")
+            .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+            .attr("y", yScale(kenedy.cases) - 5) // Shift up
+            .attr("class", "annotation")
+            .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
+            .style("font-size", "12px")
+            .style("fill", "black");
+    
+        svg.append("text")
+            .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+            .attr("y", yScale(kenedy.cases) + 10) // Shift up
+            .attr("class", "annotation")
+            .text(`Cases: ${kenedy.cases}`)
+            .style("font-size", "12px")
+            .style("fill", "black");
+    }
+    
+
     d3.select("#select-state").on("change", function() {
         const selectedState = d3.select(this).property("value");
         updateScatterplot(selectedState);
