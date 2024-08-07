@@ -156,7 +156,7 @@ const tooltip = d3.select("body").append("div")
     
             if (kenedy) {
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
                     .attr("y", yScale(kenedy.cases) - 20) // Shift up
                     .attr("class", "annotation")
                     .text(`Kenedy, TX`)
@@ -164,7 +164,7 @@ const tooltip = d3.select("body").append("div")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
                     .attr("y", yScale(kenedy.cases) - 5) // Shift up
                     .attr("class", "annotation")
                     .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
@@ -172,7 +172,7 @@ const tooltip = d3.select("body").append("div")
                     .style("fill", "black");
     
                 svg.append("text")
-                    .attr("x", xScale(kenedy.weightedAverage) - 50) // Shift left
+                    .attr("x", xScale(kenedy.weightedAverage) + 50) // Shift left
                     .attr("y", yScale(kenedy.cases) + 10) // Shift up
                     .attr("class", "annotation")
                     .text(`Cases: ${kenedy.cases}`)
