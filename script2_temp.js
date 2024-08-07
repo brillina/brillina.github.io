@@ -125,7 +125,7 @@ const tooltip = d3.select("body").append("div")
             
                 if (mower) {
                     svg.append("text")
-                        .attr("x", xScale(mower.weightedAverage) + 150)
+                        .attr("x", xScale(mower.weightedAverage) + 20)
                         .attr("y", yScale(mower.cases) - 30)
                         .attr("class", "annotation")
                         .text(`Mower, MN`)
@@ -153,7 +153,7 @@ const tooltip = d3.select("body").append("div")
                     const kenedyX = xScale(kenedy.weightedAverage);
                     const kenedyY = yScale(kenedy.cases);
             
-                    const annotationX = kenedyX + 20;
+                    const annotationX = kenedyX + 150;
                     const annotationY1 = kenedyY - 30;
                     const annotationY2 = kenedyY - 15;
                     const annotationY3 = kenedyY;
@@ -162,7 +162,7 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation-line")
                         .attr("x1", kenedyX)
                         .attr("y1", kenedyY)
-                        .attr("x2", annotationX - 5)
+                        .attr("x2", annotationX - 37)
                         .attr("y2", annotationY1 + 15)
                         .attr("stroke", "black")
                         .attr("stroke-width", 1);
