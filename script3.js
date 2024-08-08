@@ -125,6 +125,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
                 .attr("y", yScale(mower.cases) - 15)
                 .attr("class", "annotation")
                 .text(`Cases: ${mower.cases}`)
+                .attr("y", yScale(mower.cases)-4)
                 .style("font-size", "12px")
                 .style("fill", "#3b3b3b")
                 .style("font-weight", "bold");

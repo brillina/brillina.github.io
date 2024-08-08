@@ -187,6 +187,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("y", yScale(mower.cases))
                 .attr("class", "annotation")
                 .text(`Cases: ${mower.cases}`)
+                .attr("y", yScale(mower.cases)-4)
                 .style("font-size", "12px")
                 .style("fill", "#3b3b3b")
                 .style("font-weight", "bold");
