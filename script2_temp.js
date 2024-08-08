@@ -136,7 +136,7 @@ const tooltip = d3.select("body").append("div")
                         .attr("x", xScale(mower.weightedAverage) + 20)
                         .attr("y", yScale(mower.cases) - 15)
                         .attr("class", "annotation")
-                        .text(`Mask: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
+                        .text(`Mask Avg: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
                         .style("font-size", "12px")
                         .style("fill", "black");
             
@@ -179,7 +179,7 @@ const tooltip = d3.select("body").append("div")
                         .attr("x", annotationX)
                         .attr("y", annotationY2)
                         .attr("class", "annotation")
-                        .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
+                        .text(`Mask Avg: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
                         .style("font-size", "12px")
                         .style("fill", "black");
             

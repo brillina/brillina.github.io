@@ -147,7 +147,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("x", annotationX)
                 .attr("y", annotationY2)
                 .attr("class", "annotation")
-                .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
+                .text(`Population: ${kenedy.Population}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
     
@@ -173,7 +173,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("x", xScale(mower.weightedAverage) + 20)
                 .attr("y", yScale(mower.cases) - 15)
                 .attr("class", "annotation")
-                .text(`Mask: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
+                .text(`Population: ${mower.Population}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
     
