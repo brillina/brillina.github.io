@@ -204,7 +204,7 @@ const tooltip = d3.select("body").append("div")
                         .style("font-weight", "bold");
             
                     svg.append("text")
-                        .attr("x", annotationX)
+                        .attr("x", annotationX+20)
                         .attr("y", annotationY3)
                         .attr("class", "annotation")
                         .text(`Cases: ${kenedy.cases}`)
