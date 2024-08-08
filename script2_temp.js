@@ -124,6 +124,21 @@ const tooltip = d3.select("body").append("div")
                 const kenedy = data.find(d => d.county === "Kenedy" && d.state === "Texas");
             
                 if (mower) {
+                    const mowerX = xScale(mower.weightedAverage);
+                    const mowerY = yScale(mower.cases);
+            
+                    const annotationX = mowerX + 150;
+                    const annotationY1 = mowerY - 70;
+
+                    svg.append("line")
+                    .attr("class", "annotation-line")
+                    .attr("x1", mowerX)
+                    .attr("y1", mowerY)
+                    .attr("x2", annotationX - 37)
+                    .attr("y2", annotationY1 + 15)
+                    .attr("stroke", "#3b3b3b")
+                    .attr("stroke-width", 1);
+
                     svg.append("text")
                         .attr("x", xScale(mower.weightedAverage) + 20)
                         .attr("y", yScale(mower.cases) - 30)
