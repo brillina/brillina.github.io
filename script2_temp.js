@@ -140,7 +140,7 @@ const tooltip = d3.select("body").append("div")
                     .attr("stroke-width", 1);
 
                     svg.append("text")
-                        .attr("x", xScale(mower.weightedAverage) + 20)
+                        .attr("x", xScale(mower.weightedAverage) + 60)
                         .attr("y", yScale(mower.cases) - 30)
                         .attr("class", "annotation")
                         .text(`Mower, MN`)
@@ -149,7 +149,7 @@ const tooltip = d3.select("body").append("div")
                         .style("font-weight", "bold");
             
                     svg.append("text")
-                        .attr("x", xScale(mower.weightedAverage) + 20)
+                        .attr("x", xScale(mower.weightedAverage) + 60)
                         .attr("y", yScale(mower.cases) - 15)
                         .attr("class", "annotation")
                         .text(`Mask Avg: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
@@ -158,7 +158,7 @@ const tooltip = d3.select("body").append("div")
                         .style("font-weight", "bold");
             
                     svg.append("text")
-                        .attr("x", xScale(mower.weightedAverage) + 20)
+                        .attr("x", xScale(mower.weightedAverage) + 60)
                         .attr("y", yScale(mower.cases)-4)
                         .attr("class", "annotation")
                         .text(`Cases: ${mower.cases}`)
@@ -174,7 +174,7 @@ const tooltip = d3.select("body").append("div")
                     const annotationX = kenedyX + 150;
                     const annotationY1 = kenedyY - 70;
                     const annotationY2 = kenedyY - 55;
-                    const annotationY3 = kenedyY;
+                    const annotationY3 = kenedyY - 40;
             
                     svg.append("line")
                         .attr("class", "annotation-line")
