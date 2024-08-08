@@ -186,8 +186,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("stroke-width", 1);
             
                     svg.append("text")
-                        .attr("x", annotationX)
-                        .attr("y", annotationY1)
+                        .attr("x", annotationX+20)
+                        .attr("y", annotationY1-30)
                         .attr("class", "annotation")
                         .text(`Kenedy, TX`)
                         .style("font-size", "12px")
@@ -195,8 +195,8 @@ const tooltip = d3.select("body").append("div")
                         .style("font-weight", "bold");
             
                     svg.append("text")
-                        .attr("x", annotationX)
-                        .attr("y", annotationY2)
+                        .attr("x", annotationX+20)
+                        .attr("y", annotationY2-15)
                         .attr("class", "annotation")
                         .text(`Mask Avg: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
                         .style("font-size", "12px")

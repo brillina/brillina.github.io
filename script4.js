@@ -136,8 +136,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("stroke-width", 1);
     
             svg.append("text")
-                .attr("x", annotationX)
-                .attr("y", annotationY1)
+                .attr("x", annotationX +20)
+                .attr("y", annotationY1-30)
                 .attr("class", "annotation")
                 .text(`Kenedy, TX`)
                 .style("font-size", "12px")
@@ -145,8 +145,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .style("font-weight", "bold");
     
             svg.append("text")
-                .attr("x", annotationX)
-                .attr("y", annotationY2)
+                .attr("x", annotationX+20)
+                .attr("y", annotationY2-15)
                 .attr("class", "annotation")
                 .text(`Population: ${kenedy.Population}`)
                 .style("font-size", "12px")
@@ -154,7 +154,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .style("font-weight", "bold");
     
             svg.append("text")
-                .attr("x", annotationX)
+                .attr("x", annotationX+20)
                 .attr("y", annotationY3)
                 .attr("class", "annotation")
                 .text(`Cases: ${kenedy.cases}`)
