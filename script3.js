@@ -132,26 +132,6 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
         }
 
         if (kenedy) {
-            svg.append("text")
-                .attr("x", xScale(kenedy.SVI) + 10)
-                .attr("y", yScale(kenedy.cases) - 30)
-                .attr("class", "annotation")
-                .text(`Kenedy, TX`)
-                .style("font-size", "12px")
-                .style("fill", "#3b3b3b")
-                .style("font-weight", "bold");
-
-            svg.append("text")
-                .attr("x", xScale(kenedy.SVI) + 10)
-                .attr("y", yScale(kenedy.cases) - 15)
-                .attr("class", "annotation")
-                .text(`Cases: ${kenedy.cases}`)
-                .style("font-size", "12px")
-                .style("fill", "#3b3b3b")
-                .style("font-weight", "bold");
-        }
-
-        if (kenedy) {
             const kenedyX = xScale(kenedy.weightedAverage);
             const kenedyY = yScale(kenedy.cases);
     
