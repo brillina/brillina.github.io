@@ -101,7 +101,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 d3.select(event.currentTarget)
                   .attr("r", 8)
                   .attr("fill", hoverColor)
-                  .attr("stroke", "black")
+                  .attr("stroke", "#3b3b3b")
                   .attr("stroke-width", 2);
             })
             .on("mouseout", (event, d) => {
@@ -132,7 +132,7 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("y1", kenedyY)
                 .attr("x2", annotationX - 37)
                 .attr("y2", annotationY1 + 15)
-                .attr("stroke", "black")
+                .attr("stroke", "#3b3b3b")
                 .attr("stroke-width", 1);
     
             svg.append("text")
@@ -141,7 +141,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Kenedy, TX`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
     
             svg.append("text")
                 .attr("x", annotationX)
@@ -149,7 +150,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Population: ${kenedy.Population}`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
     
             svg.append("text")
                 .attr("x", annotationX)
@@ -157,7 +159,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Cases: ${kenedy.cases}`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
         }
 
         if (mower) {
@@ -167,7 +170,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Mower, MN`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
     
             svg.append("text")
                 .attr("x", xScale(mower.weightedAverage) + 20)
@@ -175,7 +179,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Population: ${mower.Population}`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
     
             svg.append("text")
                 .attr("x", xScale(mower.weightedAverage) + 20)
@@ -183,7 +188,8 @@ d3.csv("data/2020_county_population.csv").then(data => {
                 .attr("class", "annotation")
                 .text(`Cases: ${mower.cases}`)
                 .style("font-size", "12px")
-                .style("fill", "black");
+                .style("fill", "#3b3b3b")
+                .style("font-weight", "bold");
         }
     }
 

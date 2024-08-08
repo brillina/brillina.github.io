@@ -104,7 +104,7 @@ const tooltip = d3.select("body").append("div")
                         d3.select(event.currentTarget)
                           .attr("r", 8)
                           .attr("fill", hoverColor)
-                          .attr("stroke", "black")
+                          .attr("stroke", "#3b3b3b")
                           .attr("stroke-width", 2);
                     })
                     .on("mouseout", (event, d) => {
@@ -130,7 +130,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Mower, MN`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
             
                     svg.append("text")
                         .attr("x", xScale(mower.weightedAverage) + 20)
@@ -138,7 +139,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Mask Avg: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
             
                     svg.append("text")
                         .attr("x", xScale(mower.weightedAverage) + 20)
@@ -146,7 +148,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Cases: ${mower.cases}`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
                 }
             
                 if (kenedy) {
@@ -164,7 +167,7 @@ const tooltip = d3.select("body").append("div")
                         .attr("y1", kenedyY)
                         .attr("x2", annotationX - 37)
                         .attr("y2", annotationY1 + 15)
-                        .attr("stroke", "black")
+                        .attr("stroke", "#3b3b3b")
                         .attr("stroke-width", 1);
             
                     svg.append("text")
@@ -173,7 +176,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Kenedy, TX`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
             
                     svg.append("text")
                         .attr("x", annotationX)
@@ -181,7 +185,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Mask Avg: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
             
                     svg.append("text")
                         .attr("x", annotationX)
@@ -189,7 +194,8 @@ const tooltip = d3.select("body").append("div")
                         .attr("class", "annotation")
                         .text(`Cases: ${kenedy.cases}`)
                         .style("font-size", "12px")
-                        .style("fill", "black");
+                        .style("fill", "#3b3b3b")
+                        .style("font-weight", "bold");
                 }
             }
             
