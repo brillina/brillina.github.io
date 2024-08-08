@@ -208,7 +208,7 @@ const tooltip = d3.select("body").append("div")
                         .attr("y", annotationY3)
                         .attr("class", "annotation")
                         .text(`Cases: ${kenedy.cases}`)
-                        .attr("y", yScale(kenedy.cases)-4)
+                        .attr("y", yScale(kenedy.cases))
                         .style("font-size", "12px")
                         .style("fill", "#3b3b3b")
                         .style("font-weight", "bold");
