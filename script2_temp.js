@@ -154,8 +154,8 @@ const tooltip = d3.select("body").append("div")
                     const kenedyY = yScale(kenedy.cases);
             
                     const annotationX = kenedyX + 150;
-                    const annotationY1 = kenedyY - 30;
-                    const annotationY2 = kenedyY - 15;
+                    const annotationY1 = kenedyY - 70;
+                    const annotationY2 = kenedyY - 55;
                     const annotationY3 = kenedyY;
             
                     svg.append("line")

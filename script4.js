@@ -117,38 +117,71 @@ d3.csv("data/2020_county_population.csv").then(data => {
         const mower = data.find(d => d.County === "Los Angeles" && d.State === "Minnesota");
         const kenedy = data.find(d => d.County === "Kenedy" && d.State === "Texas");
 
-        if (mower) {
-            svg.append("text")
-                .attr("x", xScale(mower.Population) + 10)
-                .attr("y", yScale(mower.cases) - 30)
-                .attr("class", "annotation")
-                .text(`Los Angeles, CA`)
-                .style("font-size", "12px")
-                .style("fill", "black");
-
-            svg.append("text")
-                .attr("x", xScale(mower.Population) + 10)
-                .attr("y", yScale(mower.cases) - 15)
-                .attr("class", "annotation")
-                .text(`Cases: ${mower.cases}`)
-                .style("font-size", "12px")
-                .style("fill", "black");
-        }
-
         if (kenedy) {
+            const kenedyX = xScale(kenedy.weightedAverage);
+            const kenedyY = yScale(kenedy.cases);
+    
+            const annotationX = kenedyX + 500;
+            const annotationY1 = kenedyY - 70;
+            const annotationY2 = kenedyY - 55;
+            const annotationY3 = kenedyY;
+    
+            svg.append("line")
+                .attr("class", "annotation-line")
+                .attr("x1", kenedyX)
+                .attr("y1", kenedyY)
+                .attr("x2", annotationX - 37)
+                .attr("y2", annotationY1 + 15)
+                .attr("stroke", "black")
+                .attr("stroke-width", 1);
+    
             svg.append("text")
-                .attr("x", xScale(kenedy.Population) + 10)
-                .attr("y", yScale(kenedy.cases) - 30)
+                .attr("x", annotationX)
+                .attr("y", annotationY1)
                 .attr("class", "annotation")
                 .text(`Kenedy, TX`)
                 .style("font-size", "12px")
                 .style("fill", "black");
-
+    
             svg.append("text")
-                .attr("x", xScale(kenedy.Population) + 10)
-                .attr("y", yScale(kenedy.cases) - 15)
+                .attr("x", annotationX)
+                .attr("y", annotationY2)
+                .attr("class", "annotation")
+                .text(`Mask: ${kenedy.NEVER + kenedy.RARELY + kenedy.SOMETIMES + kenedy.FREQUENTLY + kenedy.ALWAYS}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+    
+            svg.append("text")
+                .attr("x", annotationX)
+                .attr("y", annotationY3)
                 .attr("class", "annotation")
                 .text(`Cases: ${kenedy.cases}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+        }
+
+        if (mower) {
+            svg.append("text")
+                .attr("x", xScale(mower.weightedAverage) + 20)
+                .attr("y", yScale(mower.cases) - 30)
+                .attr("class", "annotation")
+                .text(`Mower, MN`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+    
+            svg.append("text")
+                .attr("x", xScale(mower.weightedAverage) + 20)
+                .attr("y", yScale(mower.cases) - 15)
+                .attr("class", "annotation")
+                .text(`Mask: ${mower.NEVER + mower.RARELY + mower.SOMETIMES + mower.FREQUENTLY + mower.ALWAYS}`)
+                .style("font-size", "12px")
+                .style("fill", "black");
+    
+            svg.append("text")
+                .attr("x", xScale(mower.weightedAverage) + 20)
+                .attr("y", yScale(mower.cases))
+                .attr("class", "annotation")
+                .text(`Cases: ${mower.cases}`)
                 .style("font-size", "12px")
                 .style("fill", "black");
         }
