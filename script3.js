@@ -150,7 +150,7 @@ d3.csv("data/SVI_2020_US_county.csv").then(data => {
             const kenedyX = xScale(kenedy.weightedAverage);
             const kenedyY = yScale(kenedy.cases);
     
-            const annotationX = kenedyX + 500;
+            const annotationX = kenedyX - 800;
             const annotationY1 = kenedyY - 70;
             const annotationY2 = kenedyY - 55;
             const annotationY3 = kenedyY;
