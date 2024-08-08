@@ -142,7 +142,7 @@ const tooltip = d3.select("body").append("div")
             
                     svg.append("text")
                         .attr("x", xScale(mower.weightedAverage) + 20)
-                        .attr("y", yScale(mower.cases))
+                        .attr("y", yScale(mower.cases)-5)
                         .attr("class", "annotation")
                         .text(`Cases: ${mower.cases}`)
                         .style("font-size", "12px")
